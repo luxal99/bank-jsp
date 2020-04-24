@@ -1,9 +1,13 @@
 package example.servlet;
 
+import example.entity.Account;
 import example.entity.Client;
-import example.service.ClientService;
-import example.service.ClientServiceImpl;
+import example.entity.User;
+import example.entity.UserType;
+import example.service.*;
 import org.hibernate.Session;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,11 +32,31 @@ public class RegistrationServlet extends HttpServlet {
         client.setName(req.getParameter("name"));
         client.setLastname(req.getParameter("lastname"));
         client.setTelephone(req.getParameter("telephone"));
-        client.setMail(req.getParameter("mail"));
+        client.setMail(req.getParameter("email"));
 
 
         ClientService clientService = new ClientServiceImpl();
-        clientService.save(client);
-        resp.sendRedirect(req.getContextPath()+ "/pages/dashboard.jsp");
+        Client savedClient = clientService.save(client);
+
+        UserTypeService userTypeService = new UserTypeServiceImpl();
+        UserType userType = userTypeService.findById(Integer.valueOf(req.getParameter("userType")));
+
+        User user = new User();
+        user.setUsername(req.getParameter("username"));
+        user.setPassword(req.getParameter("password"));
+        user.setIdUserType(userType);
+        user.setIdClient(savedClient);
+
+        UserService userService = new UserServiceImpl();
+        userService.save(user);
+
+        Account account = new Account();
+        account.setIdClient(savedClient);
+        account.setAccountNumber(req.getParameter("accountNumber"));
+
+        AccountService accountService = new AccountServiceImpl();
+        accountService.save(account);
+
+        resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
     }
 }

@@ -17,8 +17,11 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account save(Account account) {
-
-        return null;
+        Session session = DBConfig.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(account);
+        transaction.commit();
+        return account;
     }
 
     @Override

@@ -1,6 +1,10 @@
 <%@ page import="example.entity.Client" %>
 <%@ page import="example.service.ClientService" %>
-<%@ page import="example.service.ClientServiceImpl" %><%--
+<%@ page import="example.service.ClientServiceImpl" %>
+<%@ page import="java.util.List" %>
+<%@ page import="example.entity.UserType" %>
+<%@ page import="example.service.UserTypeService" %>
+<%@ page import="example.service.UserTypeServiceImpl" %><%--
   Created by IntelliJ IDEA.
   User: luxal
   Date: 4/24/20
@@ -8,6 +12,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -83,12 +89,14 @@
 
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">E-mail</label>
-                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                                <input type="email" name="email" class="form-control"
+                                                       id="exampleInputEmail1"
                                                        aria-describedby="emailHelp">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Telephone</label>
-                                                <input type="text" name="telephone" class="form-control" id="exampleInputPassword1">
+                                                <input type="text" name="telephone" class="form-control"
+                                                       id="exampleInputPassword1">
                                             </div>
 
                                         </div>
@@ -96,14 +104,16 @@
                                             <h3>User data</h3>
                                             <div style="height: 1px;background-color: #e1e1e1"></div>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Name</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                <label for="exampleInputEmail1">Username</label>
+                                                <input type="text" name="username" class="form-control"
+                                                       id="exampleInputEmail1"
                                                        aria-describedby="emailHelp">
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Name</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                <label for="exampleInputEmail1">Password</label>
+                                                <input type="password" name="password" class="form-control"
+                                                       id="exampleInputEmail1"
                                                        aria-describedby="emailHelp">
                                             </div>
                                         </div>
@@ -111,34 +121,31 @@
                                             <h3>Accout data</h3>
                                             <div style="height: 1px;background-color: #e1e1e1"></div>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Name</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                <label for="exampleInputEmail1">Account number</label>
+                                                <input type="text" name="accountNumber" class="form-control"
+                                                       id="exampleInputEmail1"
                                                        aria-describedby="emailHelp">
                                             </div>
-                                            <br>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Name</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                       aria-describedby="emailHelp">
-                                            </div>
+                                            <%
+                                                UserTypeService userTypeService = new UserTypeServiceImpl();
+                                                List<UserType> userTypeList = userTypeService.getAll();
+                                                request.setAttribute("userTypeList", userTypeList);
+
+                                            %>
+                                            <select name="userType" class="form-control form-control-lg">
+
+                                                <% for (int i = 0; i < userTypeList.size(); i += 1) { %>
+
+                                                <option  value="<%= userTypeList.get(i).getIdUserType() %>"><%=userTypeList.get(i).getTitle()%></option>
+
+                                                <% }
+
+                                                %>
+                                            </select>
+
                                         </div>
-                                        <button class="btn" type="submit">Register</button>
+                                        <button class="btn btn-primary" type="submit">Register</button>
                                     </form>
-
-                                    <%
-                                        Client client = new Client();
-                                        client.setName(request.getParameter("name"));
-                                        client.setLastname(request.getParameter("lastname"));
-                                        client.setTelephone(request.getParameter("telephone"));
-                                        client.setMail(request.getParameter("email"));
-
-                                        out.print(client.getName());
-
-
-                                        ClientService clientService = new ClientServiceImpl();
-                                        clientService.save(client);
-
-                                    %>
 
                                 </div>
                                 <div class="modal-footer">

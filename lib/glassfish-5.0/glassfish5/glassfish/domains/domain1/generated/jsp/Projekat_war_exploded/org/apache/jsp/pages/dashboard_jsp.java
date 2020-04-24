@@ -6,6 +6,10 @@ import javax.servlet.jsp.*;
 import example.entity.Client;
 import example.service.ClientService;
 import example.service.ClientServiceImpl;
+import java.util.List;
+import example.entity.UserType;
+import example.service.UserTypeService;
+import example.service.UserTypeServiceImpl;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -45,8 +49,14 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
-      out.write('\n');
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -124,12 +134,14 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                                            <div class=\"form-group\">\n");
       out.write("                                                <label for=\"exampleInputEmail1\">E-mail</label>\n");
-      out.write("                                                <input type=\"email\" name=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n");
+      out.write("                                                <input type=\"email\" name=\"email\" class=\"form-control\"\n");
+      out.write("                                                       id=\"exampleInputEmail1\"\n");
       out.write("                                                       aria-describedby=\"emailHelp\">\n");
       out.write("                                            </div>\n");
       out.write("                                            <div class=\"form-group\">\n");
       out.write("                                                <label for=\"exampleInputPassword1\">Telephone</label>\n");
-      out.write("                                                <input type=\"text\" name=\"telephone\" class=\"form-control\" id=\"exampleInputPassword1\">\n");
+      out.write("                                                <input type=\"text\" name=\"telephone\" class=\"form-control\"\n");
+      out.write("                                                       id=\"exampleInputPassword1\">\n");
       out.write("                                            </div>\n");
       out.write("\n");
       out.write("                                        </div>\n");
@@ -137,14 +149,16 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <h3>User data</h3>\n");
       out.write("                                            <div style=\"height: 1px;background-color: #e1e1e1\"></div>\n");
       out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Name</label>\n");
-      out.write("                                                <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n");
+      out.write("                                                <label for=\"exampleInputEmail1\">Username</label>\n");
+      out.write("                                                <input type=\"text\" name=\"username\" class=\"form-control\"\n");
+      out.write("                                                       id=\"exampleInputEmail1\"\n");
       out.write("                                                       aria-describedby=\"emailHelp\">\n");
       out.write("                                            </div>\n");
       out.write("                                            <br>\n");
       out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Name</label>\n");
-      out.write("                                                <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n");
+      out.write("                                                <label for=\"exampleInputEmail1\">Password</label>\n");
+      out.write("                                                <input type=\"password\" name=\"password\" class=\"form-control\"\n");
+      out.write("                                                       id=\"exampleInputEmail1\"\n");
       out.write("                                                       aria-describedby=\"emailHelp\">\n");
       out.write("                                            </div>\n");
       out.write("                                        </div>\n");
@@ -152,36 +166,42 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <h3>Accout data</h3>\n");
       out.write("                                            <div style=\"height: 1px;background-color: #e1e1e1\"></div>\n");
       out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Name</label>\n");
-      out.write("                                                <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n");
+      out.write("                                                <label for=\"exampleInputEmail1\">Account number</label>\n");
+      out.write("                                                <input type=\"text\" name=\"accountNumber\" class=\"form-control\"\n");
+      out.write("                                                       id=\"exampleInputEmail1\"\n");
       out.write("                                                       aria-describedby=\"emailHelp\">\n");
       out.write("                                            </div>\n");
-      out.write("                                            <br>\n");
-      out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Name</label>\n");
-      out.write("                                                <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\"\n");
-      out.write("                                                       aria-describedby=\"emailHelp\">\n");
-      out.write("                                            </div>\n");
+      out.write("                                            ");
+
+                                                UserTypeService userTypeService = new UserTypeServiceImpl();
+                                                List<UserType> userTypeList = userTypeService.getAll();
+                                                request.setAttribute("userTypeList", userTypeList);
+
+                                            
+      out.write("\n");
+      out.write("                                            <select name=\"userType\" class=\"form-control form-control-lg\">\n");
+      out.write("\n");
+      out.write("                                                ");
+ for (int i = 0; i < userTypeList.size(); i += 1) { 
+      out.write("\n");
+      out.write("\n");
+      out.write("                                                <option  value=\"");
+      out.print( userTypeList.get(i).getIdUserType() );
+      out.write('"');
+      out.write('>');
+      out.print(userTypeList.get(i).getTitle());
+      out.write("</option>\n");
+      out.write("\n");
+      out.write("                                                ");
+ }
+
+                                                
+      out.write("\n");
+      out.write("                                            </select>\n");
+      out.write("\n");
       out.write("                                        </div>\n");
-      out.write("                                        <button class=\"btn\" type=\"submit\">Register</button>\n");
+      out.write("                                        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n");
       out.write("                                    </form>\n");
-      out.write("\n");
-      out.write("                                    ");
-
-                                        Client client = new Client();
-                                        client.setName(request.getParameter("name"));
-                                        client.setLastname(request.getParameter("lastname"));
-                                        client.setTelephone(request.getParameter("telephone"));
-                                        client.setMail(request.getParameter("email"));
-
-                                        out.print(client.getName());
-
-
-                                        ClientService clientService = new ClientServiceImpl();
-                                        clientService.save(client);
-
-                                    
-      out.write("\n");
       out.write("\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"modal-footer\">\n");
