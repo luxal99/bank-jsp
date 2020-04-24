@@ -1,4 +1,4 @@
-<%--
+<%@ page import="example.service.AccountServiceImpl" %><%--
   Created by IntelliJ IDEA.
   User: luxal
   Date: 4/24/20
@@ -18,6 +18,12 @@
   </head>
   <body>
     <div>
+      <%
+        AccountServiceImpl accountService = new AccountServiceImpl();
+        System.out.println(accountService.getAll());
+
+        out.print(accountService.getAll().get(0).toString());
+      %>
       <div class="container login-container">
         <div class="row">
           <div class="col-sm" style="padding-left: 0 !important;">
