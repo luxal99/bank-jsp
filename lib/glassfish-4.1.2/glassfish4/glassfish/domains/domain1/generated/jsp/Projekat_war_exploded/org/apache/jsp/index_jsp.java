@@ -61,9 +61,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("          <div class=\"col-sm\" style=\"padding-left: 0 !important;\">\n");
       out.write("            <img src=\"https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80\" class=\"img-fluid\" alt=\"\">\n");
       out.write("          </div>\n");
-      out.write("          <div class=\"col-sm\">\n");
+      out.write("          <div class=\"col-sm\" style=\"padding-top: 2em\">\n");
       out.write("            <div>\n");
-      out.write("              Log In \n");
       out.write("              <form>\n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                  <label for=\"exampleInputEmail1\">Email address</label>\n");

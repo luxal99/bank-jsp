@@ -23,9 +23,8 @@
           <div class="col-sm" style="padding-left: 0 !important;">
             <img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80" class="img-fluid" alt="">
           </div>
-          <div class="col-sm">
+          <div class="col-sm" style="padding-top: 2em">
             <div>
-              Log In 
               <form>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>

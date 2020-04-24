@@ -25,5 +25,6 @@
     <orderEntry type="library" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2" level="application_server_libraries" />
     <orderEntry type="library" name="jsp-api-2.2" level="project" />
+    <orderEntry type="library" name="javax.persistence-api-2.2" level="project" />
   </component>
 </module>
