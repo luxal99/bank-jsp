@@ -31,7 +31,7 @@
           </div>
           <div class="col-sm" style="padding-top: 2em">
             <div>
-              <form>
+              <form method="get" action="http://localhost:8080/Projekat_war_exploded/admin/login">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
