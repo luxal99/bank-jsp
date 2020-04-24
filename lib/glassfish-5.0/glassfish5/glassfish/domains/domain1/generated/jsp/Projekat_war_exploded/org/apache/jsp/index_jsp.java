@@ -57,14 +57,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  </head>\n");
       out.write("  <body>\n");
       out.write("    <div>\n");
-      out.write("      ");
-
-        AccountServiceImpl accountService = new AccountServiceImpl();
-        System.out.println(accountService.getAll());
-
-        out.print(accountService.getAll().get(0).toString());
-      
-      out.write("\n");
       out.write("      <div class=\"container login-container\">\n");
       out.write("        <div class=\"row\">\n");
       out.write("          <div class=\"col-sm\" style=\"padding-left: 0 !important;\">\n");
@@ -72,7 +64,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("          </div>\n");
       out.write("          <div class=\"col-sm\" style=\"padding-top: 2em\">\n");
       out.write("            <div>\n");
-      out.write("              <form method=\"get\" action=\"http://localhost:8080/Projekat_war_exploded/admin/login\">\n");
+      out.write("                <form method=\"get\" action=\"http://localhost:8080/Projekat_war_exploded/admin/login\">\n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                  <label for=\"exampleInputEmail1\">Email address</label>\n");
       out.write("                  <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");

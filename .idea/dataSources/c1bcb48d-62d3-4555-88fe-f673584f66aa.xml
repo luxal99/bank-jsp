@@ -943,6 +943,7 @@
     <column id="242" parent="234" name="account_number">
       <Position>2</Position>
       <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="243" parent="234" name="balance">
@@ -953,6 +954,7 @@
     <column id="244" parent="234" name="id_client">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="245" parent="234" name="account_number">
@@ -1007,21 +1009,25 @@
     <column id="254" parent="236" name="name">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="255" parent="236" name="lastname">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="256" parent="236" name="mail">
       <Position>4</Position>
       <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="257" parent="236" name="telephone">
       <Position>5</Position>
       <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="258" parent="236" name="PRIMARY">
@@ -1083,11 +1089,13 @@
     <column id="268" parent="239" name="username">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="269" parent="239" name="password">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="270" parent="239" name="id_client">
@@ -1098,6 +1106,7 @@
     <column id="271" parent="239" name="id_user_type">
       <Position>5</Position>
       <DataType>int(10)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="272" parent="239" name="id_bank">

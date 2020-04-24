@@ -43,6 +43,8 @@ public class RegistrationServlet extends HttpServlet {
 
         User user = new User();
         user.setUsername(req.getParameter("username"));
+
+        BCryptPasswordEncoder bCryptPasswordEncoder  = new BCryptPasswordEncoder();
         user.setPassword(req.getParameter("password"));
         user.setIdUserType(userType);
         user.setIdClient(savedClient);

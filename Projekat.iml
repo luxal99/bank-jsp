@@ -33,8 +33,9 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="GlassFish 4.1.2" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="jsp-api-2.2" level="project" />
     <orderEntry type="library" exported="" name="javax.persistence-api-2.2" level="project" />
-    <orderEntry type="library" exported="" name="spring-security-core-5.0.3.RELEASE" level="application" />
     <orderEntry type="library" exported="" name="Hibernate 5.4.11-5.4.11" level="project" />
     <orderEntry type="library" exported="" name="mysql-connector-java-8.0.19" level="project" />
+    <orderEntry type="library" name="jstl-1.2" level="project" />
+    <orderEntry type="library" name="spring-security-core-5.0.3.RELEASE" level="project" />
   </component>
 </module>

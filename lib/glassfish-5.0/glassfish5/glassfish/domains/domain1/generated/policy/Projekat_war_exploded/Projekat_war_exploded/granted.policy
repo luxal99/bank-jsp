@@ -1,4 +1,4 @@
-/* AUTOMATICALLY GENERATED ON Fri Apr 24 20:21:25 CEST 2020*/
+/* AUTOMATICALLY GENERATED ON Fri Apr 24 23:54:12 CEST 2020*/
 /* DO NOT EDIT */
 
 grant {
@@ -12,6 +12,7 @@ grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "", "**";
   permission javax.security.jacc.WebRoleRefPermission "example.servlet.RegistrationServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "example.servlet.LoginServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "example.servlet.AccountServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "default", "**";
   permission javax.security.jacc.WebRoleRefPermission "WSServlet", "**";
 };

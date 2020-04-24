@@ -3,6 +3,7 @@ package example.service;
 import example.config.util.DBConfig;
 import example.entity.Account;
 import example.entity.Client;
+import example.entity.UserType;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -38,5 +39,14 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public String delete(Integer id) {
         return null;
+    }
+
+    @Override
+    public Account findById(Integer id) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        org.hibernate.query.Query query = session.createNamedQuery("Account.findByIdAccount");
+        query.setInteger("idAccount",id);
+        Account account = (Account) query.getResultList().get(0);
+        return account;
     }
 }

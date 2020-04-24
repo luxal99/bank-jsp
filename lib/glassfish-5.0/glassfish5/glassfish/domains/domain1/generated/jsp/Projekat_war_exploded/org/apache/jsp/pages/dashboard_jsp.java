@@ -4,12 +4,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import example.entity.Client;
-import example.service.ClientService;
-import example.service.ClientServiceImpl;
 import java.util.List;
 import example.entity.UserType;
-import example.service.UserTypeService;
-import example.service.UserTypeServiceImpl;
+import example.service.*;
+import example.entity.Account;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -58,9 +56,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
+      out.write("    <link rel=\"stylesheet\" href=\"../assets/css/dashboard.css\">\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"\n");
       out.write("          integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n");
       out.write("    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"\n");
@@ -75,15 +73,16 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>Title</title>\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write("<div class=\"row\">\n");
-      out.write("    <div class=\"col-3\">\n");
+      out.write("<div class=\"row\" style=\"height: 100vh\">\n");
+      out.write("\n");
+      out.write("    <div class=\"col-3 menu\">\n");
       out.write("        <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\n");
       out.write("            <a class=\"nav-link active\" id=\"v-pills-home-tab\" data-toggle=\"pill\" href=\"#v-pills-home\" role=\"tab\"\n");
-      out.write("               aria-controls=\"v-pills-home\" aria-selected=\"true\">Home</a>\n");
+      out.write("               aria-controls=\"v-pills-home\" aria-selected=\"true\">Clients</a>\n");
       out.write("            <a class=\"nav-link\" id=\"v-pills-profile-tab\" data-toggle=\"pill\" href=\"#v-pills-profile\" role=\"tab\"\n");
-      out.write("               aria-controls=\"v-pills-profile\" aria-selected=\"false\">Profile</a>\n");
+      out.write("               aria-controls=\"v-pills-profile\" aria-selected=\"false\">Accounts</a>\n");
       out.write("            <a class=\"nav-link\" id=\"v-pills-messages-tab\" data-toggle=\"pill\" href=\"#v-pills-messages\" role=\"tab\"\n");
-      out.write("               aria-controls=\"v-pills-messages\" aria-selected=\"false\">Messages</a>\n");
+      out.write("               aria-controls=\"v-pills-messages\" aria-selected=\"false\">Transaction</a>\n");
       out.write("            <a class=\"nav-link\" id=\"v-pills-settings-tab\" data-toggle=\"pill\" href=\"#v-pills-settings\" role=\"tab\"\n");
       out.write("               aria-controls=\"v-pills-settings\" aria-selected=\"false\">Settings</a>\n");
       out.write("        </div>\n");
@@ -94,7 +93,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"container\">\n");
       out.write("                    <h2 class=\"text-center\">Modal Example</h2>\n");
       out.write("                    <!-- Trigger the modal with a button -->\n");
-      out.write("                    <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Open\n");
+      out.write("                    <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Open\n");
       out.write("                        Modal\n");
       out.write("                    </button>\n");
       out.write("\n");
@@ -185,12 +184,13 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
  for (int i = 0; i < userTypeList.size(); i += 1) { 
       out.write("\n");
       out.write("\n");
-      out.write("                                                <option  value=\"");
+      out.write("                                                <option value=\"");
       out.print( userTypeList.get(i).getIdUserType() );
       out.write('"');
       out.write('>');
       out.print(userTypeList.get(i).getTitle());
-      out.write("</option>\n");
+      out.write("\n");
+      out.write("                                                </option>\n");
       out.write("\n");
       out.write("                                                ");
  }
@@ -200,7 +200,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            </select>\n");
       out.write("\n");
       out.write("                                        </div>\n");
-      out.write("                                        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n");
+      out.write("                                        <div class=\"text-center\" style=\"margin-left: 1em;margin-top: 1em\">\n");
+      out.write("                                            <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n");
+      out.write("                                        </div>\n");
       out.write("                                    </form>\n");
       out.write("\n");
       out.write("                                </div>\n");
@@ -212,9 +214,140 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("\n");
+      out.write("                    <table class=\"table\">\n");
+      out.write("                        <thead>\n");
+      out.write("                        <tr>\n");
+      out.write("                            <th scope=\"col\">#</th>\n");
+      out.write("                            <th scope=\"col\">First</th>\n");
+      out.write("                            <th scope=\"col\">Last</th>\n");
+      out.write("                            <th scope=\"col\">Handle</th>\n");
+      out.write("                        </tr>\n");
+      out.write("                        </thead>\n");
+      out.write("                        <tbody>\n");
+      out.write("\n");
+      out.write("                        ");
+
+                            ClientService clientService = new ClientServiceImpl();
+                            List<Client> clientList = clientService.getAll();
+
+                        
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                        ");
+ for (int i = 0; i < clientList.size(); i += 1) { 
+      out.write("\n");
+      out.write("\n");
+      out.write("                        <tr>\n");
+      out.write("                            <td>");
+      out.print( clientList.get(i).getName() );
+      out.write("\n");
+      out.write("                            </td>\n");
+      out.write("                            <td>");
+      out.print( clientList.get(i).getLastname() );
+      out.write("\n");
+      out.write("                            </td>\n");
+      out.write("                            <td>");
+      out.print( clientList.get(i).getMail() );
+      out.write("\n");
+      out.write("                            </td>\n");
+      out.write("                            <td>");
+      out.print( clientList.get(i).getTelephone() );
+      out.write("\n");
+      out.write("                            </td>\n");
+      out.write("\n");
+      out.write("                        </tr>\n");
+      out.write("\n");
+      out.write("                        ");
+ }
+
+                        
+      out.write("\n");
+      out.write("                        </tbody>\n");
+      out.write("                    </table>\n");
+      out.write("\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
-      out.write("            <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">...\n");
+      out.write("            <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">\n");
+      out.write("\n");
+      out.write("                ");
+
+                    AccountService accountService = new AccountServiceImpl();
+                    List<Account> accountList = accountService.getAll();
+                
+      out.write("\n");
+      out.write("                <table class=\"table\">\n");
+      out.write("                    <thead>\n");
+      out.write("                    <tr>\n");
+      out.write("                        <th scope=\"col\">#</th>\n");
+      out.write("                        <th scope=\"col\">Account Number</th>\n");
+      out.write("                        <th scope=\"col\">Client</th>\n");
+      out.write("                        <th scope=\"col\">Handle</th>\n");
+      out.write("                    </tr>\n");
+      out.write("                    </thead>\n");
+      out.write("                    <tbody>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                    ");
+ for (Account account : accountList) { 
+      out.write("\n");
+      out.write("\n");
+      out.write("                    <tr>\n");
+      out.write("                        <td>");
+      out.print( account.getIdAccount() );
+      out.write("\n");
+      out.write("                        </td>\n");
+      out.write("                        <td>");
+      out.print( account.getAccountNumber() );
+      out.write("\n");
+      out.write("                        </td>\n");
+      out.write("                        <td>");
+      out.print( account.getBalance() );
+      out.write("\n");
+      out.write("                        </td>\n");
+      out.write("                        <td>\n");
+      out.write("                            <form method=\"get\" action=\"dashboard.jsp\">\n");
+      out.write("                                <button class=\"open-btn\" type=\"submit\" name=\"clientInfo\">Client detail</button>\n");
+      out.write("                                <input type=\"hidden\" name=\"idAccount\" value=\"");
+      out.print(account.getIdAccount());
+      out.write("\"/>\n");
+      out.write("                            </form>\n");
+      out.write("                        </td>\n");
+      out.write("                        <td></td>\n");
+      out.write("\n");
+      out.write("                    </tr>\n");
+      out.write("                    ");
+ }
+                    
+      out.write("\n");
+      out.write("                    </tbody>\n");
+      out.write("                </table>\n");
+      out.write("                <h2>Client Info</h2>\n");
+      out.write("                ");
+
+                    if (request.getParameter("clientInfo") != null) {
+
+                        Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
+                        request.setAttribute("account",account);
+
+                    }
+                
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                <h3>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("                <h3>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.lastname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("                <h3>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.mail}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("                <h3>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.telephone}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("\n");
       out.write("            </div>\n");
       out.write("            <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\n");
       out.write("                ...\n");

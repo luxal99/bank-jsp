@@ -1,0 +1,32 @@
+.menu{
+    -webkit-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    -moz-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    background-color:#121212;
+}
+
+.row{
+    margin-right: 0 !important;
+}
+
+.open-btn{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 4em;
+    padding-right: 4em;
+    -webkit-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    -moz-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    background-color: #4BB543;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #4BB543;
+}
+
+a{
+    color: #e1e1e1 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #4BB543 !important;
+}

@@ -18,12 +18,6 @@
   </head>
   <body>
     <div>
-      <%
-        AccountServiceImpl accountService = new AccountServiceImpl();
-        System.out.println(accountService.getAll());
-
-        out.print(accountService.getAll().get(0).toString());
-      %>
       <div class="container login-container">
         <div class="row">
           <div class="col-sm" style="padding-left: 0 !important;">
@@ -31,7 +25,7 @@
           </div>
           <div class="col-sm" style="padding-top: 2em">
             <div>
-              <form method="get" action="http://localhost:8080/Projekat_war_exploded/admin/login">
+                <form method="get" action="http://localhost:8080/Projekat_war_exploded/admin/login">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

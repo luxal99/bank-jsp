@@ -1,21 +1,15 @@
 <%@ page import="example.entity.Client" %>
-<%@ page import="example.service.ClientService" %>
-<%@ page import="example.service.ClientServiceImpl" %>
 <%@ page import="java.util.List" %>
 <%@ page import="example.entity.UserType" %>
-<%@ page import="example.service.UserTypeService" %>
-<%@ page import="example.service.UserTypeServiceImpl" %><%--
-  Created by IntelliJ IDEA.
-  User: luxal
-  Date: 4/24/20
-  Time: 2:27 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="example.service.*" %>
+<%@ page import="example.entity.Account" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 
 <html>
 <head>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -30,15 +24,16 @@
     <title>Title</title>
 </head>
 <body>
-<div class="row">
-    <div class="col-3">
+<div class="row" style="height: 100vh">
+
+    <div class="col-3 menu">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-               aria-controls="v-pills-home" aria-selected="true">Home</a>
+               aria-controls="v-pills-home" aria-selected="true">Clients</a>
             <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-               aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+               aria-controls="v-pills-profile" aria-selected="false">Accounts</a>
             <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-               aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+               aria-controls="v-pills-messages" aria-selected="false">Transaction</a>
             <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
                aria-controls="v-pills-settings" aria-selected="false">Settings</a>
         </div>
@@ -49,7 +44,7 @@
                 <div class="container">
                     <h2 class="text-center">Modal Example</h2>
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open
+                    <button type="button" class="open-btn" data-toggle="modal" data-target="#myModal">Open
                         Modal
                     </button>
 
@@ -136,7 +131,8 @@
 
                                                 <% for (int i = 0; i < userTypeList.size(); i += 1) { %>
 
-                                                <option  value="<%= userTypeList.get(i).getIdUserType() %>"><%=userTypeList.get(i).getTitle()%></option>
+                                                <option value="<%= userTypeList.get(i).getIdUserType() %>"><%=userTypeList.get(i).getTitle()%>
+                                                </option>
 
                                                 <% }
 
@@ -144,7 +140,9 @@
                                             </select>
 
                                         </div>
-                                        <button class="btn btn-primary" type="submit">Register</button>
+                                        <div class="text-center" style="margin-left: 1em;margin-top: 1em">
+                                            <button class="btn btn-primary" type="submit">Register</button>
+                                        </div>
                                     </form>
 
                                 </div>
@@ -156,9 +154,102 @@
                         </div>
                     </div>
 
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <%
+                            ClientService clientService = new ClientServiceImpl();
+                            List<Client> clientList = clientService.getAll();
+
+                        %>
+
+
+                        <% for (int i = 0; i < clientList.size(); i += 1) { %>
+
+                        <tr>
+                            <td><%= clientList.get(i).getName() %>
+                            </td>
+                            <td><%= clientList.get(i).getLastname() %>
+                            </td>
+                            <td><%= clientList.get(i).getMail() %>
+                            </td>
+                            <td><%= clientList.get(i).getTelephone() %>
+                            </td>
+
+                        </tr>
+
+                        <% }
+
+                        %>
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                <%
+                    AccountService accountService = new AccountServiceImpl();
+                    List<Account> accountList = accountService.getAll();
+                %>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Account Number</th>
+                        <th scope="col">Client</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+
+                    <% for (Account account : accountList) { %>
+
+                    <tr>
+                        <td><%= account.getIdAccount() %>
+                        </td>
+                        <td><%= account.getAccountNumber() %>
+                        </td>
+                        <td><%= account.getBalance() %>
+                        </td>
+                        <td>
+                            <form method="get" action="dashboard.jsp">
+                                <button class="open-btn" type="submit" name="clientInfo">Client detail</button>
+                                <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
+                            </form>
+                        </td>
+                        <td></td>
+
+                    </tr>
+                    <% }
+                    %>
+                    </tbody>
+                </table>
+                <h2>Client Info</h2>
+                <%
+                    if (request.getParameter("clientInfo") != null) {
+
+                        Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
+                        request.setAttribute("account",account);
+
+                    }
+                %>
+
+
+                <h3>${account.idClient.name}</h3>
+                <h3>${account.idClient.lastname}</h3>
+                <h3>${account.idClient.mail}</h3>
+                <h3>${account.idClient.telephone}</h3>
+
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                 ...
