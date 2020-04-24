@@ -439,6 +439,7 @@
       <property name="archiveType" value="war"></property>
       <property name="defaultAppName" value="Projekat_war_exploded"></property>
       <module name="Projekat_war_exploded">
+        <engine sniffer="webservices"></engine>
         <engine sniffer="security"></engine>
         <engine sniffer="web"></engine>
       </module>

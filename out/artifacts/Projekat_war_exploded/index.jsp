@@ -1,4 +1,5 @@
-<%@ page import="example.service.AccountServiceImpl" %><%--
+<%@ page import="example.service.AccountServiceImpl" %>
+<%@ page import="example.util.HashPassword" %><%--
   Created by IntelliJ IDEA.
   User: luxal
   Date: 4/24/20
@@ -17,6 +18,7 @@
     <title>$Title$</title>
   </head>
   <body>
+
     <div>
       <div class="container login-container">
         <div class="row">

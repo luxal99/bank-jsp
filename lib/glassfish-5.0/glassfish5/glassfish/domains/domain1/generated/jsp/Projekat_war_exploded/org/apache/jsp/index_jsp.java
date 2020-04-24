@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import example.service.AccountServiceImpl;
+import example.util.HashPassword;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -43,6 +44,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\n');
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -56,6 +58,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>$Title$</title>\n");
       out.write("  </head>\n");
       out.write("  <body>\n");
+      out.write("\n");
       out.write("    <div>\n");
       out.write("      <div class=\"container login-container\">\n");
       out.write("        <div class=\"row\">\n");

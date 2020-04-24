@@ -1,10 +1,12 @@
 package example.servlet;
 
+import com.sun.crypto.provider.AESKeyGenerator;
 import example.entity.Account;
 import example.entity.Client;
 import example.entity.User;
 import example.entity.UserType;
 import example.service.*;
+import example.util.HashPassword;
 import org.hibernate.Session;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -44,8 +46,9 @@ public class RegistrationServlet extends HttpServlet {
         User user = new User();
         user.setUsername(req.getParameter("username"));
 
-        BCryptPasswordEncoder bCryptPasswordEncoder  = new BCryptPasswordEncoder();
-        user.setPassword(req.getParameter("password"));
+        String hashedPassword = HashPassword.encrypt(req.getParameter("password"));
+
+        user.setPassword(hashedPassword);
         user.setIdUserType(userType);
         user.setIdClient(savedClient);
 
