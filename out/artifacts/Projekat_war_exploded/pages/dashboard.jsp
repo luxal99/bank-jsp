@@ -222,7 +222,7 @@
                         <td><%= account.getBalance() %>
                         </td>
                         <td>
-                            <form method="get" action="dashboard.jsp">
+                            <form method="get" action="dashboard.jsp" >
                                 <button class="open-btn" type="submit" name="clientInfo">Client detail</button>
                                 <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
                             </form>

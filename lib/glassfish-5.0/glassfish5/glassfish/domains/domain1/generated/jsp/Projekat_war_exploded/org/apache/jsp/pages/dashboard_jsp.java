@@ -306,7 +306,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                        </td>\n");
       out.write("                        <td>\n");
-      out.write("                            <form method=\"get\" action=\"dashboard.jsp\">\n");
+      out.write("                            <form method=\"get\" action=\"dashboard.jsp\" >\n");
       out.write("                                <button class=\"open-btn\" type=\"submit\" name=\"clientInfo\">Client detail</button>\n");
       out.write("                                <input type=\"hidden\" name=\"idAccount\" value=\"");
       out.print(account.getIdAccount());

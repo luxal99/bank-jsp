@@ -1,5 +1,9 @@
 package example.servlet;
 
+import example.entity.User;
+import example.service.UserService;
+import example.service.UserServiceImpl;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +16,20 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect(req.getContextPath()+ "/pages/dashboard.jsp");
+
+        try{
+            UserService userService = new UserServiceImpl();
+            User user = userService.findByUsername(req.getParameter("username"));
+            if (user.getIdBank() !=null && user.getPassword().equals(req.getParameter("password"))){
+
+                resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
+            }else{
+                resp.sendRedirect(req.getContextPath() + "/pages/index.jsp");
+            }
+        }catch (Exception ex){
+            resp.setStatus(404);
+        }
+
     }
 
     @Override

@@ -66,13 +66,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div>\n");
       out.write("                <form method=\"get\" action=\"http://localhost:8080/Projekat_war_exploded/admin/login\">\n");
       out.write("                <div class=\"form-group\">\n");
-      out.write("                  <label for=\"exampleInputEmail1\">Email address</label>\n");
-      out.write("                  <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");
+      out.write("                  <label for=\"exampleInputEmail1\">Username</label>\n");
+      out.write("                  <input type=\"text\" name=\"username\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");
       out.write("                  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                  <label for=\"exampleInputPassword1\">Password</label>\n");
-      out.write("                  <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">\n");
+      out.write("                  <input type=\"password\" name=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">\n");
       out.write("                </div>\n");
       out.write("                <div class=\"form-group form-check\">\n");
       out.write("                  <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n");

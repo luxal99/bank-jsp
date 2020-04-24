@@ -1,6 +1,7 @@
 package example.service;
 
 import example.config.util.DBConfig;
+import example.entity.Account;
 import example.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -21,5 +22,14 @@ public class UserServiceImpl implements  UserService {
     @Override
     public List<User> getAll() {
         return null;
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        org.hibernate.query.Query query = session.createNamedQuery("User.findByUsername");
+        query.setString("username",username);
+        User user = (User) query.getResultList().get(0);
+        return user;
     }
 }
