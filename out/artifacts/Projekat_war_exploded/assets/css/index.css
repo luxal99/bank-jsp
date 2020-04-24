@@ -1,0 +1,17 @@
+.login-btn{
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: .5em;
+    padding-bottom: .4em;
+    background-color: #4BB543;
+    color: #fff;
+    border: 1px solid #4BB543;
+    border-radius: .25rem;
+
+}
+.login-container{
+    -webkit-box-shadow: 2px 14px 35px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 14px 35px -22px rgba(0,0,0,0.75);
+    box-shadow: 2px 14px 35px -22px rgba(0,0,0,0.75);
+    margin-top: 15em;
+}
