@@ -2,8 +2,10 @@ package example.service;
 
 import example.config.util.DBConfig;
 import example.entity.Account;
+import example.entity.Client;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import javax.persistence.Query;
@@ -15,6 +17,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account save(Account account) {
+
         return null;
     }
 
