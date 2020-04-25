@@ -4,6 +4,7 @@ import example.entity.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
+import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.criterion.Property;
 
 import java.util.Properties;

@@ -130,27 +130,27 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <form>
+                    <form action="/Projekat_war_exploded/client/user" method="post">
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Username</label>
-                                <input type="email" class="form-control" value="${clinet.userList.get(0).username}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="text" name="username" class="form-control" value="${clinet.userList.get(0).username}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Current password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">New password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="password" name="newPassword" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
-                        </form>
-                    </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -165,24 +165,28 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <form>
+                    <form method="post" action="/Projekat_war_exploded/client">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Telephone</label>
-                                <input type="text" class="form-control" value="${clinet.telephone}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="text" name="telephone" class="form-control" value="${clinet.telephone}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Email</label>
-                                <input value="${clinet.mail}" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input  type="text" name="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
 
-                        </form>
-                    </form>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input value="${clinet.idClient}"  type="hidden" name="idClient" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
                 </div>
             </div>
         </div>

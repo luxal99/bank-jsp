@@ -7,7 +7,7 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class UserServiceImpl implements  UserService {
+public class UserServiceImpl implements UserService {
 
     @Override
     public String save(User user) {
@@ -27,8 +27,17 @@ public class UserServiceImpl implements  UserService {
     public User findByUsername(String username) {
         Session session = DBConfig.getSessionFactory().openSession();
         org.hibernate.query.Query query = session.createNamedQuery("User.findByUsername");
-        query.setString("username",username);
+        query.setString("username", username);
         User user = (User) query.getResultList().get(0);
         return user;
+    }
+
+    @Override
+    public String updateUser(User user) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(user);
+        transaction.commit();
+        return "Updated";
     }
 }

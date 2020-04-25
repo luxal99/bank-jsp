@@ -4,6 +4,7 @@ import example.config.util.DBConfig;
 import example.entity.Client;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +34,19 @@ public class ClientServiceImpl implements ClientService {
     public Client findClientById(Integer id) {
         Session session = DBConfig.getSessionFactory().openSession();
         org.hibernate.query.Query query = session.createNamedQuery("Client.findByIdClient");
-        query.setInteger("idClient",id);
+        query.setInteger("idClient", id);
         Client client = (Client) query.getResultList().get(0);
         return client;
+    }
+
+    @Override
+    public String updateClient(Client client) {
+
+        Session session = DBConfig.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(client);
+        transaction.commit();
+
+        return "Updated";
     }
 }
