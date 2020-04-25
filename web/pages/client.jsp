@@ -171,6 +171,40 @@
                             </div>
                         </div>
 
+                        <h3 style="margin-left: 2em;margin-top: 2em">Send money</h3>
+                        <div class="row transfer-row">
+
+                            <div style="height: 1px;background-color: #eee"></div>
+
+                            <div class="col transfer-col" style="margin-left: 2em;margin-right: 2em">
+                                <div style="padding: 1em 2em 2em 1em">
+                                    <h5 >Current account <span style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
+
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+                                        </div>
+                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon2">$</span>
+                                        </div>
+                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1"><br>
+
+                                    </div>
+
+
+                                    <div>
+                                        <button type="submit" class="transfer-btn">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab">

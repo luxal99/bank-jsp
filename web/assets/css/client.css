@@ -45,6 +45,12 @@ body{
 .nav-link{
     color: #4BB543;
 }
+.transfer-col{
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+
+}
 
 .nav-link:hover{
     color: #121212;
@@ -120,4 +126,18 @@ h1,h3,h4,a,p{
 .balance-h1{
     color: #7530FF;
     font-weight: bold;
+}
+
+.transfer-btn{
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color: #fff;
+    background-color: #7530FF;
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    border: 1px solid #7530FF;
+    border-radius: 5px;
 }

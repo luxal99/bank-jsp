@@ -27,6 +27,10 @@
 </head>
 <body>
 <div>
+
+    <%--
+        Provera da li postoji hash u obliku AES 256 hash-a
+    --%>
     <%
 
         Cookie[] cookies = request.getCookies();
@@ -83,6 +87,10 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-9">
+
+                <%--
+                    Podesavanje default naloga koji ce biti prikazan
+                --%>
                 <%
                     Account defaultAccount = new Account();
                     if (request.getParameter("changeAccount") == null) {
@@ -138,7 +146,10 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    
+                                    <%--
+                                     Prikaz poslednje tri transakcije
+                                     --%>
 
                                     <% for (int i = 0; i < 2; i++) { %>
 
@@ -158,6 +169,40 @@
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+
+                        <h3 style="margin-left: 2em;margin-top: 2em">Send money</h3>
+                        <div class="row transfer-row">
+
+                            <div style="height: 1px;background-color: #eee"></div>
+
+                            <div class="col transfer-col" style="margin-left: 2em;margin-right: 2em">
+                                <div style="padding: 1em 2em 2em 1em">
+                                    <h5 >Current account <span style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
+
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+                                        </div>
+                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon2">$</span>
+                                        </div>
+                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1"><br>
+
+                                    </div>
+
+
+                                    <div>
+                                        <button type="submit" class="transfer-btn">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
                         </div>
 
                     </div>
@@ -209,16 +254,12 @@
         </div>
     </div>
 
-    <!-- Button trigger modal -->
-
-
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">User information</h5>
+                    <h5 class="modal-title">User information</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -229,19 +270,19 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
                             <input type="text" name="username" class="form-control"
-                                   value="${clinet.userList.get(0).username}" id="exampleInputEmail1"
+                                   value="${clinet.userList.get(0).username}"
                                    aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            <small class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Current password</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                            <input type="password" name="password" class="form-control"
                                    placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">New password</label>
-                            <input type="password" name="newPassword" class="form-control" id="exampleInputPassword1"
+                            <input type="password" name="newPassword" class="form-control"
                                    placeholder="Password">
                         </div>
 
@@ -275,7 +316,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Email</label>
-                            <input type="text" name="email" class="form-control" id="exampleInputPassword1"
+                            <input type="text" name="email" class="form-control"
                                    placeholder="Password">
                         </div>
 
