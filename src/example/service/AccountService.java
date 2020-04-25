@@ -8,4 +8,5 @@ public interface AccountService {
     public Account save(Account account);
     public  List<Account> getAll();
     public String delete(Integer id);
+    public Account findById(Integer id);
 }

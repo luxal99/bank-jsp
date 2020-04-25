@@ -41,7 +41,7 @@ public class Bank implements Serializable {
     private Integer idBank;
     @Column(name = "title")
     private String title;
-    @OneToMany(mappedBy = "idCompany")
+    @OneToMany(mappedBy = "idBank")
     private List<User> userList;
 
     public Bank() {

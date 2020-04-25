@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import example.service.AccountServiceImpl;
+import example.util.HashPassword;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -43,6 +44,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\n');
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -56,15 +58,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>$Title$</title>\n");
       out.write("  </head>\n");
       out.write("  <body>\n");
-      out.write("    <div>\n");
-      out.write("      ");
-
-        AccountServiceImpl accountService = new AccountServiceImpl();
-        System.out.println(accountService.getAll());
-
-        out.print(accountService.getAll().get(0).toString());
-      
       out.write("\n");
+      out.write("    <div>\n");
       out.write("      <div class=\"container login-container\">\n");
       out.write("        <div class=\"row\">\n");
       out.write("          <div class=\"col-sm\" style=\"padding-left: 0 !important;\">\n");
@@ -72,15 +67,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("          </div>\n");
       out.write("          <div class=\"col-sm\" style=\"padding-top: 2em\">\n");
       out.write("            <div>\n");
-      out.write("              <form method=\"get\" action=\"http://localhost:8080/Projekat_war_exploded/admin/login\">\n");
+      out.write("                <form method=\"post\" action=\"http://localhost:8080/Projekat_war_exploded/admin/login\">\n");
       out.write("                <div class=\"form-group\">\n");
-      out.write("                  <label for=\"exampleInputEmail1\">Email address</label>\n");
-      out.write("                  <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");
+      out.write("                  <label for=\"exampleInputEmail1\">Username</label>\n");
+      out.write("                  <input type=\"text\" name=\"username\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");
       out.write("                  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                  <label for=\"exampleInputPassword1\">Password</label>\n");
-      out.write("                  <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">\n");
+      out.write("                  <input type=\"password\" name=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">\n");
       out.write("                </div>\n");
       out.write("                <div class=\"form-group form-check\">\n");
       out.write("                  <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n");

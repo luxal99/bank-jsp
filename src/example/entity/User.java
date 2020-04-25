@@ -43,9 +43,9 @@ public class User implements Serializable {
     private String username;
     @Column(name = "password")
     private String password;
-    @JoinColumn(name = "id_company", referencedColumnName = "id_bank")
+    @JoinColumn(name = "id_bank", referencedColumnName = "id_bank")
     @ManyToOne
-    private Bank idCompany;
+    private Bank idBank;
     @JoinColumn(name = "id_client", referencedColumnName = "id_client")
     @ManyToOne
     private Client idClient;
@@ -84,12 +84,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public Bank getIdCompany() {
-        return idCompany;
+    public Bank getIdBank() {
+        return idBank;
     }
 
-    public void setIdCompany(Bank idCompany) {
-        this.idCompany = idCompany;
+    public void setIdBank(Bank idBank) {
+        this.idBank = idBank;
     }
 
     public Client getIdClient() {
