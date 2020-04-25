@@ -27,6 +27,10 @@
 </head>
 <body>
 <div>
+
+    <%--
+        Provera da li postoji hash u obliku AES 256 hash-a
+    --%>
     <%
 
         Cookie[] cookies = request.getCookies();
@@ -83,6 +87,10 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-9">
+
+                <%--
+                    Podesavanje default naloga koji ce biti prikazan
+                --%>
                 <%
                     Account defaultAccount = new Account();
                     if (request.getParameter("changeAccount") == null) {
@@ -138,7 +146,10 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    
+                                    <%--
+                                     Prikaz poslednje tri transakcije
+                                     --%>
 
                                     <% for (int i = 0; i < 2; i++) { %>
 
@@ -209,10 +220,6 @@
         </div>
     </div>
 
-    <!-- Button trigger modal -->
-
-
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -231,7 +238,7 @@
                             <input type="text" name="username" class="form-control"
                                    value="${clinet.userList.get(0).username}"
                                    aria-describedby="emailHelp" placeholder="Enter email">
-                            <small  class="form-text text-muted">We'll never share your email with anyone
+                            <small class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
