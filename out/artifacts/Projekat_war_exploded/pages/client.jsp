@@ -48,7 +48,7 @@
         ClientService clientService = new ClientServiceImpl();
         Client client = clientService.findClientById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
 
-        request.setAttribute("clinet",client);
+        request.setAttribute("clinet", client);
 
 
     %>
@@ -59,8 +59,10 @@
                      width="100px" class="img-fluid">
             </div>
             <div class="col-sm text-right">
-                <button type="button" class="profile-btn" data-toggle="modal" data-target="#exampleModal"><h4><i class="fa fa-user"></i> Profile</h4></button>
-                <button type="button" class="profile-btn" data-toggle="modal" data-target="#clientInfoModel"><h4><i class="fa fa-user"></i> Client information</h4></button>
+                <button type="button" class="profile-btn" data-toggle="modal" data-target="#exampleModal"><h4><i
+                        class="fa fa-user"></i> Profile</h4></button>
+                <button type="button" class="profile-btn" data-toggle="modal" data-target="#clientInfoModel"><h4><i
+                        class="fa fa-user"></i> Client information</h4></button>
             </div>
         </div>
     </div>
@@ -89,21 +91,22 @@
                         <div class="col-9 text-right">
                             <div class="row">
                                 <div class="col">
-                                    <h4 >Your username <br> <span>${clinet.userList.get(0).username}</span></h4>
+                                    <h4>Your username <br> <span>${clinet.userList.get(0).username}</span></h4>
                                 </div>
                                 <div class="col">
                                     <h4>Your client id <br> <span>${clinet.idClient}</span></h4>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                     <div style="height: 1px;background-color: #eee"></div>
+
                 </div>
-
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                         aria-labelledby="v-pills-messages-tab">
+                        <h1>Overview</h1>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab"></div>
@@ -120,7 +123,8 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -132,19 +136,24 @@
                 <div class="modal-body">
                     <form action="/Projekat_war_exploded/client/user" method="post">
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Username</label>
-                                <input type="text" name="username" class="form-control" value="${clinet.userList.get(0).username}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Current password</label>
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">New password</label>
-                                <input type="password" name="newPassword" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username</label>
+                            <input type="text" name="username" class="form-control"
+                                   value="${clinet.userList.get(0).username}" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Current password</label>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">New password</label>
+                            <input type="password" name="newPassword" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
 
                 </div>
                 <div class="modal-footer">
@@ -155,7 +164,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="clientInfoModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="clientInfoModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -166,19 +176,23 @@
                 </div>
                 <div class="modal-body">
                     <form method="post" action="/Projekat_war_exploded/client">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Telephone</label>
-                                <input type="text" name="telephone" class="form-control" value="${clinet.telephone}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Email</label>
-                                <input  type="text" name="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Telephone</label>
+                            <input type="text" name="telephone" class="form-control" value="${clinet.telephone}"
+                                   id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input type="text" name="email" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Email</label>
-                            <input value="${clinet.idClient}"  type="hidden" name="idClient" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input value="${clinet.idClient}" type="hidden" name="idClient" class="form-control"
+                                   id="exampleInputPassword1" placeholder="Password">
                         </div>
 
 

@@ -11526,3 +11526,435 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 [2020-04-25T21:33:17.774+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843197774] [levelValue: 800] [[
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
+[2020-04-25T21:37:16.624+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436624] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:37:16.624+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436624] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:37:16.625+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436625] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:37:16.625+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436625] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:37:16.625+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436625] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:37:16.628+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436628] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:37:16.642+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436642] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:37:16.715+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843436715] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:37:41.517+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461517] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:37:41.518+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461518] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:37:41.518+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461518] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:37:41.518+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461518] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:37:41.519+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461519] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:37:41.529+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461529] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:37:41.553+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461553] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:37:41.694+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843461694] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:37:42.534+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462534] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:37:42.534+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462534] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:37:42.535+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462535] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:37:42.535+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462535] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:37:42.535+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462535] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:37:42.539+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462539] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:37:42.553+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462553] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:37:42.644+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843462644] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:37:43.451+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463451] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:37:43.452+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463452] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:37:43.452+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463452] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:37:43.452+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463452] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:37:43.453+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463453] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:37:43.456+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463456] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:37:43.471+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463471] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:37:43.539+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843463539] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:38:34.792+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514792] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:38:34.792+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514792] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:38:34.793+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514793] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:38:34.793+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514793] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:38:34.793+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514793] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:38:34.796+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514796] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:38:34.817+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514817] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:38:34.915+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843514915] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:38:35.987+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843515987] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:38:35.988+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843515988] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:38:35.989+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843515989] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:38:35.989+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843515989] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:38:35.990+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843515990] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:38:35.994+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843515994] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:38:36.012+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843516012] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:38:36.089+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843516089] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:39:04.597+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544597] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:39:04.598+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544598] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:39:04.599+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544599] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:39:04.599+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544599] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:39:04.600+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544600] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:39:04.604+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544604] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:39:04.619+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544619] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:39:04.682+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843544682] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:39:22.325+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562325] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:39:22.326+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562326] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:39:22.327+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562327] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:39:22.327+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562327] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:39:22.328+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562328] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:39:22.331+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562331] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:39:22.348+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562348] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:39:22.418+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562418] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:39:22.437+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562437] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:39:22.438+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562438] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:39:22.438+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562438] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:39:22.438+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562438] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:39:22.439+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562439] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:39:22.443+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562443] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:39:22.454+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562454] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:39:22.511+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562511] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:39:22.529+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562529] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:39:22.530+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562530] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:39:22.530+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562530] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:39:22.530+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562530] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:39:22.530+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562530] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:39:22.533+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562533] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:39:22.544+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562544] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:39:22.622+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843562622] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:40:42.429+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642429] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:40:42.429+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642429] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:40:42.429+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642429] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:40:42.430+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642430] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:40:42.430+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642430] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:40:42.432+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642432] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:40:42.445+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642445] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:40:42.504+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587843642504] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:42:19.504+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739504] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:42:19.505+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739505] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:42:19.506+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739506] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:42:19.506+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739506] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:42:19.507+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739507] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:42:19.515+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739515] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:42:19.532+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739532] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:42:19.640+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843739640] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:42:25.111+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745111] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:42:25.111+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745111] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:42:25.111+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745111] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:42:25.111+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745111] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:42:25.111+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745111] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:42:25.114+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745114] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:42:25.126+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745126] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:42:25.176+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587843745176] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:43:34.210+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814210] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:43:34.211+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814211] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:43:34.212+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814212] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:43:34.212+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814212] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:43:34.212+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814212] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:43:34.215+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814215] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:43:34.232+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814232] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:43:34.307+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843814307] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:43:35.135+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815135] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:43:35.136+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815136] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:43:35.136+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815136] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:43:35.136+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815136] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:43:35.137+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815137] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:43:35.141+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815141] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:43:35.154+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815154] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:43:35.221+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843815221] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:44:07.888+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847888] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:44:07.889+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847889] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:44:07.890+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847890] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:44:07.891+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847891] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:44:07.891+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847891] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:44:07.895+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847895] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:44:07.913+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847913] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:44:07.988+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587843847988] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:44:27.447+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867447] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:44:27.448+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867448] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:44:27.448+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867448] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:44:27.448+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867448] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:44:27.449+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867449] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:44:27.451+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867451] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:44:27.466+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867466] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:44:27.537+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587843867537] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
+[2020-04-25T21:45:54.243+0200] [glassfish 5.0] [WARN] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954243] [levelValue: 900] [[
+  HHH10001002: Using Hibernate built-in connection pool (not for production use!)]]
+
+[2020-04-25T21:45:54.244+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954244] [levelValue: 800] [[
+  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bank?autoReconnect=true&useSSL=false]]]
+
+[2020-04-25T21:45:54.244+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954244] [levelValue: 800] [[
+  HHH10001001: Connection properties: {user=root, password=****}]]
+
+[2020-04-25T21:45:54.244+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.connections.pooling] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954244] [levelValue: 800] [[
+  HHH10001003: Autocommit mode: false]]
+
+[2020-04-25T21:45:54.244+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954244] [levelValue: 800] [[
+  HHH000115: Hibernate connection pool size: 20 (min=1)]]
+
+[2020-04-25T21:45:54.247+0200] [glassfish 5.0] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954247] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect]]
+
+[2020-04-25T21:45:54.260+0200] [glassfish 5.0] [INFO] [] [org.hibernate.orm.beans] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954260] [levelValue: 800] [[
+  HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
+
+[2020-04-25T21:45:54.307+0200] [glassfish 5.0] [INFO] [] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587843954307] [levelValue: 800] [[
+  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
+
