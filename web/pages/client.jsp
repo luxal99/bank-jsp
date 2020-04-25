@@ -3,6 +3,10 @@
 <%@ page import="example.service.ClientServiceImpl" %>
 <%@ page import="example.entity.Client" %>
 <%@ page import="com.sun.xml.bind.v2.model.core.ID" %>
+<%@ page import="org.jsoup.nodes.Document" %>
+<%@ page import="org.jsoup.Jsoup" %>
+<%@ page import="org.jsoup.nodes.Element" %>
+<%@ page import="org.jsoup.select.Elements" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -24,6 +28,7 @@
 <body>
 <div>
     <%
+
         Cookie[] cookies = request.getCookies();
         Cookie idCookie = new Cookie("id", "");
 
@@ -54,7 +59,8 @@
                      width="100px" class="img-fluid">
             </div>
             <div class="col-sm text-right">
-                <h4><i class="fa fa-user"></i> Profile</h4>
+                <button type="button" class="profile-btn" data-toggle="modal" data-target="#exampleModal"><h4><i class="fa fa-user"></i> Profile</h4></button>
+                <button type="button" class="profile-btn" data-toggle="modal" data-target="#clientInfoModel"><h4><i class="fa fa-user"></i> Client information</h4></button>
             </div>
         </div>
     </div>
@@ -79,7 +85,6 @@
                     <div class="row">
                         <div class="col-3">
                             <h4>Hello, <span><%=client.getName()%></span></h4>
-
                         </div>
                         <div class="col-9 text-right">
                             <div class="row">
@@ -99,7 +104,6 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 
-
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab"></div>
@@ -112,6 +116,77 @@
         </div>
     </div>
 
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">User information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Username</label>
+                                <input type="email" class="form-control" value="${clinet.userList.get(0).username}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Current password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">New password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                        </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="clientInfoModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Client information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Telephone</label>
+                                <input type="text" class="form-control" value="${clinet.telephone}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Email</label>
+                                <input value="${clinet.mail}" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+
+                        </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 

@@ -1,7 +1,6 @@
 package example.service;
 
 import example.config.util.DBConfig;
-import example.entity.Account;
 import example.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

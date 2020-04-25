@@ -13,6 +13,9 @@
           <element id="library" level="project" name="Hibernate 5.4.11-5.4.11" />
           <element id="library" level="project" name="mysql-connector-java-8.0.19" />
           <element id="library" level="application" name="spring-security-core-5.0.3.RELEASE" />
+          <element id="library" level="project" name="spring-security-core-5.0.3.RELEASE" />
+          <element id="library" level="project" name="jsoup-1.13.1" />
+          <element id="library" level="project" name="jstl-1.2" />
         </element>
       </element>
     </root>

@@ -2,10 +2,8 @@ package example.service;
 
 import example.config.util.DBConfig;
 import example.entity.Client;
-import example.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
