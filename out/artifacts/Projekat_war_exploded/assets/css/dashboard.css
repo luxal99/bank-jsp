@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 .menu{
     -webkit-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
     -moz-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
@@ -29,4 +30,21 @@ a{
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color: #4BB543 !important;
+}
+.pay-btn{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 4em;
+    padding-right: 4em;
+    -webkit-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    -moz-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    background-color: red;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 5px;
+}
+
+h1,h2,h3,p,a{
+    font-family: 'Montserrat', sans-serif;
 }

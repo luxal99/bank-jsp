@@ -205,8 +205,10 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Account Number</th>
-                        <th scope="col">Client</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Client ID</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Client name</th>
+                        <th scope="col">Client lastname</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -219,11 +221,19 @@
                         </td>
                         <td><%= account.getAccountNumber() %>
                         </td>
+                        <td><%= account.getIdClient().getIdClient() %>
+                        </td>
                         <td><%= account.getBalance() %>
                         </td>
+                        <td><%= account.getIdClient().getName() %>
+                        </td>
+                        <td><%= account.getIdClient().getLastname() %>
+                        </td>
                         <td>
-                            <form method="get" action="dashboard.jsp" >
-                                <button class="open-btn" type="submit" name="clientInfo">Client detail</button>
+                            <form method="get" action="dashboard.jsp">
+                                <button class="open-btn" type="submit" name="clientInfo">
+                                    Select client
+                                </button>
                                 <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
                             </form>
                         </td>
@@ -234,21 +244,25 @@
                     %>
                     </tbody>
                 </table>
-                <h2>Client Info</h2>
+                <button class="pay-btn" type="button" data-toggle="modal" data-target="#payUpModal">Pay up
+                </button>
+                <div style="height: 1px;background-color: #eee;margin-top: 1em"></div>
+                <h3>Current selected client</h3>
                 <%
                     if (request.getParameter("clientInfo") != null) {
-
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
-                        request.setAttribute("account",account);
+                        request.setAttribute("account", account);
 
                     }
                 %>
 
-
-                <h3>${account.idClient.name}</h3>
-                <h3>${account.idClient.lastname}</h3>
-                <h3>${account.idClient.mail}</h3>
-                <h3>${account.idClient.telephone}</h3>
+                <div style="margin-top: 1em">
+                    <h3>${account.accountNumber}</h3>
+                    <h3>${account.idClient.name}</h3>
+                    <h3>${account.idClient.lastname}</h3>
+                    <h3>${account.idClient.mail}</h3>
+                    <h3>${account.idClient.telephone}</h3>
+                </div>
 
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
@@ -256,6 +270,58 @@
             </div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                 ...
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="payUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Account number: ${account.accountNumber}</h3>
+
+                        <form method="post" action="dashboard.jsp">
+                            <input class="form-control" type="text" name="idAccount" value="${account.balance}"/>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>${account.idClient.name}</h3>
+                        <h3>${account.idClient.lastname}</h3>
+                        <h3>${account.idClient.mail}</h3>
+                        <h3>${account.idClient.telephone}</h3>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
