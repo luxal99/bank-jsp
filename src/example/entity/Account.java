@@ -47,6 +47,7 @@ public class Account implements Serializable {
     @JoinColumn(name = "id_client", referencedColumnName = "id_client")
     @ManyToOne
     private Client idClient;
+    
 
     public Account() {
     }

@@ -3,15 +3,13 @@ package org.apache.jsp.pages;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import example.util.HashPassword;
+import example.entity.Client;
 import example.service.ClientService;
 import example.service.ClientServiceImpl;
-import example.entity.Client;
-import com.sun.xml.bind.v2.model.core.ID;
-import org.jsoup.nodes.Document;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import example.util.HashPassword;
+import example.entity.Account;
+import example.service.AccountService;
+import example.service.AccountServiceImpl;
 
 public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -138,6 +136,20 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            <div class=\"col-sm-1\"></div>\n");
       out.write("            <div class=\"col-sm-8\">\n");
+      out.write("                ");
+
+                    if (request.getParameter("changeAccount") == null) {
+                        Account defaultAccount = client.getAccountList().get(0);
+
+                        request.setAttribute("currentAccount", defaultAccount);
+                    } else {
+                        AccountService accountService = new AccountServiceImpl();
+                        Account defaultAccount = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
+                        request.setAttribute("currentAccount", defaultAccount);
+                    }
+
+                
+      out.write("\n");
       out.write("                <div class=\"client-info-div\">\n");
       out.write("                    <div class=\"row\">\n");
       out.write("                        <div class=\"col-3\">\n");
@@ -167,10 +179,71 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"tab-content\" id=\"v-pills-tabContent\">\n");
       out.write("                    <div class=\"tab-pane fade show active\" id=\"v-pills-home\" role=\"tabpanel\"\n");
       out.write("                         aria-labelledby=\"v-pills-messages-tab\">\n");
-      out.write("                        <h1>Overview</h1>\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("\n");
+      out.write("                            <div class=\"col account-col\">\n");
+      out.write("                                <h4>Account number <span\n");
+      out.write("                                        class=\"account-span\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentAccount.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</span></h4>\n");
+      out.write("                                <h4>Balance <span class=\"account-span\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentAccount.balance}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</span></h4>\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"col\"></div>\n");
+      out.write("                        </div>\n");
+      out.write("\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\"\n");
-      out.write("                         aria-labelledby=\"v-pills-messages-tab\"></div>\n");
+      out.write("                         aria-labelledby=\"v-pills-messages-tab\">\n");
+      out.write("\n");
+      out.write("                        <table class=\"table\">\n");
+      out.write("                            <thead>\n");
+      out.write("                            <tr>\n");
+      out.write("                                <th scope=\"col\">#</th>\n");
+      out.write("                                <th scope=\"col\">Account Number</th>\n");
+      out.write("                                <th scope=\"col\">Client</th>\n");
+      out.write("                                <th scope=\"col\">Handle</th>\n");
+      out.write("                            </tr>\n");
+      out.write("                            </thead>\n");
+      out.write("                            <tbody>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                            ");
+ for (Account account : client.getAccountList()) { 
+      out.write("\n");
+      out.write("\n");
+      out.write("                            <tr>\n");
+      out.write("                                <td>");
+      out.print( account.getIdAccount() );
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("                                <td>");
+      out.print( account.getAccountNumber() );
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("                                <td>");
+      out.print( account.getBalance() );
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("                                <td>\n");
+      out.write("                                    <form method=\"get\" action=\"client.jsp\" >\n");
+      out.write("                                        <button class=\"open-btn\" type=\"submit\" name=\"changeAccount\">Change account</button>\n");
+      out.write("                                        <input type=\"hidden\" name=\"idAccount\" value=\"");
+      out.print(account.getIdAccount());
+      out.write("\"/>\n");
+      out.write("                                    </form>\n");
+      out.write("                                </td>\n");
+      out.write("                                <td></td>\n");
+      out.write("\n");
+      out.write("                            </tr>\n");
+      out.write("                            ");
+ }
+                            
+      out.write("\n");
+      out.write("                            </tbody>\n");
+      out.write("                        </table>\n");
+      out.write("                    </div>\n");
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\"\n");
       out.write("                         aria-labelledby=\"v-pills-messages-tab\"></div>\n");
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\"\n");

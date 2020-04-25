@@ -1,13 +1,13 @@
-<%@ page import="example.util.HashPassword" %>
+<%@ page import="example.entity.Client" %>
 <%@ page import="example.service.ClientService" %>
 <%@ page import="example.service.ClientServiceImpl" %>
-<%@ page import="example.entity.Client" %>
-<%@ page import="com.sun.xml.bind.v2.model.core.ID" %>
-<%@ page import="org.jsoup.nodes.Document" %>
-<%@ page import="org.jsoup.Jsoup" %>
-<%@ page import="org.jsoup.nodes.Element" %>
-<%@ page import="org.jsoup.select.Elements" %>
+<%@ page import="example.util.HashPassword" %>
+<%@ page import="example.entity.Account" %>
+<%@ page import="example.service.AccountService" %>
+<%@ page import="example.service.AccountServiceImpl" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <html>
 <head>
     <title>Title</title>
@@ -83,6 +83,18 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-8">
+                <%
+                    if (request.getParameter("changeAccount") == null) {
+                        Account defaultAccount = client.getAccountList().get(0);
+
+                        request.setAttribute("currentAccount", defaultAccount);
+                    } else {
+                        AccountService accountService = new AccountServiceImpl();
+                        Account defaultAccount = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
+                        request.setAttribute("currentAccount", defaultAccount);
+                    }
+
+                %>
                 <div class="client-info-div">
                     <div class="row">
                         <div class="col-3">
@@ -106,10 +118,55 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab">
-                        <h1>Overview</h1>
+                        <div class="row">
+
+                            <div class="col account-col">
+                                <h4>Account number <span
+                                        class="account-span">${currentAccount.accountNumber}</span></h4>
+                                <h4>Balance <span class="account-span">${currentAccount.balance}</span></h4>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                         aria-labelledby="v-pills-messages-tab"></div>
+                         aria-labelledby="v-pills-messages-tab">
+
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Account Number</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+
+                            <% for (Account account : client.getAccountList()) { %>
+
+                            <tr>
+                                <td><%= account.getIdAccount() %>
+                                </td>
+                                <td><%= account.getAccountNumber() %>
+                                </td>
+                                <td><%= account.getBalance() %>
+                                </td>
+                                <td>
+                                    <form method="get" action="client.jsp" >
+                                        <button class="open-btn" type="submit" name="changeAccount">Change account</button>
+                                        <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
+                                    </form>
+                                </td>
+                                <td></td>
+
+                            </tr>
+                            <% }
+                            %>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab"></div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"

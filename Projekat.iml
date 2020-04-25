@@ -40,5 +40,6 @@
     <orderEntry type="library" name="jstl-1.2" level="project" />
     <orderEntry type="library" name="spring-security-core-5.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="jsoup-1.13.1" level="project" />
+    <orderEntry type="library" name="gson-2.8.6" level="project" />
   </component>
 </module>

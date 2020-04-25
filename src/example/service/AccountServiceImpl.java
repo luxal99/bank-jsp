@@ -49,4 +49,9 @@ public class AccountServiceImpl implements AccountService {
         Account account = (Account) query.getResultList().get(0);
         return account;
     }
+
+    @Override
+    public List<Account> findAccountByIdClient(Integer id) {
+        return null;
+    }
 }
