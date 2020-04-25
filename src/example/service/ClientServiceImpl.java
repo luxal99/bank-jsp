@@ -1,8 +1,8 @@
 package example.service;
 
 import example.config.util.DBConfig;
-import example.entity.Account;
 import example.entity.Client;
+import example.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -29,5 +29,14 @@ public class ClientServiceImpl implements ClientService {
         Query query = session.createNamedQuery("Client.findAll");
         clientList = query.getResultList();
         return clientList;
+    }
+
+    @Override
+    public Client findClientById(Integer id) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        org.hibernate.query.Query query = session.createNamedQuery("Client.findByIdClient");
+        query.setInteger("idClient",id);
+        Client client = (Client) query.getResultList().get(0);
+        return client;
     }
 }

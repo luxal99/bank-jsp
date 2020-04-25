@@ -1,4 +1,8 @@
 <%@ page import="example.util.HashPassword" %>
+<%@ page import="example.service.ClientService" %>
+<%@ page import="example.service.ClientServiceImpl" %>
+<%@ page import="example.entity.Client" %>
+<%@ page import="com.sun.xml.bind.v2.model.core.ID" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -6,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/client.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/node_modules/font-awesome/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
             crossorigin="anonymous"></script>
@@ -18,13 +23,38 @@
 </head>
 <body>
 <div>
+    <%
+        Cookie[] cookies = request.getCookies();
+        Cookie idCookie = new Cookie("id", "");
+
+        boolean haveId = false;
+
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("id")) {
+                haveId = true;
+                idCookie.setValue(cookie.getValue());
+            }
+        }
+
+        if (!haveId) {
+            response.sendRedirect(request.getContextPath());
+        }
+
+        ClientService clientService = new ClientServiceImpl();
+        Client client = clientService.findClientById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+
+        request.setAttribute("clinet",client);
+
+
+    %>
     <div class=" header-menu">
         <div class="row">
             <div class="col-sm text-left" style="padding-top: .5em;padding-bottom: .5em">
-                <img src="https://firebasestorage.googleapis.com/v0/b/soy-smile-249718.appspot.com/o/1280px-Starling_Bank_Logo.svg.png?alt=media&token=260dc062-b7a4-432a-8c0c-bd4c5c542687" width="100px" class="img-fluid">
+                <img src="https://firebasestorage.googleapis.com/v0/b/soy-smile-249718.appspot.com/o/1280px-Starling_Bank_Logo.svg.png?alt=media&token=260dc062-b7a4-432a-8c0c-bd4c5c542687"
+                     width="100px" class="img-fluid">
             </div>
-            <div class="col-sm text-left">
-
+            <div class="col-sm text-right">
+                <h4><i class="fa fa-user"></i> Profile</h4>
             </div>
         </div>
     </div>
@@ -45,13 +75,40 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-8">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"></div>
+                <div class="client-info-div">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4>Hello, <span><%=client.getName()%></span></h4>
+
+                        </div>
+                        <div class="col-9 text-right">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 >Your username <br> <span>${clinet.userList.get(0).username}</span></h4>
+                                </div>
+                                <div class="col">
+                                    <h4>Your client id <br> <span>${clinet.idClient}</span></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="height: 1px;background-color: #eee"></div>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                         aria-labelledby="v-pills-messages-tab"></div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                         aria-labelledby="v-pills-messages-tab"></div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                         aria-labelledby="v-pills-settings-tab"></div>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 

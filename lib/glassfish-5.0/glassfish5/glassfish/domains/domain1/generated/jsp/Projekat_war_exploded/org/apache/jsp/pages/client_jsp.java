@@ -4,6 +4,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import example.util.HashPassword;
+import example.service.ClientService;
+import example.service.ClientServiceImpl;
+import example.entity.Client;
+import com.sun.xml.bind.v2.model.core.ID;
 
 public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -45,12 +49,17 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <title>Title</title>\n");
       out.write("    <link rel=\"stylesheet\" href=\"../assets/css/client.css\">\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"\n");
       out.write("          integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"../assets/node_modules/font-awesome/css/font-awesome.min.css\">\n");
       out.write("    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"\n");
       out.write("            integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\"\n");
       out.write("            crossorigin=\"anonymous\"></script>\n");
@@ -63,13 +72,40 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\n");
       out.write("<body>\n");
       out.write("<div>\n");
+      out.write("    ");
+
+        Cookie[] cookies = request.getCookies();
+        Cookie idCookie = new Cookie("id", "");
+
+        boolean haveId = false;
+
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("id")) {
+                haveId = true;
+                idCookie.setValue(cookie.getValue());
+            }
+        }
+
+        if (!haveId) {
+            response.sendRedirect(request.getContextPath());
+        }
+
+        ClientService clientService = new ClientServiceImpl();
+        Client client = clientService.findClientById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+
+        request.setAttribute("clinet",client);
+
+
+    
+      out.write("\n");
       out.write("    <div class=\" header-menu\">\n");
       out.write("        <div class=\"row\">\n");
       out.write("            <div class=\"col-sm text-left\" style=\"padding-top: .5em;padding-bottom: .5em\">\n");
-      out.write("                <img src=\"https://firebasestorage.googleapis.com/v0/b/soy-smile-249718.appspot.com/o/1280px-Starling_Bank_Logo.svg.png?alt=media&token=260dc062-b7a4-432a-8c0c-bd4c5c542687\" width=\"100px\" class=\"img-fluid\">\n");
+      out.write("                <img src=\"https://firebasestorage.googleapis.com/v0/b/soy-smile-249718.appspot.com/o/1280px-Starling_Bank_Logo.svg.png?alt=media&token=260dc062-b7a4-432a-8c0c-bd4c5c542687\"\n");
+      out.write("                     width=\"100px\" class=\"img-fluid\">\n");
       out.write("            </div>\n");
-      out.write("            <div class=\"col-sm text-left\">\n");
-      out.write("\n");
+      out.write("            <div class=\"col-sm text-right\">\n");
+      out.write("                <h4><i class=\"fa fa-user\"></i> Profile</h4>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
@@ -90,13 +126,46 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            <div class=\"col-sm-1\"></div>\n");
       out.write("            <div class=\"col-sm-8\">\n");
-      out.write("            <div class=\"tab-content\" id=\"v-pills-tabContent\">\n");
-      out.write("                <div class=\"tab-pane fade\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\"></div>\n");
-      out.write("                <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\"></div>\n");
-      out.write("                <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\"></div>\n");
-      out.write("                <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\" aria-labelledby=\"v-pills-settings-tab\"></div>\n");
+      out.write("                <div class=\"client-info-div\">\n");
+      out.write("                    <div class=\"row\">\n");
+      out.write("                        <div class=\"col-3\">\n");
+      out.write("                            <h4>Hello, <span>");
+      out.print(client.getName());
+      out.write("</span></h4>\n");
+      out.write("\n");
+      out.write("                        </div>\n");
+      out.write("                        <div class=\"col-9 text-right\">\n");
+      out.write("                            <div class=\"row\">\n");
+      out.write("                                <div class=\"col\">\n");
+      out.write("                                    <h4 >Your username <br> <span>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${clinet.userList.get(0).username}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</span></h4>\n");
+      out.write("                                </div>\n");
+      out.write("                                <div class=\"col\">\n");
+      out.write("                                    <h4>Your client id <br> <span>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${clinet.idClient}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</span></h4>\n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("\n");
+      out.write("                    </div>\n");
+      out.write("                    <div style=\"height: 1px;background-color: #eee\"></div>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"tab-content\" id=\"v-pills-tabContent\">\n");
+      out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\"\n");
+      out.write("                         aria-labelledby=\"v-pills-messages-tab\"></div>\n");
+      out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\"\n");
+      out.write("                         aria-labelledby=\"v-pills-messages-tab\"></div>\n");
+      out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\"\n");
+      out.write("                         aria-labelledby=\"v-pills-settings-tab\"></div>\n");
+      out.write("                </div>\n");
       out.write("            </div>\n");
-      out.write("        </div>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("\n");
