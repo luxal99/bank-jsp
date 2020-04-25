@@ -7,7 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b09f0829-ccb5-49f2-bbad-c37231915735" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml.bak" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/dashboard_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/dashboard_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,18 +108,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/assets/img" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$/src/example/entity" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/pages" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/example/config/util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assets/img" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+      <recent name="$PROJECT_DIR$/src/example/entity" />
     </key>
   </component>
   <component name="RunManager">
@@ -298,38 +308,38 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587765229189" />
-    <state width="1291" height="357" key="GridCell.Tab.0.bottom" timestamp="1587848722928">
+    <state width="1291" height="357" key="GridCell.Tab.0.bottom" timestamp="1587854237801">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722928" />
-    <state width="1291" height="357" key="GridCell.Tab.0.center" timestamp="1587848722928">
+    <state width="1291" height="357" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237801" />
+    <state width="1291" height="357" key="GridCell.Tab.0.center" timestamp="1587854237800">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722928" />
-    <state width="1291" height="357" key="GridCell.Tab.0.left" timestamp="1587848722927">
+    <state width="1291" height="357" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237800" />
+    <state width="1291" height="357" key="GridCell.Tab.0.left" timestamp="1587854237800">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722927" />
-    <state width="1291" height="357" key="GridCell.Tab.0.right" timestamp="1587848722928">
+    <state width="1291" height="357" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237800" />
+    <state width="1291" height="357" key="GridCell.Tab.0.right" timestamp="1587854237800">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722928" />
-    <state width="1291" height="357" key="GridCell.Tab.1.bottom" timestamp="1587848722929">
+    <state width="1291" height="357" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237800" />
+    <state width="1291" height="357" key="GridCell.Tab.1.bottom" timestamp="1587854237801">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722929" />
-    <state width="1291" height="357" key="GridCell.Tab.1.center" timestamp="1587848722928">
+    <state width="1291" height="357" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237801" />
+    <state width="1291" height="357" key="GridCell.Tab.1.center" timestamp="1587854237801">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722928" />
-    <state width="1291" height="357" key="GridCell.Tab.1.left" timestamp="1587848722928">
+    <state width="1291" height="357" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237801" />
+    <state width="1291" height="357" key="GridCell.Tab.1.left" timestamp="1587854237801">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722928" />
-    <state width="1291" height="357" key="GridCell.Tab.1.right" timestamp="1587848722929">
+    <state width="1291" height="357" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237801" />
+    <state width="1291" height="357" key="GridCell.Tab.1.right" timestamp="1587854237801">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587848722929" />
+    <state width="1291" height="357" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587854237801" />
     <state width="1291" height="296" key="GridCell.Tab.2.bottom" timestamp="1587804077743">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -370,9 +380,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="236" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587831698169" />
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587848692816">
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587852009945">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587848692816" />
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587852009945" />
   </component>
 </project>

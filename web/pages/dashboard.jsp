@@ -44,115 +44,11 @@
                 <div class="container">
                     <h2 class="text-center">Modal Example</h2>
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="open-btn" data-toggle="modal" data-target="#myModal">Open
-                        Modal
+                    <button type="button" class="open-btn" data-toggle="modal" data-target="#myModal">Create user
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Modal Header</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form method="post" action="/Projekat_war_exploded/admin/registration">
-
-                                        <div class="col-sm">
-                                            <h3>Client information</h3>
-                                            <div style="height: 1px;background-color: #e1e1e1"></div>
-
-                                            <div class="row" style="margin-top: 1em">
-                                                <div class="col-sm">
-                                                    <div class="form-group">
-                                                        <label for="exampleInputEmail1">Name</label>
-                                                        <input type="text" class="form-control" name="name"
-                                                               id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <div class="form-group">
-                                                        <label for="exampleInputPassword1">Lastname</label>
-                                                        <input type="text" name="lastname" class="form-control"
-                                                               id="exampleInputPassword1">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">E-mail</label>
-                                                <input type="email" name="email" class="form-control"
-                                                       id="exampleInputEmail1"
-                                                       aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">Telephone</label>
-                                                <input type="text" name="telephone" class="form-control"
-                                                       id="exampleInputPassword1">
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm">
-                                            <h3>User data</h3>
-                                            <div style="height: 1px;background-color: #e1e1e1"></div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Username</label>
-                                                <input type="text" name="username" class="form-control"
-                                                       id="exampleInputEmail1"
-                                                       aria-describedby="emailHelp">
-                                            </div>
-                                            <br>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Password</label>
-                                                <input type="password" name="password" class="form-control"
-                                                       id="exampleInputEmail1"
-                                                       aria-describedby="emailHelp">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm">
-                                            <h3>Accout data</h3>
-                                            <div style="height: 1px;background-color: #e1e1e1"></div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Account number</label>
-                                                <input type="text" name="accountNumber" class="form-control"
-                                                       id="exampleInputEmail1"
-                                                       aria-describedby="emailHelp">
-                                            </div>
-                                            <%
-                                                UserTypeService userTypeService = new UserTypeServiceImpl();
-                                                List<UserType> userTypeList = userTypeService.getAll();
-                                                request.setAttribute("userTypeList", userTypeList);
-
-                                            %>
-                                            <select name="userType" class="form-control form-control-lg">
-
-                                                <% for (int i = 0; i < userTypeList.size(); i += 1) { %>
-
-                                                <option value="<%= userTypeList.get(i).getIdUserType() %>"><%=userTypeList.get(i).getTitle()%>
-                                                </option>
-
-                                                <% }
-
-                                                %>
-                                            </select>
-
-                                        </div>
-                                        <div class="text-center" style="margin-left: 1em;margin-top: 1em">
-                                            <button class="btn btn-primary" type="submit">Register</button>
-                                        </div>
-                                    </form>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
                     <table class="table">
                         <thead>
@@ -195,6 +91,10 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                <button type="button" class="open-btn" data-toggle="modal" data-target="#addAccountModal">Create
+                    account
+                </button>
 
                 <%
                     AccountService accountService = new AccountServiceImpl();
@@ -305,27 +205,160 @@
             </div>
         </div>
 
-        <div class="modal fade" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="addAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title">Create account</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h3>${account.idClient.name}</h3>
-                        <h3>${account.idClient.lastname}</h3>
-                        <h3>${account.idClient.mail}</h3>
-                        <h3>${account.idClient.telephone}</h3>
 
+                        <form method="post" action="dashboard.jsp">
+                            <input type="text" name="accountNumber" class="form-control"
+                                   aria-describedby="emailHelp"><br>
+
+                            <select name="clientListPos" class="form-control form-control-lg">
+                                <% for (int i = 0; i < clientList.size(); i += 1) { %>
+
+                                <option value="<%= i %>"><%=clientList.get(i).getName() + " " + clientList.get(i).getLastname() + " " + clientList.get(i).getMail() %>
+                                </option>
+
+                                <% }
+
+                                %>
+                            </select>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" name="createAccount" class="btn btn-primary">Save changes</button>
+
+                        </form>
                     </div>
                 </div>
+            </div>
+
+            <%
+                if (request.getParameter("createAccount") != null) {
+                    Client client = clientList.get(Integer.valueOf(request.getParameter("clientListPos")));
+                    Account account = new Account();
+                    account.setAccountNumber(request.getParameter("accountNumber"));
+                    account.setBalance(0.0);
+                    account.setIdClient(client);
+
+                    accountService.save(account);
+                }
+
+            %>
+
+        </div>
+
+
+        <%-- Create user modal--%>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/Projekat_war_exploded/admin/registration">
+
+                            <div class="col-sm">
+                                <h3>Client information</h3>
+                                <div style="height: 1px;background-color: #e1e1e1"></div>
+
+                                <div class="row" style="margin-top: 1em">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Name</label>
+                                            <input type="text" class="form-control" name="name"
+                                                   aria-describedby="emailHelp">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Lastname</label>
+                                            <input type="text" name="lastname" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">E-mail</label>
+                                    <input type="email" name="email" class="form-control"
+                                           id="exampleInputEmail1"
+                                           aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Telephone</label>
+                                    <input type="text" name="telephone" class="form-control"
+                                           id="exampleInputPassword1">
+                                </div>
+
+                            </div>
+                            <div class="col-sm">
+                                <h3>User data</h3>
+                                <div style="height: 1px;background-color: #e1e1e1"></div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Username</label>
+                                    <input type="text" name="username" class="form-control"
+                                           id="exampleInputEmail1"
+                                           aria-describedby="emailHelp">
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Password</label>
+                                    <input type="password" name="password" class="form-control"
+                                           id="exampleInputEmail1"
+                                           aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <h3>Accout data</h3>
+                                <div style="height: 1px;background-color: #e1e1e1"></div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Account number</label>
+                                    <input type="text" name="accountNumber" class="form-control"
+                                           id="exampleInputEmail1"
+                                           aria-describedby="emailHelp">
+                                </div>
+                                <%
+                                    UserTypeService userTypeService = new UserTypeServiceImpl();
+                                    List<UserType> userTypeList = userTypeService.getAll();
+                                    request.setAttribute("userTypeList", userTypeList);
+
+                                %>
+                                <select name="userType" class="form-control form-control-lg">
+
+                                    <% for (int i = 0; i < userTypeList.size(); i += 1) { %>
+
+                                    <option value="<%= userTypeList.get(i).getIdUserType() %>"><%=userTypeList.get(i).getTitle()%>
+                                    </option>
+
+                                    <% }
+
+                                    %>
+                                </select>
+
+                            </div>
+                            <div class="text-center" style="margin-left: 1em;margin-top: 1em">
+                                <button class="btn btn-primary" type="submit">Register</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
