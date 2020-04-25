@@ -7,6 +7,7 @@ import example.util.HashPassword;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,25 +19,38 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
+    }
+
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try{
 
             UserService userService = new UserServiceImpl();
             User user = userService.findByUsername(req.getParameter("username"));
-            if (user.getIdBank() !=null && user.getPassword().equals(HashPassword.encrypt(req.getParameter("password")))){
+            String password = HashPassword.decrypt(user.getPassword());
+            assert password != null;
+            if (user.getIdBank() !=null && password.equals(req.getParameter("password"))){
 
                 resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
+
+            }else if(user.getIdClient() != null && password.equals(req.getParameter("password"))){
+                resp.setContentType("text/html");
+
+                Cookie cookie = new Cookie("id",HashPassword.encrypt(String.valueOf(user.getIdClient().getIdClient())));
+                cookie.setPath(req.getContextPath() + "/pages/client.jsp");
+                resp.addCookie(cookie);
+
+                resp.sendRedirect(req.getContextPath() + "/pages/client.jsp");
             }
             else{
-                resp.sendRedirect(req.getContextPath() + "/pages/index.jsp");
+                resp.sendRedirect(req.getContextPath());
             }
+
+
         }catch (Exception ex){
             resp.setStatus(404);
         }
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
     }
 }

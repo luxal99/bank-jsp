@@ -38,7 +38,7 @@
                aria-controls="v-pills-settings" aria-selected="false">Settings</a>
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-8">
         <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <div class="container">
