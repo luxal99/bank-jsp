@@ -6,15 +6,8 @@
 package example.entity;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import java.util.List;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -25,9 +18,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "type_of_transaction")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "TypeOfTransaction.findAll", query = "SELECT t FROM TypeOfTransaction t"),
-    @NamedQuery(name = "TypeOfTransaction.findByIdTypeOfTransaction", query = "SELECT t FROM TypeOfTransaction t WHERE t.idTypeOfTransaction = :idTypeOfTransaction"),
-    @NamedQuery(name = "TypeOfTransaction.findByTitle", query = "SELECT t FROM TypeOfTransaction t WHERE t.title = :title")})
+        @NamedQuery(name = "TypeOfTransaction.findAll", query = "SELECT t FROM TypeOfTransaction t"),
+        @NamedQuery(name = "TypeOfTransaction.findByIdTypeOfTransaction", query = "SELECT t FROM TypeOfTransaction t WHERE t.idTypeOfTransaction = :idTypeOfTransaction"),
+        @NamedQuery(name = "TypeOfTransaction.findByTitle", query = "SELECT t FROM TypeOfTransaction t WHERE t.title = :title")})
 public class TypeOfTransaction implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -38,8 +31,18 @@ public class TypeOfTransaction implements Serializable {
     private Integer idTypeOfTransaction;
     @Column(name = "title")
     private String title;
+    @OneToMany(mappedBy = "typeOfTransaction")
+    private List<Transaction> transactionList;
 
     public TypeOfTransaction() {
+    }
+
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+    public void setTransactionList(List<Transaction> transactionList) {
+        this.transactionList = transactionList;
     }
 
     public TypeOfTransaction(Integer idTypeOfTransaction) {
@@ -86,5 +89,5 @@ public class TypeOfTransaction implements Serializable {
     public String toString() {
         return "com.mycompany.mavenproject2.TypeOfTransaction[ idTypeOfTransaction=" + idTypeOfTransaction + " ]";
     }
-    
+
 }
