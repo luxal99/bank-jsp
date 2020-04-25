@@ -218,7 +218,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">User information</h5>
+                    <h5 class="modal-title">User information</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -229,19 +229,19 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
                             <input type="text" name="username" class="form-control"
-                                   value="${clinet.userList.get(0).username}" id="exampleInputEmail1"
+                                   value="${clinet.userList.get(0).username}"
                                    aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            <small  class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Current password</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                            <input type="password" name="password" class="form-control"
                                    placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">New password</label>
-                            <input type="password" name="newPassword" class="form-control" id="exampleInputPassword1"
+                            <input type="password" name="newPassword" class="form-control"
                                    placeholder="Password">
                         </div>
 
@@ -275,7 +275,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Email</label>
-                            <input type="text" name="email" class="form-control" id="exampleInputPassword1"
+                            <input type="text" name="email" class="form-control"
                                    placeholder="Password">
                         </div>
 
