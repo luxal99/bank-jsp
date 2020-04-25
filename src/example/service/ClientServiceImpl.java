@@ -1,7 +1,6 @@
 package example.service;
 
 import example.config.util.DBConfig;
-import example.entity.Account;
 import example.entity.Client;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -18,6 +17,7 @@ public class ClientServiceImpl implements ClientService {
         Transaction transaction = session.beginTransaction();
         session.save(client);
         transaction.commit();
+
         return client;
     }
 

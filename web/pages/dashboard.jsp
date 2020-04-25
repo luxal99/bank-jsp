@@ -289,13 +289,13 @@
                     <div class="modal-body">
                         <h3>Account number: ${account.accountNumber}</h3>
 
-                        <form method="post" action="dashboard.jsp">
-                            <input class="form-control" type="text" name="idAccount" value="${account.balance}"/>
-
+                        <form method="post" action="/Projekat_war_exploded/admin/account">
+                            <input class="form-control" type="text" name="amount" value="${account.balance}"/>
+                            <input class="form-control" type="hidden" name="accountNumber" value="${account.accountNumber}"/>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                         </form>
                     </div>
                 </div>

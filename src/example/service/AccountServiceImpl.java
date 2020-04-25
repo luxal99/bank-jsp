@@ -2,12 +2,8 @@ package example.service;
 
 import example.config.util.DBConfig;
 import example.entity.Account;
-import example.entity.Client;
-import example.entity.UserType;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import javax.persistence.Query;
 import java.util.ArrayList;
@@ -45,8 +41,23 @@ public class AccountServiceImpl implements AccountService {
     public Account findById(Integer id) {
         Session session = DBConfig.getSessionFactory().openSession();
         org.hibernate.query.Query query = session.createNamedQuery("Account.findByIdAccount");
-        query.setInteger("idAccount",id);
+        query.setInteger("idAccount", id);
         Account account = (Account) query.getResultList().get(0);
         return account;
     }
+
+    @Override
+    public String payUp(String accountNumber, Double amount) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        org.hibernate.query.Query query = session.createQuery("update Account set balance = balance+ :amount where accountNumber = :accountNumber");
+        query.setParameter("amount", amount);
+        query.setParameter("accountNumber", accountNumber);
+        query.executeUpdate();
+        transaction.commit();
+
+        return "Updated";
+    }
+
+
 }
