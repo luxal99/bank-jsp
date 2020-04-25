@@ -338,15 +338,14 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                    </tbody>\n");
       out.write("                </table>\n");
-      out.write("                <button class=\"pay-btn\" type=\"button\" data-toggle=\"modal\" data-target=\"#payUpModal\">Pay up\n");
-      out.write("                </button>\n");
+      out.write("                <button class=\"pay-btn\" type=\"button\" data-toggle=\"modal\" data-target=\"#payUpModal\">Pay up</button>\n");
       out.write("                <div style=\"height: 1px;background-color: #eee;margin-top: 1em\"></div>\n");
       out.write("                <h3>Current selected client</h3>\n");
       out.write("                ");
 
                     if (request.getParameter("clientInfo") != null) {
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
-                        request.setAttribute("account", account);
+                        request.getSession().setAttribute("account", account);
 
                     }
                 
@@ -397,22 +396,29 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h3>\n");
       out.write("\n");
+      out.write("\n");
       out.write("                        <form method=\"post\" action=\"/Projekat_war_exploded/admin/account\">\n");
       out.write("                            <input class=\"form-control\" type=\"text\" name=\"amount\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.balance}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\n");
-      out.write("                            <input class=\"form-control\" type=\"hidden\" name=\"accountNumber\" value=\"");
+      out.write("                            <input class=\"form-control\" type=\"hidden\" name=\"accountNumber\"\n");
+      out.write("                                   value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"/>\n");
+      out.write("                            <input class=\"form-control\" type=\"hidden\" name=\"idAccount\"\n");
+      out.write("                                   value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idAccount}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"modal-footer\">\n");
       out.write("                        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n");
-      out.write("                        <button type=\"submit\" class=\"btn btn-primary\">Save changes</button>\n");
+      out.write("                        <button type=\"submit\" name=\"payUp\" class=\"btn btn-primary\">Save changes</button>\n");
       out.write("                        </form>\n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
+      out.write("\n");
       out.write("        <div class=\"modal fade\" id=\"clientModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\"\n");
       out.write("             aria-hidden=\"true\">\n");
       out.write("            <div class=\"modal-dialog\" role=\"document\">\n");

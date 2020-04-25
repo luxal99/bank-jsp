@@ -244,14 +244,13 @@
                     %>
                     </tbody>
                 </table>
-                <button class="pay-btn" type="button" data-toggle="modal" data-target="#payUpModal">Pay up
-                </button>
+                <button class="pay-btn" type="button" data-toggle="modal" data-target="#payUpModal">Pay up</button>
                 <div style="height: 1px;background-color: #eee;margin-top: 1em"></div>
                 <h3>Current selected client</h3>
                 <%
                     if (request.getParameter("clientInfo") != null) {
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
-                        request.setAttribute("account", account);
+                        request.getSession().setAttribute("account", account);
 
                     }
                 %>
@@ -289,18 +288,23 @@
                     <div class="modal-body">
                         <h3>Account number: ${account.accountNumber}</h3>
 
+
                         <form method="post" action="/Projekat_war_exploded/admin/account">
                             <input class="form-control" type="text" name="amount" value="${account.balance}"/>
-                            <input class="form-control" type="hidden" name="accountNumber" value="${account.accountNumber}"/>
+                            <input class="form-control" type="hidden" name="accountNumber"
+                                   value="${account.accountNumber}"/>
+                            <input class="form-control" type="hidden" name="idAccount"
+                                   value="${account.idAccount}"/>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" name="payUp" class="btn btn-primary">Save changes</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
             <div class="modal-dialog" role="document">

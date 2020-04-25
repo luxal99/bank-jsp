@@ -9,5 +9,5 @@ public interface AccountService {
     public  List<Account> getAll();
     public String delete(Integer id);
     public Account findById(Integer id);
-    public String payUp(String accountNuber,Double amount);
+    public String payUp(String accountNuber,Double amount,Account account);
 }

@@ -20,12 +20,14 @@ public class AccountServlet extends HttpServlet {
         AccountService accountService = new AccountServiceImpl();
         resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
 
+
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AccountService accountService = new AccountServiceImpl();
-        accountService.payUp(req.getParameter("accountNumber"), Double.valueOf(req.getParameter("amount")));
+        Account account = accountService.findById(Integer.valueOf(req.getParameter("idAccount")));
+        accountService.payUp(req.getParameter("accountNumber"), Double.valueOf(req.getParameter("amount")), account);
         resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
     }
 }

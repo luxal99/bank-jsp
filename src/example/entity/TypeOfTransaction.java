@@ -6,15 +6,8 @@
 package example.entity;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import java.util.List;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -38,8 +31,18 @@ public class TypeOfTransaction implements Serializable {
     private Integer idTypeOfTransaction;
     @Column(name = "title")
     private String title;
+    @OneToMany(mappedBy = "typeOfTransaction")
+    private List<Transaction> transactionList;
 
     public TypeOfTransaction() {
+    }
+
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+    public void setTransactionList(List<Transaction> transactionList) {
+        this.transactionList = transactionList;
     }
 
     public TypeOfTransaction(Integer idTypeOfTransaction) {
