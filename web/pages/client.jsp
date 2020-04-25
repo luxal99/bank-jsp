@@ -18,36 +18,6 @@
 </head>
 <body>
 <div>
-    <%
-        try {
-
-            Cookie[] cookies = request.getCookies();
-            Cookie idCookie = new Cookie("id", "");
-
-
-            boolean haveCookie = false;
-
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("id")) {
-                    idCookie.setValue(cookie.getValue());
-                    haveCookie = true;
-                }
-            }
-            if (!haveCookie) {
-                response.sendRedirect(request.getContextPath());
-            }
-
-            request.setAttribute("idCookie", idCookie);
-        } catch (Exception e) {
-            response.sendRedirect(request.getContextPath());
-        }
-
-    %>
-
-    <% Cookie cookie = (Cookie) request.getAttribute("idCookie");
-    out.println(HashPassword.decrypt(cookie.getValue()));
-    %>
-
     <div class=" header-menu">
         <div class="row">
             <div class="col-sm text-left" style="padding-top: .5em;padding-bottom: .5em">
@@ -73,14 +43,13 @@
                        aria-controls="v-pills-settings" aria-selected="false">Settings</a>
                 </div>
             </div>
-            <<div class="col-sm-9">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                    ...
-                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"></div>
             </div>
         </div>
         </div>

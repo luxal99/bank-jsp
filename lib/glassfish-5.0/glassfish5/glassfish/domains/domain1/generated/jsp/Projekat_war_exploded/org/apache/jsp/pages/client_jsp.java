@@ -63,40 +63,6 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\n");
       out.write("<body>\n");
       out.write("<div>\n");
-      out.write("    ");
-
-        try {
-
-            Cookie[] cookies = request.getCookies();
-            Cookie idCookie = new Cookie("id", "");
-
-
-            boolean haveCookie = false;
-
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("id")) {
-                    idCookie.setValue(cookie.getValue());
-                    haveCookie = true;
-                }
-            }
-            if (!haveCookie) {
-                response.sendRedirect(request.getContextPath());
-            }
-
-            request.setAttribute("idCookie", idCookie);
-        } catch (Exception e) {
-            response.sendRedirect(request.getContextPath());
-        }
-
-    
-      out.write("\n");
-      out.write("\n");
-      out.write("    ");
- Cookie cookie = (Cookie) request.getAttribute("idCookie");
-    out.println(HashPassword.decrypt(cookie.getValue()));
-    
-      out.write("\n");
-      out.write("\n");
       out.write("    <div class=\" header-menu\">\n");
       out.write("        <div class=\"row\">\n");
       out.write("            <div class=\"col-sm text-left\" style=\"padding-top: .5em;padding-bottom: .5em\">\n");
@@ -122,14 +88,13 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                       aria-controls=\"v-pills-settings\" aria-selected=\"false\">Settings</a>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
-      out.write("            <<div class=\"col-sm-9\">\n");
+      out.write("            <div class=\"col-sm-1\"></div>\n");
+      out.write("            <div class=\"col-sm-8\">\n");
       out.write("            <div class=\"tab-content\" id=\"v-pills-tabContent\">\n");
       out.write("                <div class=\"tab-pane fade\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\"></div>\n");
       out.write("                <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\"></div>\n");
       out.write("                <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\"></div>\n");
-      out.write("                <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\" aria-labelledby=\"v-pills-settings-tab\">\n");
-      out.write("                    ...\n");
-      out.write("                </div>\n");
+      out.write("                <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\" aria-labelledby=\"v-pills-settings-tab\"></div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        </div>\n");
