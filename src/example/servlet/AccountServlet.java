@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/admin/findAccountById")
+@WebServlet("/admin/account")
 public class AccountServlet extends HttpServlet {
 
     @Override

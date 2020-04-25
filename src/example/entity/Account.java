@@ -40,6 +40,13 @@ public class Account implements Serializable {
     @OneToMany(mappedBy = "idAccount")
     private List<Transaction> transactionList;
 
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+    public void setTransactionList(List<Transaction> transactionList) {
+        this.transactionList = transactionList;
+    }
 
     public Account() {
     }

@@ -69,7 +69,7 @@
 
     <div class="content-container">
         <div class="row">
-            <div class="col-sm-3 menu">
+            <div class="col-sm-2 menu">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
                        aria-controls="v-pills-home" aria-selected="true">Clients</a>
@@ -82,25 +82,27 @@
                 </div>
             </div>
             <div class="col-sm-1"></div>
-            <div class="col-sm-8">
+            <div class="col-sm-9">
                 <%
+                    Account defaultAccount = new Account();
                     if (request.getParameter("changeAccount") == null) {
-                        Account defaultAccount = client.getAccountList().get(0);
+                        defaultAccount = client.getAccountList().get(0);
 
                         request.setAttribute("currentAccount", defaultAccount);
                     } else {
                         AccountService accountService = new AccountServiceImpl();
-                        Account defaultAccount = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
+                        defaultAccount = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
                         request.setAttribute("currentAccount", defaultAccount);
                     }
 
                 %>
                 <div class="client-info-div">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-4">
                             <h4>Hello, <span><%=client.getName()%></span></h4>
+                            <h4>Account number <span style="color: #7530FF">${currentAccount.accountNumber}</span></h4>
                         </div>
-                        <div class="col-9 text-right">
+                        <div class="col-8 text-right">
                             <div class="row">
                                 <div class="col">
                                     <h4>Your username <br> <span>${clinet.userList.get(0).username}</span></h4>
@@ -120,19 +122,49 @@
                          aria-labelledby="v-pills-messages-tab">
                         <div class="row">
 
-                            <div class="col account-col">
-                                <h4>Account number <span
-                                        class="account-span">${currentAccount.accountNumber}</span></h4>
-                                <h4>Balance <span class="account-span">${currentAccount.balance}</span></h4>
+                            <div class="col-4 account-col">
+
+                                <h4>Balance </h4>
+                                <h1 class="balance-h1">${currentAccount.balance}</h1>
                             </div>
-                            <div class="col"></div>
+                            <div class="col  transaction-col">
+                                <table class="table text-right">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Account Number</th>
+                                        <th scope="col">Client</th>
+                                        <th scope="col">Client</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                    <% for (int i = 0; i < 2; i++) { %>
+
+                                    <tr>
+                                        <td><%= defaultAccount.getTransactionList().get(i).getIdTransaction() %>
+                                        </td>
+                                        <td><%= defaultAccount.getTransactionList().get(i).getDate() %>
+                                        </td>
+                                        <td class="<%=defaultAccount.getTransactionList().get(i).getTypeOfTransaction().getTitle()%>"><%= defaultAccount.getTransactionList().get(i).getAmount() %>
+                                        </td>
+                                        <td><%= defaultAccount.getTransactionList().get(i).getTypeOfTransaction().getTitle() %>
+                                        </td>
+
+                                    </tr>
+                                    <% }
+                                    %>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab">
 
-                        <table class="table">
+                        <table class="table text-right">
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -154,8 +186,9 @@
                                 <td><%= account.getBalance() %>
                                 </td>
                                 <td>
-                                    <form method="get" action="client.jsp" >
-                                        <button class="open-btn" type="submit" name="changeAccount">Change account</button>
+                                    <form method="get" action="client.jsp">
+                                        <button class="open-btn" type="submit" name="changeAccount">Change account
+                                        </button>
                                         <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
                                     </form>
                                 </td>
