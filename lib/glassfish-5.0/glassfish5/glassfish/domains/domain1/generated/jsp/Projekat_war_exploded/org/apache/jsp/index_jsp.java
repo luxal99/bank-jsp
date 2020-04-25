@@ -69,11 +69,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<div>\n");
       out.write("    <div class=\"container login-container\">\n");
       out.write("        <div class=\"row\">\n");
-      out.write("            <div class=\"col-sm left-col\" style=\"padding-left: 0 !important;\">\n");
-      out.write("                <div class=\"container\">\n");
-      out.write("                    <h1 class=\"text-center\" style=\"color: #fff;padding-top: 25%\">Welcome</h1>\n");
-      out.write("                    <h4 class=\"text-center\">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>\n");
-      out.write("                </div>\n");
+      out.write("            <div class=\"col-sm \" style=\"padding: 0 !important;\">\n");
+      out.write("               <div class=\"left-col\">\n");
+      out.write("                   <div class=\"container\">\n");
+      out.write("                       <h1 class=\"text-center\" style=\"color: #fff;padding-top: 25%\">Welcome</h1>\n");
+      out.write("                       <h4 class=\"text-center\">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>\n");
+      out.write("                   </div>\n");
+      out.write("               </div>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"col-sm\" style=\"padding-top: 5em\">\n");
       out.write("                <div>\n");

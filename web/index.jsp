@@ -29,11 +29,13 @@
 <div>
     <div class="container login-container">
         <div class="row">
-            <div class="col-sm left-col" style="padding-left: 0 !important;">
-                <div class="container">
-                    <h1 class="text-center" style="color: #fff;padding-top: 25%">Welcome</h1>
-                    <h4 class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-                </div>
+            <div class="col-sm " style="padding: 0 !important;">
+               <div class="left-col">
+                   <div class="container">
+                       <h1 class="text-center" style="color: #fff;padding-top: 25%">Welcome</h1>
+                       <h4 class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+                   </div>
+               </div>
             </div>
             <div class="col-sm" style="padding-top: 5em">
                 <div>
