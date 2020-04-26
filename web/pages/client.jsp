@@ -213,7 +213,7 @@
                                      Prikaz poslednje tri transakcije
                                      --%>
 
-                                    <% for (int i = defaultAccount.getAccountTransactionList().size() - 1; i > defaultAccount.getAccountTransactionList().size() - 5; i--) { %>
+                                    <%for (int i = defaultAccount.getAccountTransactionList().size() - 1; i > defaultAccount.getAccountTransactionList().size() - 5; i--) { %>
 
                                     <tr>
                                         <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getIdTransaction() %>
