@@ -10,7 +10,6 @@ import app.service.dao.TransactionService;
 import app.service.dao.TransactionTypeService;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,8 +17,7 @@ import java.util.List;
 
 public class AccountServiceImpl implements AccountService {
 
-
-    @Override
+  @Override
     public Account save(Account account) {
         Session session = DBConfig.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

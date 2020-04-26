@@ -1,7 +1,6 @@
 <%@ page import="app.entity.Client" %>
 <%@ page import="java.util.List" %>
 <%@ page import="app.entity.UserType" %>
-<%@ page import="app.service.*" %>
 <%@ page import="app.entity.Account" %>
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>

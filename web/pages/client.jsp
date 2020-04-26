@@ -14,7 +14,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Client panel</title>
     <link rel="stylesheet" href="../assets/css/client.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -82,7 +82,7 @@
             <div class="col-sm-2 menu">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                       aria-controls="v-pills-home" aria-selected="true">Clients</a>
+                       aria-controls="v-pills-home" aria-selected="true">Overview</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
                        aria-controls="v-pills-profile" aria-selected="false">Accounts</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
@@ -92,7 +92,9 @@
                 </div>
             </div>
             <div class="col-sm-1"></div>
-            <div class="col-sm-9">
+            <div class="col-sm-9" style="max-height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;">
 
                 <%--
                     Podesavanje default naloga koji ce biti prikazan
@@ -325,7 +327,7 @@
 
                         <table class="table text-right">
                             <thead>
-                            <tr>
+                            <tr style="background-color: #eee">
                                 <th scope="col">Date</th>
                                 <th scope="col">Amount</th>
                                 <th scope="col">User</th>

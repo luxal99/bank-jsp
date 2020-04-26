@@ -69,7 +69,7 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("    <title>Title</title>\n");
+      out.write("    <title>Client panel</title>\n");
       out.write("    <link rel=\"stylesheet\" href=\"../assets/css/client.css\">\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"\n");
       out.write("          integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n");
@@ -138,7 +138,7 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"col-sm-2 menu\">\n");
       out.write("                <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\n");
       out.write("                    <a class=\"nav-link active\" id=\"v-pills-home-tab\" data-toggle=\"pill\" href=\"#v-pills-home\" role=\"tab\"\n");
-      out.write("                       aria-controls=\"v-pills-home\" aria-selected=\"true\">Clients</a>\n");
+      out.write("                       aria-controls=\"v-pills-home\" aria-selected=\"true\">Overview</a>\n");
       out.write("                    <a class=\"nav-link\" id=\"v-pills-profile-tab\" data-toggle=\"pill\" href=\"#v-pills-profile\" role=\"tab\"\n");
       out.write("                       aria-controls=\"v-pills-profile\" aria-selected=\"false\">Accounts</a>\n");
       out.write("                    <a class=\"nav-link\" id=\"v-pills-messages-tab\" data-toggle=\"pill\" href=\"#v-pills-messages\" role=\"tab\"\n");
@@ -148,7 +148,9 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"col-sm-1\"></div>\n");
-      out.write("            <div class=\"col-sm-9\">\n");
+      out.write("            <div class=\"col-sm-9\" style=\"max-height: 80vh;\n");
+      out.write("    overflow: scroll;\n");
+      out.write("    overflow-x: hidden;\">\n");
       out.write("\n");
       out.write("                ");
       out.write("\n");
@@ -424,7 +426,7 @@ for (int i = defaultAccount.getAccountTransactionList().size() - 1; i > defaultA
       out.write("\n");
       out.write("                        <table class=\"table text-right\">\n");
       out.write("                            <thead>\n");
-      out.write("                            <tr>\n");
+      out.write("                            <tr style=\"background-color: #eee\">\n");
       out.write("                                <th scope=\"col\">Date</th>\n");
       out.write("                                <th scope=\"col\">Amount</th>\n");
       out.write("                                <th scope=\"col\">User</th>\n");
