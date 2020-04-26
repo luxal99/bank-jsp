@@ -5,6 +5,9 @@
  */
 package example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.gson.annotations.JsonAdapter;
+
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -49,6 +52,7 @@ public class Account implements Serializable {
     @Column(name = "balance")
     private Double balance;
     @OneToMany(mappedBy = "idAccount")
+    @JsonIgnore
     private List<AccountTransaction> accountTransactionList;
     @JoinColumn(name = "id_bank", referencedColumnName = "id_bank")
     @ManyToOne
@@ -140,7 +144,7 @@ public class Account implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject2.Account[ idAccount=" + idAccount + " ]";
+        return "" + idAccount + "";
     }
     
 }

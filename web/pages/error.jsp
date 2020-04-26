@@ -32,6 +32,8 @@
               <ul class="text-center" style="padding-top: 1em">
                   <li class="text-left"><h4>If you input not valid account number</h4></li>
                   <li class="text-left"><h4>Page not found</h4></li>
+                  <li class="text-left"><h4>In transfer process you don't have enough money</h4></li>
+
               </ul>
             </div>
             <div class="col">

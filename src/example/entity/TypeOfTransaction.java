@@ -5,6 +5,8 @@
  */
 package example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -21,16 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- *
  * @author luxal
  */
 @Entity
 @Table(name = "type_of_transaction")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "TypeOfTransaction.findAll", query = "SELECT t FROM TypeOfTransaction t"),
-    @NamedQuery(name = "TypeOfTransaction.findByIdTypeOfTransaction", query = "SELECT t FROM TypeOfTransaction t WHERE t.idTypeOfTransaction = :idTypeOfTransaction"),
-    @NamedQuery(name = "TypeOfTransaction.findByTitle", query = "SELECT t FROM TypeOfTransaction t WHERE t.title = :title")})
+        @NamedQuery(name = "TypeOfTransaction.findAll", query = "SELECT t FROM TypeOfTransaction t"),
+        @NamedQuery(name = "TypeOfTransaction.findByIdTypeOfTransaction", query = "SELECT t FROM TypeOfTransaction t WHERE t.idTypeOfTransaction = :idTypeOfTransaction"),
+        @NamedQuery(name = "TypeOfTransaction.findByTitle", query = "SELECT t FROM TypeOfTransaction t WHERE t.title = :title")})
 public class TypeOfTransaction implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -42,6 +43,8 @@ public class TypeOfTransaction implements Serializable {
     @Column(name = "title")
     private String title;
     @OneToMany(mappedBy = "idTypeTransaction")
+    @JsonIgnore
+
     private List<AccountTransaction> accountTransactionList;
 
     public TypeOfTransaction() {
@@ -100,5 +103,5 @@ public class TypeOfTransaction implements Serializable {
     public String toString() {
         return "com.mycompany.mavenproject2.TypeOfTransaction[ idTypeOfTransaction=" + idTypeOfTransaction + " ]";
     }
-    
+
 }

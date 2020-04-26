@@ -5,6 +5,10 @@
 <%@ page import="example.entity.Account" %>
 <%@ page import="example.service.AccountService" %>
 <%@ page import="example.service.AccountServiceImpl" %>
+<%@ page import="example.dto.TransactionDTO" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
@@ -56,6 +60,8 @@
 
 
     %>
+
+
     <div class=" header-menu">
         <div class="row">
             <div class="col-sm text-left" style="padding-top: .5em;padding-bottom: .5em">
@@ -103,6 +109,64 @@
                         request.setAttribute("currentAccount", defaultAccount);
                     }
 
+                %>
+
+                <%
+
+                    List<TransactionDTO> transactionDTOList = new ArrayList<TransactionDTO>();
+                    for (int i = 0; i < defaultAccount.getAccountTransactionList().size(); i++) {
+                        for (int j = 0; j < defaultAccount.getAccountTransactionList().get(j).getIdTransaction().getAccountTransactionList().size(); j++) {
+
+                            TransactionDTO transactionDTO = new TransactionDTO();
+
+                            if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().getTitle().equals("payout") &&
+                                    defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdAccount() != defaultAccount.getIdAccount()
+                            ) {
+
+                                transactionDTO.setAccount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount());
+                                transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
+                                transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
+
+                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payup");
+                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+
+                                if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
+
+                                } else {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getName() + " " +
+                                            defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getLastname());
+
+                                }
+                                transactionDTOList.add(transactionDTO);
+
+
+                            } else if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().getTitle().equals("payup")
+                                    && defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdAccount() != defaultAccount.getIdAccount()
+                            ) {
+
+                                transactionDTO.setAccount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount());
+                                transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
+                                transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
+
+                                if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
+
+                                } else {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getName() + " " +
+                                            defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getLastname());
+
+                                }
+
+                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payout");
+                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+                                transactionDTOList.add(transactionDTO);
+                            }
+
+
+                        }
+
+                    }
                 %>
                 <div class="client-info-div">
                     <div class="row">
@@ -221,6 +285,7 @@
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab">
 
+
                         <table class="table text-right">
                             <thead>
                             <tr>
@@ -258,7 +323,42 @@
                         </table>
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                         aria-labelledby="v-pills-messages-tab"></div>
+                         aria-labelledby="v-pills-messages-tab">
+
+                        <%
+
+                        %>
+                        <table class="table text-right">
+                            <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Account number</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+
+                            <% for (TransactionDTO transactionDTO : transactionDTOList) { %>
+
+                            <tr>
+                                <td><%= transactionDTO.getDate() %>
+                                </td>
+                                <td class="<%=transactionDTO.getTypeOfTransaction().getTitle()%>"><%= transactionDTO.getAmount()%>
+                                </td>
+                                <td><%=transactionDTO.getSubject()%>
+                                </td>
+                                <td><%= transactionDTO.getAccount().getAccountNumber()%>
+                                </td>
+
+                            </tr>
+                            <% }
+                            %>
+                            </tbody>
+                        </table>
+
+                    </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                          aria-labelledby="v-pills-settings-tab"></div>
                 </div>

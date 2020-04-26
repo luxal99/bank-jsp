@@ -10,6 +10,10 @@ import example.util.HashPassword;
 import example.entity.Account;
 import example.service.AccountService;
 import example.service.AccountServiceImpl;
+import example.dto.TransactionDTO;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
 
 public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -49,6 +53,10 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -108,6 +116,8 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
 
     
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("    <div class=\" header-menu\">\n");
       out.write("        <div class=\"row\">\n");
       out.write("            <div class=\"col-sm text-left\" style=\"padding-top: .5em;padding-bottom: .5em\">\n");
@@ -155,6 +165,66 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
                         request.setAttribute("currentAccount", defaultAccount);
                     }
 
+                
+      out.write("\n");
+      out.write("\n");
+      out.write("                ");
+
+
+                    List<TransactionDTO> transactionDTOList = new ArrayList<TransactionDTO>();
+                    for (int i = 0; i < defaultAccount.getAccountTransactionList().size(); i++) {
+                        for (int j = 0; j < defaultAccount.getAccountTransactionList().get(j).getIdTransaction().getAccountTransactionList().size(); j++) {
+
+                            TransactionDTO transactionDTO = new TransactionDTO();
+
+                            if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().getTitle().equals("payout") &&
+                                    defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdAccount() != defaultAccount.getIdAccount()
+                            ) {
+
+                                transactionDTO.setAccount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount());
+                                transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
+                                transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
+
+                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payup");
+                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+
+                                if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
+
+                                } else {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getName() + " " +
+                                            defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getLastname());
+
+                                }
+                                transactionDTOList.add(transactionDTO);
+
+
+                            } else if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().getTitle().equals("payup")
+                                    && defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdAccount() != defaultAccount.getIdAccount()
+                            ) {
+
+                                transactionDTO.setAccount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount());
+                                transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
+                                transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
+
+                                if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
+
+                                } else {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getName() + " " +
+                                            defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getLastname());
+
+                                }
+
+                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payout");
+                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+                                transactionDTOList.add(transactionDTO);
+                            }
+
+
+                        }
+
+                    }
                 
       out.write("\n");
       out.write("                <div class=\"client-info-div\">\n");
@@ -302,6 +372,7 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\"\n");
       out.write("                         aria-labelledby=\"v-pills-messages-tab\">\n");
       out.write("\n");
+      out.write("\n");
       out.write("                        <table class=\"table text-right\">\n");
       out.write("                            <thead>\n");
       out.write("                            <tr>\n");
@@ -351,7 +422,59 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </table>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\"\n");
-      out.write("                         aria-labelledby=\"v-pills-messages-tab\"></div>\n");
+      out.write("                         aria-labelledby=\"v-pills-messages-tab\">\n");
+      out.write("\n");
+      out.write("                        ");
+
+
+                        
+      out.write("\n");
+      out.write("                        <table class=\"table text-right\">\n");
+      out.write("                            <thead>\n");
+      out.write("                            <tr>\n");
+      out.write("                                <th scope=\"col\">Date</th>\n");
+      out.write("                                <th scope=\"col\">Amount</th>\n");
+      out.write("                                <th scope=\"col\">User</th>\n");
+      out.write("                                <th scope=\"col\">Account number</th>\n");
+      out.write("                            </tr>\n");
+      out.write("                            </thead>\n");
+      out.write("                            <tbody>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                            ");
+ for (TransactionDTO transactionDTO : transactionDTOList) { 
+      out.write("\n");
+      out.write("\n");
+      out.write("                            <tr>\n");
+      out.write("                                <td>");
+      out.print( transactionDTO.getDate() );
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("                                <td class=\"");
+      out.print(transactionDTO.getTypeOfTransaction().getTitle());
+      out.write('"');
+      out.write('>');
+      out.print( transactionDTO.getAmount());
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("                                <td>");
+      out.print(transactionDTO.getSubject());
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("                                <td>");
+      out.print( transactionDTO.getAccount().getAccountNumber());
+      out.write("\n");
+      out.write("                                </td>\n");
+      out.write("\n");
+      out.write("                            </tr>\n");
+      out.write("                            ");
+ }
+                            
+      out.write("\n");
+      out.write("                            </tbody>\n");
+      out.write("                        </table>\n");
+      out.write("\n");
+      out.write("                    </div>\n");
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\"\n");
       out.write("                         aria-labelledby=\"v-pills-settings-tab\"></div>\n");
       out.write("                </div>\n");

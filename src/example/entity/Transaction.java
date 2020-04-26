@@ -5,6 +5,8 @@
  */
 package example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -50,6 +52,7 @@ public class Transaction implements Serializable {
     @Column(name = "amount")
     private Double amount;
     @OneToMany(mappedBy = "idTransaction")
+    @JsonIgnore
     private List<AccountTransaction> accountTransactionList;
 
     public Transaction() {
