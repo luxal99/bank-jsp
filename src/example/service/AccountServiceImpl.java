@@ -90,18 +90,20 @@ public class AccountServiceImpl implements AccountService {
 
         accountTransactionService.save(receiverTransaction);
 
-        org.hibernate.query.Query queryIncrease = session.createQuery("update Account set balance = balance + :balance where idAccount = :receiverAccount");
-        org.hibernate.query.Query queryDecrease = session.createQuery("update Account set balance = balance - :balance where idAccount = :senderAccount");
+        org.hibernate.query.Query queryIncrease = session.createQuery("update Account set balance = balance + :amount where accountNumber = :receiverAccount");
+        org.hibernate.query.Query queryDecrease = session.createQuery("update Account set balance = balance - :amount where accountNumber = :senderAccount");
 
-        queryIncrease.setParameter("balance", amount);
-        queryIncrease.setParameter("receiverAccount", receiverAccount.getIdAccount());
+        queryIncrease.setParameter("amount", amount);
+        queryIncrease.setParameter("receiverAccount", receiverAccount.getAccountNumber());
 
         queryIncrease.executeUpdate();
 
-        queryDecrease.setParameter("balance", amount);
-        queryDecrease.setParameter("senderAccount", senderAccount.getIdAccount());
+        queryDecrease.setParameter("amount", amount);
+        queryDecrease.setParameter("senderAccount", senderAccount.getAccountNumber());
 
         queryDecrease.executeUpdate();
+        transaction.commit();
+        session.close();
 
         return "Updated";
     }
