@@ -17,6 +17,7 @@ public class ClientServiceImpl implements ClientService {
         Transaction transaction = session.beginTransaction();
         session.save(client);
         transaction.commit();
+
         return client;
     }
 

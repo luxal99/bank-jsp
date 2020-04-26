@@ -48,15 +48,14 @@ public class Account implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "balance")
     private Double balance;
+    @OneToMany(mappedBy = "idAccount")
+    private List<AccountTransaction> accountTransactionList;
     @JoinColumn(name = "id_bank", referencedColumnName = "id_bank")
     @ManyToOne
     private Bank idBank;
     @JoinColumn(name = "id_client", referencedColumnName = "id_client")
     @ManyToOne
     private Client idClient;
-
-    @OneToMany(mappedBy = "idAccount")
-    private List<AccountTransaction> accountTransactionList;
 
     public Account() {
     }
