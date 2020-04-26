@@ -7,9 +7,6 @@ package example.entity;
 
 import java.io.Serializable;
 import java.util.List;
-<<<<<<< HEAD
-import javax.persistence.*;
-=======
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,21 +19,21 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
->>>>>>> client
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
+ *
  * @author luxal
  */
 @Entity
 @Table(name = "account")
 @XmlRootElement
 @NamedQueries({
-        @NamedQuery(name = "Account.findAll", query = "SELECT a FROM Account a"),
-        @NamedQuery(name = "Account.findByIdAccount", query = "SELECT a FROM Account a WHERE a.idAccount = :idAccount"),
-        @NamedQuery(name = "Account.findByAccountNumber", query = "SELECT a FROM Account a WHERE a.accountNumber = :accountNumber"),
-        @NamedQuery(name = "Account.findByBalance", query = "SELECT a FROM Account a WHERE a.balance = :balance")})
+    @NamedQuery(name = "Account.findAll", query = "SELECT a FROM Account a"),
+    @NamedQuery(name = "Account.findByIdAccount", query = "SELECT a FROM Account a WHERE a.idAccount = :idAccount"),
+    @NamedQuery(name = "Account.findByAccountNumber", query = "SELECT a FROM Account a WHERE a.accountNumber = :accountNumber"),
+    @NamedQuery(name = "Account.findByBalance", query = "SELECT a FROM Account a WHERE a.balance = :balance")})
 public class Account implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -51,18 +48,14 @@ public class Account implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "balance")
     private Double balance;
+    @OneToMany(mappedBy = "idAccount")
+    private List<AccountTransaction> accountTransactionList;
     @JoinColumn(name = "id_bank", referencedColumnName = "id_bank")
     @ManyToOne
     private Bank idBank;
     @JoinColumn(name = "id_client", referencedColumnName = "id_client")
     @ManyToOne
     private Client idClient;
-    @OneToMany(mappedBy = "idAccount")
-    private List<Transaction> transactionList;
-
-
-    @OneToMany(mappedBy = "idAccount")
-    private List<AccountTransaction> accountTransactionList;
 
     public Account() {
     }
@@ -147,16 +140,7 @@ public class Account implements Serializable {
 
     @Override
     public String toString() {
-<<<<<<< HEAD
-        return "Account{" +
-                "idAccount=" + idAccount +
-                ", accountNumber='" + accountNumber + '\'' +
-                ", balance=" + balance +
-                ", idClient=" + idClient +
-                '}';
-=======
         return "com.mycompany.mavenproject2.Account[ idAccount=" + idAccount + " ]";
->>>>>>> client
     }
     
 }

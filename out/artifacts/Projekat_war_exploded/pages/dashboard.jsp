@@ -3,6 +3,8 @@
 <%@ page import="example.entity.UserType" %>
 <%@ page import="example.service.*" %>
 <%@ page import="example.entity.Account" %>
+<%@ page import="example.entity.Bank" %>
+<%@ page import="example.util.HashPassword" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -26,6 +28,30 @@
 <body>
 <div class="row" style="height: 100vh">
 
+    <%
+        Cookie[] cookies = request.getCookies();
+        Cookie idCookie = new Cookie("idBank", "");
+
+        boolean haveId = false;
+
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("idBank")) {
+                haveId = true;
+                idCookie.setValue(cookie.getValue());
+            }
+        }
+
+        if (!haveId) {
+            response.sendRedirect(request.getContextPath());
+        } else {
+            BankService bankService = new BankServiceImpl();
+            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            request.setAttribute("bankAccount", bank.getAccountList().get(0));
+        }
+
+
+    %>
+
     <div class="col-3 menu">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
@@ -36,9 +62,14 @@
                aria-controls="v-pills-messages" aria-selected="false">Transaction</a>
             <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
                aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+
         </div>
     </div>
     <div class="col-9">
+        <div class="text-right" style="padding-top: 1em;padding-left: 1em">
+            <h3>Bank account ${bankAccount.accountNumber}</h3>
+            <h3>${bankAccount.balance}</h3>
+        </div>
         <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <div class="container">
@@ -64,7 +95,6 @@
                         <%
                             ClientService clientService = new ClientServiceImpl();
                             List<Client> clientList = clientService.getAll();
-
                         %>
 
 
@@ -150,7 +180,7 @@
                 <%
                     if (request.getParameter("clientInfo") != null) {
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
-                        request.getSession().setAttribute("account", account);
+                        request.setAttribute("account", account);
 
                     }
                 %>
@@ -193,8 +223,10 @@
                             <input class="form-control" type="text" name="amount" value="${account.balance}"/>
                             <input class="form-control" type="hidden" name="accountNumber"
                                    value="${account.accountNumber}"/>
-                            <input class="form-control" type="hidden" name="idAccount"
+                            <input class="form-control" type="hidden" name="idClientAccount"
                                    value="${account.idAccount}"/>
+                            <input class="form-control" type="hidden" name="idBankAccount"
+                                   value="${bankAccount.idAccount}"/>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

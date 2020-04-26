@@ -8,6 +8,8 @@ import java.util.List;
 import example.entity.UserType;
 import example.service.*;
 import example.entity.Account;
+import example.entity.Bank;
+import example.util.HashPassword;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -56,6 +58,8 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <link rel=\"stylesheet\" href=\"../assets/css/dashboard.css\">\n");
@@ -75,6 +79,32 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body>\n");
       out.write("<div class=\"row\" style=\"height: 100vh\">\n");
       out.write("\n");
+      out.write("    ");
+
+        Cookie[] cookies = request.getCookies();
+        Cookie idCookie = new Cookie("idBank", "");
+
+        boolean haveId = false;
+
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("idBank")) {
+                haveId = true;
+                idCookie.setValue(cookie.getValue());
+            }
+        }
+
+        if (!haveId) {
+            response.sendRedirect(request.getContextPath());
+        } else {
+            BankService bankService = new BankServiceImpl();
+            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            request.setAttribute("bankAccount", bank.getAccountList().get(0));
+        }
+
+
+    
+      out.write("\n");
+      out.write("\n");
       out.write("    <div class=\"col-3 menu\">\n");
       out.write("        <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\n");
       out.write("            <a class=\"nav-link active\" id=\"v-pills-home-tab\" data-toggle=\"pill\" href=\"#v-pills-home\" role=\"tab\"\n");
@@ -85,148 +115,28 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("               aria-controls=\"v-pills-messages\" aria-selected=\"false\">Transaction</a>\n");
       out.write("            <a class=\"nav-link\" id=\"v-pills-settings-tab\" data-toggle=\"pill\" href=\"#v-pills-settings\" role=\"tab\"\n");
       out.write("               aria-controls=\"v-pills-settings\" aria-selected=\"false\">Settings</a>\n");
+      out.write("\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <div class=\"col-9\">\n");
+      out.write("        <div class=\"text-right\" style=\"padding-top: 1em;padding-left: 1em\">\n");
+      out.write("            <h3>Bank account ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${bankAccount.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("            <h3>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${bankAccount.balance}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("        </div>\n");
       out.write("        <div class=\"tab-content\" id=\"v-pills-tabContent\">\n");
       out.write("            <div class=\"tab-pane fade show active\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-home-tab\">\n");
       out.write("                <div class=\"container\">\n");
       out.write("                    <h2 class=\"text-center\">Modal Example</h2>\n");
       out.write("                    <!-- Trigger the modal with a button -->\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.write("                    <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Create user\n");
       out.write("                    </button>\n");
       out.write("\n");
       out.write("                    <!-- Modal -->\n");
       out.write("\n");
-<<<<<<< HEAD
-=======
-      out.write("                    <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Open\n");
-      out.write("                        Modal\n");
-      out.write("                    </button>\n");
-      out.write("\n");
-      out.write("                    <!-- Modal -->\n");
-      out.write("                    <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n");
-      out.write("                        <div class=\"modal-dialog\">\n");
-      out.write("\n");
-      out.write("                            <!-- Modal content-->\n");
-      out.write("                            <div class=\"modal-content\">\n");
-      out.write("                                <div class=\"modal-header\">\n");
-      out.write("                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n");
-      out.write("                                    <h4 class=\"modal-title\">Modal Header</h4>\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"modal-body\">\n");
-      out.write("                                    <form method=\"post\" action=\"/Projekat_war_exploded/admin/registration\">\n");
-      out.write("\n");
-      out.write("                                        <div class=\"col-sm\">\n");
-      out.write("                                            <h3>Client information</h3>\n");
-      out.write("                                            <div style=\"height: 1px;background-color: #e1e1e1\"></div>\n");
-      out.write("\n");
-      out.write("                                            <div class=\"row\" style=\"margin-top: 1em\">\n");
-      out.write("                                                <div class=\"col-sm\">\n");
-      out.write("                                                    <div class=\"form-group\">\n");
-      out.write("                                                        <label for=\"exampleInputEmail1\">Name</label>\n");
-      out.write("                                                        <input type=\"text\" class=\"form-control\" name=\"name\"\n");
-      out.write("                                                               id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");
-      out.write("                                                    </div>\n");
-      out.write("                                                </div>\n");
-      out.write("                                                <div class=\"col-sm\">\n");
-      out.write("                                                    <div class=\"form-group\">\n");
-      out.write("                                                        <label for=\"exampleInputPassword1\">Lastname</label>\n");
-      out.write("                                                        <input type=\"text\" name=\"lastname\" class=\"form-control\"\n");
-      out.write("                                                               id=\"exampleInputPassword1\">\n");
-      out.write("                                                    </div>\n");
-      out.write("                                                </div>\n");
-      out.write("                                            </div>\n");
-      out.write("\n");
-      out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">E-mail</label>\n");
-      out.write("                                                <input type=\"email\" name=\"email\" class=\"form-control\"\n");
-      out.write("                                                       id=\"exampleInputEmail1\"\n");
-      out.write("                                                       aria-describedby=\"emailHelp\">\n");
-      out.write("                                            </div>\n");
-      out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputPassword1\">Telephone</label>\n");
-      out.write("                                                <input type=\"text\" name=\"telephone\" class=\"form-control\"\n");
-      out.write("                                                       id=\"exampleInputPassword1\">\n");
-      out.write("                                            </div>\n");
-      out.write("\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"col-sm\">\n");
-      out.write("                                            <h3>User data</h3>\n");
-      out.write("                                            <div style=\"height: 1px;background-color: #e1e1e1\"></div>\n");
-      out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Username</label>\n");
-      out.write("                                                <input type=\"text\" name=\"username\" class=\"form-control\"\n");
-      out.write("                                                       id=\"exampleInputEmail1\"\n");
-      out.write("                                                       aria-describedby=\"emailHelp\">\n");
-      out.write("                                            </div>\n");
-      out.write("                                            <br>\n");
-      out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Password</label>\n");
-      out.write("                                                <input type=\"password\" name=\"password\" class=\"form-control\"\n");
-      out.write("                                                       id=\"exampleInputEmail1\"\n");
-      out.write("                                                       aria-describedby=\"emailHelp\">\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"col-sm\">\n");
-      out.write("                                            <h3>Accout data</h3>\n");
-      out.write("                                            <div style=\"height: 1px;background-color: #e1e1e1\"></div>\n");
-      out.write("                                            <div class=\"form-group\">\n");
-      out.write("                                                <label for=\"exampleInputEmail1\">Account number</label>\n");
-      out.write("                                                <input type=\"text\" name=\"accountNumber\" class=\"form-control\"\n");
-      out.write("                                                       id=\"exampleInputEmail1\"\n");
-      out.write("                                                       aria-describedby=\"emailHelp\">\n");
-      out.write("                                            </div>\n");
-      out.write("                                            ");
-
-                                                UserTypeService userTypeService = new UserTypeServiceImpl();
-                                                List<UserType> userTypeList = userTypeService.getAll();
-                                                request.setAttribute("userTypeList", userTypeList);
-
-                                            
-      out.write("\n");
-      out.write("                                            <select name=\"userType\" class=\"form-control form-control-lg\">\n");
-      out.write("\n");
-      out.write("                                                ");
- for (int i = 0; i < userTypeList.size(); i += 1) { 
-      out.write("\n");
-      out.write("\n");
-      out.write("                                                <option value=\"");
-      out.print( userTypeList.get(i).getIdUserType() );
-      out.write('"');
-      out.write('>');
-      out.print(userTypeList.get(i).getTitle());
-      out.write("\n");
-      out.write("                                                </option>\n");
-      out.write("\n");
-      out.write("                                                ");
- }
-
-                                                
-      out.write("\n");
-      out.write("                                            </select>\n");
-      out.write("\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"text-center\" style=\"margin-left: 1em;margin-top: 1em\">\n");
-      out.write("                                            <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n");
-      out.write("                                        </div>\n");
-      out.write("                                    </form>\n");
-      out.write("\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"modal-footer\">\n");
-      out.write("                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("\n");
-      out.write("                        </div>\n");
-      out.write("                    </div>\n");
->>>>>>> client
-=======
->>>>>>> dev
       out.write("\n");
       out.write("                    <table class=\"table\">\n");
       out.write("                        <thead>\n");
@@ -243,7 +153,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                             ClientService clientService = new ClientServiceImpl();
                             List<Client> clientList = clientService.getAll();
-
                         
       out.write("\n");
       out.write("\n");
@@ -284,19 +193,10 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">\n");
       out.write("\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.write("                <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#addAccountModal\">Create\n");
       out.write("                    account\n");
       out.write("                </button>\n");
       out.write("\n");
-<<<<<<< HEAD
-=======
->>>>>>> client
-=======
->>>>>>> dev
       out.write("                ");
 
                     AccountService accountService = new AccountServiceImpl();
@@ -308,21 +208,10 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <tr>\n");
       out.write("                        <th scope=\"col\">#</th>\n");
       out.write("                        <th scope=\"col\">Account Number</th>\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.write("                        <th scope=\"col\">Client ID</th>\n");
       out.write("                        <th scope=\"col\">Balance</th>\n");
       out.write("                        <th scope=\"col\">Client name</th>\n");
       out.write("                        <th scope=\"col\">Client lastname</th>\n");
-<<<<<<< HEAD
-=======
-      out.write("                        <th scope=\"col\">Client</th>\n");
-      out.write("                        <th scope=\"col\">Handle</th>\n");
->>>>>>> client
-=======
->>>>>>> dev
       out.write("                    </tr>\n");
       out.write("                    </thead>\n");
       out.write("                    <tbody>\n");
@@ -342,10 +231,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                        </td>\n");
       out.write("                        <td>");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.print( account.getIdClient().getIdClient() );
       out.write("\n");
       out.write("                        </td>\n");
@@ -366,17 +251,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <button class=\"open-btn\" type=\"submit\" name=\"clientInfo\">\n");
       out.write("                                    Select client\n");
       out.write("                                </button>\n");
-<<<<<<< HEAD
-=======
-      out.print( account.getBalance() );
-      out.write("\n");
-      out.write("                        </td>\n");
-      out.write("                        <td>\n");
-      out.write("                            <form method=\"get\" action=\"dashboard.jsp\" >\n");
-      out.write("                                <button class=\"open-btn\" type=\"submit\" name=\"clientInfo\">Client detail</button>\n");
->>>>>>> client
-=======
->>>>>>> dev
       out.write("                                <input type=\"hidden\" name=\"idAccount\" value=\"");
       out.print(account.getIdAccount());
       out.write("\"/>\n");
@@ -391,10 +265,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                    </tbody>\n");
       out.write("                </table>\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.write("                <button class=\"pay-btn\" type=\"button\" data-toggle=\"modal\" data-target=\"#payUpModal\">Pay up</button>\n");
       out.write("                <div style=\"height: 1px;background-color: #eee;margin-top: 1em\"></div>\n");
       out.write("                <h3>Current selected client</h3>\n");
@@ -402,28 +272,12 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                     if (request.getParameter("clientInfo") != null) {
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
-                        request.getSession().setAttribute("account", account);
-<<<<<<< HEAD
-=======
-      out.write("                <h2>Client Info</h2>\n");
-      out.write("                ");
-
-                    if (request.getParameter("clientInfo") != null) {
-
-                        Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
-                        request.setAttribute("account",account);
->>>>>>> client
-=======
->>>>>>> dev
+                        request.setAttribute("account", account);
 
                     }
                 
       out.write("\n");
       out.write("\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.write("                <div style=\"margin-top: 1em\">\n");
       out.write("                    <h3>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -441,24 +295,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.telephone}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h3>\n");
       out.write("                </div>\n");
-<<<<<<< HEAD
-=======
-      out.write("\n");
-      out.write("                <h3>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h3>\n");
-      out.write("                <h3>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.lastname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h3>\n");
-      out.write("                <h3>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.mail}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h3>\n");
-      out.write("                <h3>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.telephone}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h3>\n");
->>>>>>> client
-=======
->>>>>>> dev
       out.write("\n");
       out.write("            </div>\n");
       out.write("            <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\n");
@@ -468,10 +304,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                ...\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dev
       out.write("        <!-- Button trigger modal -->\n");
       out.write("\n");
       out.write("\n");
@@ -500,9 +332,13 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                   value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\n");
-      out.write("                            <input class=\"form-control\" type=\"hidden\" name=\"idAccount\"\n");
+      out.write("                            <input class=\"form-control\" type=\"hidden\" name=\"idClientAccount\"\n");
       out.write("                                   value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idAccount}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"/>\n");
+      out.write("                            <input class=\"form-control\" type=\"hidden\" name=\"idBankAccount\"\n");
+      out.write("                                   value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${bankAccount.idAccount}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"modal-footer\">\n");
@@ -693,11 +529,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
-<<<<<<< HEAD
-=======
->>>>>>> client
-=======
->>>>>>> dev
       out.write("    </div>\n");
       out.write("</div>\n");
       out.write("\n");

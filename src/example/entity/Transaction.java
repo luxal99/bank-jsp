@@ -7,9 +7,6 @@ package example.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-<<<<<<< HEAD
-import javax.persistence.*;
-=======
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -23,29 +20,21 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
->>>>>>> client
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
+ *
  * @author luxal
  */
 @Entity
 @Table(name = "transaction")
 @XmlRootElement
 @NamedQueries({
-<<<<<<< HEAD
-        @NamedQuery(name = "Transaction.findAll", query = "SELECT t FROM Transaction t"),
-        @NamedQuery(name = "Transaction.findByIdTransaction", query = "SELECT t FROM Transaction t WHERE t.idTransaction = :idTransaction"),
-        @NamedQuery(name = "Transaction.findByDate", query = "SELECT t FROM Transaction t WHERE t.date = :date"),
-        @NamedQuery(name = "Transaction.findByAmount", query = "SELECT t FROM Transaction t WHERE t.amount = :amount"),
-        @NamedQuery(name = "Transaction.findByIdAccount", query = "SELECT t FROM Transaction t WHERE t.idAccount = :idAccount")})
-=======
     @NamedQuery(name = "Transaction.findAll", query = "SELECT t FROM Transaction t"),
     @NamedQuery(name = "Transaction.findByIdTransaction", query = "SELECT t FROM Transaction t WHERE t.idTransaction = :idTransaction"),
     @NamedQuery(name = "Transaction.findByDate", query = "SELECT t FROM Transaction t WHERE t.date = :date"),
     @NamedQuery(name = "Transaction.findByAmount", query = "SELECT t FROM Transaction t WHERE t.amount = :amount")})
->>>>>>> client
 public class Transaction implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -60,18 +49,8 @@ public class Transaction implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "amount")
     private Double amount;
-<<<<<<< HEAD
-    @JoinColumn(name = "id_account", referencedColumnName = "id_account")
-    @ManyToOne
-    private Account idAccount;
-
-    @JoinColumn(name = "id_type_transaction", referencedColumnName = "id_type_of_transaction")
-    @ManyToOne
-    private TypeOfTransaction typeOfTransaction;
-=======
     @OneToMany(mappedBy = "idTransaction")
     private List<AccountTransaction> accountTransactionList;
->>>>>>> client
 
     public Transaction() {
     }
@@ -96,22 +75,6 @@ public class Transaction implements Serializable {
         this.date = date;
     }
 
-    public Account getIdAccount() {
-        return idAccount;
-    }
-
-    public void setIdAccount(Account idAccount) {
-        this.idAccount = idAccount;
-    }
-
-    public TypeOfTransaction getTypeOfTransaction() {
-        return typeOfTransaction;
-    }
-
-    public void setTypeOfTransaction(TypeOfTransaction typeOfTransaction) {
-        this.typeOfTransaction = typeOfTransaction;
-    }
-
     public Double getAmount() {
         return amount;
     }
@@ -120,8 +83,6 @@ public class Transaction implements Serializable {
         this.amount = amount;
     }
 
-<<<<<<< HEAD
-=======
     @XmlTransient
     public List<AccountTransaction> getAccountTransactionList() {
         return accountTransactionList;
@@ -130,7 +91,6 @@ public class Transaction implements Serializable {
     public void setAccountTransactionList(List<AccountTransaction> accountTransactionList) {
         this.accountTransactionList = accountTransactionList;
     }
->>>>>>> client
 
     @Override
     public int hashCode() {
@@ -156,5 +116,5 @@ public class Transaction implements Serializable {
     public String toString() {
         return "com.mycompany.mavenproject2.Transaction[ idTransaction=" + idTransaction + " ]";
     }
-
+    
 }

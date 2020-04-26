@@ -7,9 +7,6 @@ package example.entity;
 
 import java.io.Serializable;
 import java.util.List;
-<<<<<<< HEAD
-import javax.persistence.*;
-=======
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +17,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
->>>>>>> client
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -45,23 +41,10 @@ public class TypeOfTransaction implements Serializable {
     private Integer idTypeOfTransaction;
     @Column(name = "title")
     private String title;
-<<<<<<< HEAD
-    @OneToMany(mappedBy = "typeOfTransaction")
-    private List<Transaction> transactionList;
-=======
     @OneToMany(mappedBy = "idTypeTransaction")
     private List<AccountTransaction> accountTransactionList;
->>>>>>> client
 
     public TypeOfTransaction() {
-    }
-
-    public List<Transaction> getTransactionList() {
-        return transactionList;
-    }
-
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
     }
 
     public TypeOfTransaction(Integer idTypeOfTransaction) {

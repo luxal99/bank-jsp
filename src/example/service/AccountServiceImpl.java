@@ -2,6 +2,7 @@ package example.service;
 
 import example.config.util.DBConfig;
 import example.entity.Account;
+import example.entity.AccountTransaction;
 import example.entity.TypeOfTransaction;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -28,13 +29,16 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<Account> getAll() {
-        List<Account> employeeList = new ArrayList();
+        List<Account> accountList = new ArrayList();
         Session session = DBConfig.getSessionFactory().openSession();
 
         Query query = session.createNamedQuery("Account.findAll");
-        employeeList = query.getResultList();
+        accountList = query.getResultList();
 
-        return employeeList;
+        for (int i = 0; i < accountList.size(); i++) {
+            if (accountList.get(i).getIdClient() == null) accountList.remove(i);
+        }
+        return accountList;
     }
 
     @Override
@@ -51,43 +55,60 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public String payUp(String accountNumber, Double amount, Account account) {
+    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount) {
 
         Session session = DBConfig.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         TransactionService transactionService = new TransactionServiceImpl();
         TransactionTypeService transactionTypeService = new TransactionTypeServiceImpl();
+        AccountTransactionService accountTransactionService = new AccountTransactionServiceImpl();
+        AccountService accountService = new AccountServiceImpl();
 
-        org.hibernate.query.Query query = session.createQuery("update Account set balance = balance+ :amount where accountNumber = :accountNumber");
-        query.setParameter("amount", amount);
-        query.setParameter("accountNumber", accountNumber);
-        query.executeUpdate();
-        transaction.commit();
-        session.close();
 
         example.entity.Transaction transactionEntity = new example.entity.Transaction();
-        TypeOfTransaction typeOfTransaction = transactionTypeService.findByType("payup");
+        TypeOfTransaction payUpTransaction = transactionTypeService.findByType("payup");
+        TypeOfTransaction payOutTransaction = transactionTypeService.findByType("payout");
+        AccountTransaction senderTransaction = new AccountTransaction();
+        AccountTransaction receiverTransaction = new AccountTransaction();
 
         Date date = new Date();
 
         transactionEntity.setDate(date);
         transactionEntity.setAmount(amount);
-        transactionEntity.setIdAccount(account);
-        transactionEntity.setTypeOfTransaction(typeOfTransaction);
-
 
         transactionService.save(transactionEntity);
 
+        senderTransaction.setIdTransaction(transactionEntity);
+        senderTransaction.setIdAccount(senderAccount);
+        senderTransaction.setIdTypeTransaction(payUpTransaction);
+
+        accountTransactionService.save(senderTransaction);
+
+        receiverTransaction.setIdTransaction(transactionEntity);
+        receiverTransaction.setIdAccount(receiverAccount);
+        receiverTransaction.setIdTypeTransaction(payOutTransaction);
+
+        accountTransactionService.save(receiverTransaction);
+
+        org.hibernate.query.Query queryIncrease = session.createQuery("update Account set balance = balance + :balance where idAccount = :receiverAccount");
+        org.hibernate.query.Query queryDecrease = session.createQuery("update Account set balance = balance - :balance where idAccount = :senderAccount");
+
+        queryIncrease.setParameter("balance", amount);
+        queryIncrease.setParameter("receiverAccount", receiverAccount.getIdAccount());
+
+        queryIncrease.executeUpdate();
+
+        queryDecrease.setParameter("balance", amount);
+        queryDecrease.setParameter("senderAccount", senderAccount.getIdAccount());
+
+        queryDecrease.executeUpdate();
 
         return "Updated";
     }
 
-<<<<<<< HEAD
 
-=======
     @Override
     public List<Account> findAccountByIdClient(Integer id) {
         return null;
     }
->>>>>>> client
 }
