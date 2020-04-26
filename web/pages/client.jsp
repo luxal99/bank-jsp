@@ -127,8 +127,7 @@
                                 transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
                                 transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
 
-                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payup");
-                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+                                transactionDTO.setTypeOfTransaction("payup");
 
                                 if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
                                     transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
@@ -158,8 +157,7 @@
 
                                 }
 
-                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payout");
-                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+                                transactionDTO.setTypeOfTransaction("payout");
                                 transactionDTOList.add(transactionDTO);
                             }
 
@@ -325,9 +323,6 @@
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab">
 
-                        <%
-
-                        %>
                         <table class="table text-right">
                             <thead>
                             <tr>
@@ -345,7 +340,7 @@
                             <tr>
                                 <td><%= transactionDTO.getDate() %>
                                 </td>
-                                <td class="<%=transactionDTO.getTypeOfTransaction().getTitle()%>"><%= transactionDTO.getAmount()%>
+                                <td class="<%=transactionDTO.getTypeOfTransaction()%>"><%= transactionDTO.getAmount()%>
                                 </td>
                                 <td><%=transactionDTO.getSubject()%>
                                 </td>

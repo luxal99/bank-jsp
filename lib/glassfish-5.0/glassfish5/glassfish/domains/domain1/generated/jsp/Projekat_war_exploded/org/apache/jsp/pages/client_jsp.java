@@ -185,8 +185,7 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
                                 transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
                                 transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
 
-                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payup");
-                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+                                transactionDTO.setTypeOfTransaction("payup");
 
                                 if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
                                     transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
@@ -216,8 +215,7 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                                 }
 
-                                defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().setTitle("payout");
-                                transactionDTO.setTypeOfTransaction(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction());
+                                transactionDTO.setTypeOfTransaction("payout");
                                 transactionDTOList.add(transactionDTO);
                             }
 
@@ -424,11 +422,6 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\"\n");
       out.write("                         aria-labelledby=\"v-pills-messages-tab\">\n");
       out.write("\n");
-      out.write("                        ");
-
-
-                        
-      out.write("\n");
       out.write("                        <table class=\"table text-right\">\n");
       out.write("                            <thead>\n");
       out.write("                            <tr>\n");
@@ -451,7 +444,7 @@ public final class client_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                                </td>\n");
       out.write("                                <td class=\"");
-      out.print(transactionDTO.getTypeOfTransaction().getTitle());
+      out.print(transactionDTO.getTypeOfTransaction());
       out.write('"');
       out.write('>');
       out.print( transactionDTO.getAmount());

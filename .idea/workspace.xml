@@ -7,49 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786b0f37-ed47-4cf0-8f0b-f4fdc1332b95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_10_3_javadoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_ignore_1_0_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Projekat_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Projekat_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projekat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projekat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml.bak" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/error_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/TypeOfTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/TypeOfTransaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/entity/UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/service/AccountServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/client.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/client.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/entity/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/entity/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/entity/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/entity/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/entity/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/entity/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/entity/TypeOfTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/entity/TypeOfTransaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/entity/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/entity/UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/service/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/TypeOfTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/TypeOfTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/service/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/dto/TransactionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/dto/TransactionDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/client.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/client.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/error.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,10 +301,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587800545176" />
-    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587933430982">
+    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587934471174">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587933430982" />
+    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587934471174" />
     <state x="555" y="214" width="800" height="683" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1587709110253">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -358,38 +321,38 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587912902160" />
-    <state width="1716" height="399" key="GridCell.Tab.0.bottom" timestamp="1587933680632">
+    <state width="1716" height="399" key="GridCell.Tab.0.bottom" timestamp="1587934544166">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680632" />
-    <state width="1716" height="399" key="GridCell.Tab.0.center" timestamp="1587933680632">
+    <state width="1716" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544166" />
+    <state width="1716" height="399" key="GridCell.Tab.0.center" timestamp="1587934544160">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680632" />
-    <state width="1716" height="399" key="GridCell.Tab.0.left" timestamp="1587933680631">
+    <state width="1716" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544160" />
+    <state width="1716" height="399" key="GridCell.Tab.0.left" timestamp="1587934544159">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680631" />
-    <state width="1716" height="399" key="GridCell.Tab.0.right" timestamp="1587933680632">
+    <state width="1716" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544159" />
+    <state width="1716" height="399" key="GridCell.Tab.0.right" timestamp="1587934544166">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680632" />
-    <state width="1716" height="399" key="GridCell.Tab.1.bottom" timestamp="1587933680633">
+    <state width="1716" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544166" />
+    <state width="1716" height="399" key="GridCell.Tab.1.bottom" timestamp="1587934544167">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680633" />
-    <state width="1716" height="399" key="GridCell.Tab.1.center" timestamp="1587933680632">
+    <state width="1716" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544167" />
+    <state width="1716" height="399" key="GridCell.Tab.1.center" timestamp="1587934544167">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680632" />
-    <state width="1716" height="399" key="GridCell.Tab.1.left" timestamp="1587933680632">
+    <state width="1716" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544167" />
+    <state width="1716" height="399" key="GridCell.Tab.1.left" timestamp="1587934544166">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680632" />
-    <state width="1716" height="399" key="GridCell.Tab.1.right" timestamp="1587933680633">
+    <state width="1716" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544166" />
+    <state width="1716" height="399" key="GridCell.Tab.1.right" timestamp="1587934544167">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587933680633" />
+    <state width="1716" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587934544167" />
     <state width="1291" height="296" key="GridCell.Tab.2.bottom" timestamp="1587808770510">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

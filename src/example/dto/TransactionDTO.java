@@ -12,7 +12,7 @@ public class TransactionDTO {
     private Double amount;
     private Account account;
     private String subject;
-    private TypeOfTransaction typeOfTransaction;
+    private String typeOfTransaction;
 
     public TransactionDTO() {
     }
@@ -49,11 +49,11 @@ public class TransactionDTO {
         this.subject = subject;
     }
 
-    public TypeOfTransaction getTypeOfTransaction() {
+    public String getTypeOfTransaction() {
         return typeOfTransaction;
     }
 
-    public void setTypeOfTransaction(TypeOfTransaction typeOfTransaction) {
+    public void setTypeOfTransaction(String typeOfTransaction) {
         this.typeOfTransaction = typeOfTransaction;
     }
 }
