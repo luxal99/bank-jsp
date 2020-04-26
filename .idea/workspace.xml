@@ -13,12 +13,7 @@
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/dashboard_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/client.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/client.css" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/example/service/AccountServiceImpl.class" afterDir="false" />
@@ -27,7 +22,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/Projekat/example/servlet/AccountServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/example/servlet/AccountServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/example/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/service/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/example/servlet/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/servlet/AccountServlet.java" afterDir="false" />
->>>>>>> dev
+      <change beforePath="$PROJECT_DIR$/web/assets/css/client.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/client.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,18 +118,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/example/entity" />
+      <recent name="$PROJECT_DIR$/web/assets/img" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/pages" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/example/config/util" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/example/entity" />
-      <recent name="$PROJECT_DIR$/web/assets/img" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 5.0.0">
@@ -238,27 +233,12 @@
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="GlassFish Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@663a59aa" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@4183f3f7" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@214db471" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -345,73 +325,38 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587896218623" />
-<<<<<<< HEAD
-    <state width="1291" height="399" key="GridCell.Tab.0.bottom" timestamp="1587903353626">
+    <state width="1291" height="399" key="GridCell.Tab.0.bottom" timestamp="1587904982902">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353626" />
-    <state width="1291" height="399" key="GridCell.Tab.0.center" timestamp="1587903353626">
+    <state width="1291" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982902" />
+    <state width="1291" height="399" key="GridCell.Tab.0.center" timestamp="1587904982899">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353626" />
-    <state width="1291" height="399" key="GridCell.Tab.0.left" timestamp="1587903353625">
+    <state width="1291" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982899" />
+    <state width="1291" height="399" key="GridCell.Tab.0.left" timestamp="1587904982898">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353625" />
-    <state width="1291" height="399" key="GridCell.Tab.0.right" timestamp="1587903353626">
+    <state width="1291" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982898" />
+    <state width="1291" height="399" key="GridCell.Tab.0.right" timestamp="1587904982901">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353626" />
-    <state width="1291" height="399" key="GridCell.Tab.1.bottom" timestamp="1587903353627">
+    <state width="1291" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982901" />
+    <state width="1291" height="399" key="GridCell.Tab.1.bottom" timestamp="1587904982905">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353627" />
-    <state width="1291" height="399" key="GridCell.Tab.1.center" timestamp="1587903353626">
+    <state width="1291" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982905" />
+    <state width="1291" height="399" key="GridCell.Tab.1.center" timestamp="1587904982903">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353626" />
-    <state width="1291" height="399" key="GridCell.Tab.1.left" timestamp="1587903353626">
+    <state width="1291" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982903" />
+    <state width="1291" height="399" key="GridCell.Tab.1.left" timestamp="1587904982902">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353626" />
-    <state width="1291" height="399" key="GridCell.Tab.1.right" timestamp="1587903353626">
+    <state width="1291" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982902" />
+    <state width="1291" height="399" key="GridCell.Tab.1.right" timestamp="1587904982904">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587903353626" />
-=======
-    <state width="1291" height="399" key="GridCell.Tab.0.bottom" timestamp="1587904170064">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170064" />
-    <state width="1291" height="399" key="GridCell.Tab.0.center" timestamp="1587904170062">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170062" />
-    <state width="1291" height="399" key="GridCell.Tab.0.left" timestamp="1587904170061">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170061" />
-    <state width="1291" height="399" key="GridCell.Tab.0.right" timestamp="1587904170063">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170063" />
-    <state width="1291" height="399" key="GridCell.Tab.1.bottom" timestamp="1587904170069">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170069" />
-    <state width="1291" height="399" key="GridCell.Tab.1.center" timestamp="1587904170066">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170066" />
-    <state width="1291" height="399" key="GridCell.Tab.1.left" timestamp="1587904170065">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170065" />
-    <state width="1291" height="399" key="GridCell.Tab.1.right" timestamp="1587904170067">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587904170067" />
->>>>>>> dev
+    <state width="1291" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587904982904" />
     <state width="1291" height="296" key="GridCell.Tab.2.bottom" timestamp="1587808770510">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -452,17 +397,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="236" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587822868629" />
-<<<<<<< HEAD
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587903937224">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587903937224" />
-=======
     <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587904168354">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587904168354" />
->>>>>>> dev
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
