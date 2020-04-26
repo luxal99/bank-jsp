@@ -39,7 +39,7 @@
             </div>
             <div class="col-sm" style="padding-top: 5em">
                 <div>
-                    <form method="post" action="http://localhost:8080/Projekat_war_exploded/admin/login">
+                    <form method="post" action="/Projekat_war_exploded/admin/login">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
                             <input type="text" name="username" class="form-control" id="exampleInputEmail1"

@@ -43,6 +43,8 @@ public class Bank implements Serializable {
     private String title;
     @OneToMany(mappedBy = "idBank")
     private List<User> userList;
+    @OneToMany(mappedBy = "idBank")
+    private List<Account> accountList;
 
     public Bank() {
     }
@@ -74,6 +76,15 @@ public class Bank implements Serializable {
 
     public void setUserList(List<User> userList) {
         this.userList = userList;
+    }
+
+    @XmlTransient
+    public List<Account> getAccountList() {
+        return accountList;
+    }
+
+    public void setAccountList(List<Account> accountList) {
+        this.accountList = accountList;
     }
 
     @Override

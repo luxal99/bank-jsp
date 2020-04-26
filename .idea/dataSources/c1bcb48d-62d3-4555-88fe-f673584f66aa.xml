@@ -927,257 +927,322 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="234" parent="3" name="account"/>
-    <table id="235" parent="3" name="bank"/>
-    <table id="236" parent="3" name="client"/>
-    <table id="237" parent="3" name="transaction"/>
-    <table id="238" parent="3" name="type_of_transaction"/>
-    <table id="239" parent="3" name="user"/>
-    <table id="240" parent="3" name="user_type"/>
-    <column id="241" parent="234" name="id_account">
+    <table id="235" parent="3" name="account_transaction"/>
+    <table id="236" parent="3" name="bank"/>
+    <table id="237" parent="3" name="client"/>
+    <table id="238" parent="3" name="transaction"/>
+    <table id="239" parent="3" name="type_of_transaction"/>
+    <table id="240" parent="3" name="user"/>
+    <table id="241" parent="3" name="user_type"/>
+    <column id="242" parent="234" name="id_account">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="234" name="account_number">
+    <column id="243" parent="234" name="account_number">
       <Position>2</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="234" name="balance">
+    <column id="244" parent="234" name="balance">
       <Position>3</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="234" name="id_client">
+    <column id="245" parent="234" name="id_client">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="245" parent="234" name="account_number">
+    <column id="246" parent="234" name="id_bank">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="247" parent="234" name="account_number">
       <ColNames>account_number</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="246" parent="234" name="account_client_id_client_fk">
+    <index id="248" parent="234" name="account_client_id_client_fk">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="247" parent="234" name="PRIMARY">
+    <index id="249" parent="234" name="account_bank_id_bank_fk">
+      <ColNames>id_bank</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="250" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_account</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="248" parent="234" name="account_number">
+    <key id="251" parent="234" name="account_number">
       <ColNames>account_number</ColNames>
       <UnderlyingIndexName>account_number</UnderlyingIndexName>
     </key>
-    <foreign-key id="249" parent="234" name="account_client_id_client_fk">
+    <foreign-key id="252" parent="234" name="account_client_id_client_fk">
       <ColNames>id_client</ColNames>
       <RefTableName>client</RefTableName>
       <RefColNames>id_client</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="250" parent="235" name="id_bank">
-      <Position>1</Position>
-      <DataType>int(10)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="251" parent="235" name="title">
-      <Position>2</Position>
-      <DataType>varchar(64)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="252" parent="235" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
+    <foreign-key id="253" parent="234" name="account_bank_id_bank_fk">
       <ColNames>id_bank</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="253" parent="236" name="id_client">
-      <Position>1</Position>
-      <DataType>int(10)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="254" parent="236" name="name">
-      <Position>2</Position>
-      <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="255" parent="236" name="lastname">
-      <Position>3</Position>
-      <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="256" parent="236" name="mail">
-      <Position>4</Position>
-      <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="257" parent="236" name="telephone">
-      <Position>5</Position>
-      <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="258" parent="236" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id_client</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="259" parent="237" name="id_transaction">
+      <RefTableName>bank</RefTableName>
+      <RefColNames>id_bank</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="254" parent="235" name="id_account_transaction">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="237" name="date">
+    <column id="255" parent="235" name="id_account">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="235" name="id_transaction">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="235" name="id_type_transaction">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="258" parent="235" name="id_account">
+      <ColNames>id_account</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="259" parent="235" name="id_transaction">
+      <ColNames>id_transaction</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="260" parent="235" name="id_type_transaction">
+      <ColNames>id_type_transaction</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="261" parent="235" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_account_transaction</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="262" parent="235" name="account_transaction_ibfk_1">
+      <ColNames>id_account</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefColNames>id_account</RefColNames>
+    </foreign-key>
+    <foreign-key id="263" parent="235" name="account_transaction_ibfk_2">
+      <ColNames>id_transaction</ColNames>
+      <RefTableName>transaction</RefTableName>
+      <RefColNames>id_transaction</RefColNames>
+    </foreign-key>
+    <foreign-key id="264" parent="235" name="account_transaction_ibfk_3">
+      <ColNames>id_type_transaction</ColNames>
+      <RefTableName>type_of_transaction</RefTableName>
+      <RefColNames>id_type_of_transaction</RefColNames>
+    </foreign-key>
+    <column id="265" parent="236" name="id_bank">
+      <Position>1</Position>
+      <DataType>int(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="236" name="title">
+      <Position>2</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="267" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_bank</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="268" parent="237" name="id_client">
+      <Position>1</Position>
+      <DataType>int(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="237" name="name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="237" name="lastname">
+      <Position>3</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="271" parent="237" name="mail">
+      <Position>4</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="237" name="telephone">
+      <Position>5</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="273" parent="237" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_client</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="274" parent="238" name="id_transaction">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="238" name="date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="237" name="amount">
+    <column id="276" parent="238" name="amount">
       <Position>3</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="237" name="id_account">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="263" parent="237" name="PRIMARY">
+    <key id="277" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_transaction</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="264" parent="238" name="id_type_of_transaction">
+    <column id="278" parent="239" name="id_type_of_transaction">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="238" name="title">
+    <column id="279" parent="239" name="title">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="266" parent="238" name="PRIMARY">
+    <key id="280" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_type_of_transaction</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="267" parent="239" name="id_user">
+    <column id="281" parent="240" name="id_user">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="239" name="username">
+    <column id="282" parent="240" name="username">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="239" name="password">
+    <column id="283" parent="240" name="password">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="239" name="id_client">
+    <column id="284" parent="240" name="id_client">
       <Position>4</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="239" name="id_user_type">
+    <column id="285" parent="240" name="id_user_type">
       <Position>5</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="239" name="id_bank">
+    <column id="286" parent="240" name="id_bank">
       <Position>6</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="273" parent="239" name="username">
+    <index id="287" parent="240" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="274" parent="239" name="FKuser805388">
+    <index id="288" parent="240" name="FKuser805388">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="275" parent="239" name="FKuser949261">
+    <index id="289" parent="240" name="FKuser949261">
       <ColNames>id_user_type</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="276" parent="239" name="FKuser236728">
+    <index id="290" parent="240" name="FKuser236728">
       <ColNames>id_bank</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="277" parent="239" name="PRIMARY">
+    <key id="291" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_user</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="278" parent="239" name="username">
+    <key id="292" parent="240" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <foreign-key id="279" parent="239" name="FKuser805388">
+    <foreign-key id="293" parent="240" name="FKuser805388">
       <ColNames>id_client</ColNames>
       <RefTableName>client</RefTableName>
       <RefColNames>id_client</RefColNames>
     </foreign-key>
-    <foreign-key id="280" parent="239" name="FKuser949261">
+    <foreign-key id="294" parent="240" name="FKuser949261">
       <ColNames>id_user_type</ColNames>
       <RefTableName>user_type</RefTableName>
       <RefColNames>id_user_type</RefColNames>
     </foreign-key>
-    <foreign-key id="281" parent="239" name="FKuser236728">
+    <foreign-key id="295" parent="240" name="FKuser236728">
       <ColNames>id_bank</ColNames>
       <RefTableName>bank</RefTableName>
       <RefColNames>id_bank</RefColNames>
     </foreign-key>
-    <column id="282" parent="240" name="id_user_type">
+    <column id="296" parent="241" name="id_user_type">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="240" name="title">
+    <column id="297" parent="241" name="title">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="284" parent="240" name="title">
+    <index id="298" parent="241" name="title">
       <ColNames>title</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="285" parent="240" name="PRIMARY">
+    <key id="299" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_user_type</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="286" parent="240" name="title">
+    <key id="300" parent="241" name="title">
       <ColNames>title</ColNames>
       <UnderlyingIndexName>title</UnderlyingIndexName>
     </key>

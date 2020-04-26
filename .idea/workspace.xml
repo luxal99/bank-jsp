@@ -7,19 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b09f0829-ccb5-49f2-bbad-c37231915735" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1bcb48d-62d3-4555-88fe-f673584f66aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1bcb48d-62d3-4555-88fe-f673584f66aa.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml.bak" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/domain.xml.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/dashboard_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/client.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/client.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/client.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/client.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/client.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/client.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/TypeOfTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/TypeOfTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/entity/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +106,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/gson-2.8.6.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/example/entity" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.14677104" />
@@ -110,18 +114,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/example/entity" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/web/assets/img" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/pages" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/example/config/util" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/web/assets/img" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$/src/example/entity" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 5.0.0">
@@ -226,12 +230,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@1f4b0b6b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@74a48402" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4183f3f7" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -291,10 +290,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587800545176" />
-    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587847703830">
+    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587896713386">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587847703830" />
+    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587896713386" />
     <state x="555" y="214" width="800" height="683" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1587709110253">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -307,42 +306,42 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="482" y="60" width="945" height="993" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1587731082234" />
-    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl" timestamp="1587844773204">
+    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl" timestamp="1587896218623">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587844773204" />
-    <state width="1291" height="357" key="GridCell.Tab.0.bottom" timestamp="1587857546777">
+    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587896218623" />
+    <state width="1291" height="399" key="GridCell.Tab.0.bottom" timestamp="1587896800859">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546777" />
-    <state width="1291" height="357" key="GridCell.Tab.0.center" timestamp="1587857546776">
+    <state width="1291" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
+    <state width="1291" height="399" key="GridCell.Tab.0.center" timestamp="1587896800859">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546776" />
-    <state width="1291" height="357" key="GridCell.Tab.0.left" timestamp="1587857546776">
+    <state width="1291" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
+    <state width="1291" height="399" key="GridCell.Tab.0.left" timestamp="1587896800859">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546776" />
-    <state width="1291" height="357" key="GridCell.Tab.0.right" timestamp="1587857546776">
+    <state width="1291" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
+    <state width="1291" height="399" key="GridCell.Tab.0.right" timestamp="1587896800859">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546776" />
-    <state width="1291" height="357" key="GridCell.Tab.1.bottom" timestamp="1587857546777">
+    <state width="1291" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
+    <state width="1291" height="399" key="GridCell.Tab.1.bottom" timestamp="1587896800860">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546777" />
-    <state width="1291" height="357" key="GridCell.Tab.1.center" timestamp="1587857546777">
+    <state width="1291" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
+    <state width="1291" height="399" key="GridCell.Tab.1.center" timestamp="1587896800860">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546777" />
-    <state width="1291" height="357" key="GridCell.Tab.1.left" timestamp="1587857546777">
+    <state width="1291" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
+    <state width="1291" height="399" key="GridCell.Tab.1.left" timestamp="1587896800860">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546777" />
-    <state width="1291" height="357" key="GridCell.Tab.1.right" timestamp="1587857546777">
+    <state width="1291" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
+    <state width="1291" height="399" key="GridCell.Tab.1.right" timestamp="1587896800860">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="357" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587857546777" />
+    <state width="1291" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
     <state width="1291" height="296" key="GridCell.Tab.2.bottom" timestamp="1587808770510">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -383,10 +382,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="236" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587822868629" />
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587855893487">
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587896785328">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587855893487" />
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587896785328" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

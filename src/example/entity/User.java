@@ -39,8 +39,10 @@ public class User implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_user")
     private Integer idUser;
+    @Basic(optional = false)
     @Column(name = "username")
     private String username;
+    @Basic(optional = false)
     @Column(name = "password")
     private String password;
     @JoinColumn(name = "id_bank", referencedColumnName = "id_bank")
@@ -50,7 +52,7 @@ public class User implements Serializable {
     @ManyToOne
     private Client idClient;
     @JoinColumn(name = "id_user_type", referencedColumnName = "id_user_type")
-    @ManyToOne
+    @ManyToOne(optional = false)
     private UserType idUserType;
 
     public User() {
@@ -58,6 +60,12 @@ public class User implements Serializable {
 
     public User(Integer idUser) {
         this.idUser = idUser;
+    }
+
+    public User(Integer idUser, String username, String password) {
+        this.idUser = idUser;
+        this.username = username;
+        this.password = password;
     }
 
     public Integer getIdUser() {

@@ -30,6 +30,7 @@ public class DBConfig {
         configuration.addAnnotatedClass(TypeOfTransaction.class);
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(UserType.class);
+        configuration.addAnnotatedClass(AccountTransaction.class);
         sessionFactory = configuration.buildSessionFactory();
 
         return sessionFactory;

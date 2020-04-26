@@ -42,12 +42,16 @@ public class Client implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_client")
     private Integer idClient;
+    @Basic(optional = false)
     @Column(name = "name")
     private String name;
+    @Basic(optional = false)
     @Column(name = "lastname")
     private String lastname;
+    @Basic(optional = false)
     @Column(name = "mail")
     private String mail;
+    @Basic(optional = false)
     @Column(name = "telephone")
     private String telephone;
     @OneToMany(mappedBy = "idClient")
@@ -60,6 +64,14 @@ public class Client implements Serializable {
 
     public Client(Integer idClient) {
         this.idClient = idClient;
+    }
+
+    public Client(Integer idClient, String name, String lastname, String mail, String telephone) {
+        this.idClient = idClient;
+        this.name = name;
+        this.lastname = lastname;
+        this.mail = mail;
+        this.telephone = telephone;
     }
 
     public Integer getIdClient() {
