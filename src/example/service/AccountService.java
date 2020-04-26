@@ -13,7 +13,9 @@ public interface AccountService {
 
     public Account findById(Integer id);
 
-    public String transfer(String accountNuber, Double amount, Account senderAccount,Account reciverAccount);
+    public String transfer(String accountNuber, Double amount, Account senderAccount,Account reciverAccount) throws Exception;
 
     public List<Account> findAccountByIdClient(Integer id);
+
+    public Account findByAccountNumber(String accountNumber);
 }

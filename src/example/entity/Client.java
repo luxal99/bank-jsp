@@ -5,6 +5,8 @@
  */
 package example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -55,7 +57,9 @@ public class Client implements Serializable {
     @Column(name = "telephone")
     private String telephone;
     @OneToMany(mappedBy = "idClient")
+    @JsonIgnore
     private List<User> userList;
+    @JsonIgnore
     @OneToMany(mappedBy = "idClient")
     private List<Account> accountList;
 

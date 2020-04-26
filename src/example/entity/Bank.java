@@ -5,6 +5,8 @@
  */
 package example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -44,6 +46,7 @@ public class Bank implements Serializable {
     @OneToMany(mappedBy = "idBank")
     private List<User> userList;
     @OneToMany(mappedBy = "idBank")
+    @JsonIgnore
     private List<Account> accountList;
 
     public Bank() {

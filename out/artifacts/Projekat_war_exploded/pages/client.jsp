@@ -5,6 +5,10 @@
 <%@ page import="example.entity.Account" %>
 <%@ page import="example.service.AccountService" %>
 <%@ page import="example.service.AccountServiceImpl" %>
+<%@ page import="example.dto.TransactionDTO" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
@@ -56,6 +60,8 @@
 
 
     %>
+
+
     <div class=" header-menu">
         <div class="row">
             <div class="col-sm text-left" style="padding-top: .5em;padding-bottom: .5em">
@@ -104,6 +110,62 @@
                     }
 
                 %>
+
+                <%
+
+                    List<TransactionDTO> transactionDTOList = new ArrayList<TransactionDTO>();
+                    for (int i = 0; i < defaultAccount.getAccountTransactionList().size(); i++) {
+                        for (int j = 0; j < defaultAccount.getAccountTransactionList().get(j).getIdTransaction().getAccountTransactionList().size(); j++) {
+
+                            TransactionDTO transactionDTO = new TransactionDTO();
+
+                            if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().getTitle().equals("payout") &&
+                                    defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdAccount() != defaultAccount.getIdAccount()
+                            ) {
+
+                                transactionDTO.setAccount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount());
+                                transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
+                                transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
+
+                                transactionDTO.setTypeOfTransaction("payup");
+
+                                if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
+
+                                } else {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getName() + " " +
+                                            defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getLastname());
+
+                                }
+                                transactionDTOList.add(transactionDTO);
+
+
+                            } else if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdTypeTransaction().getTitle().equals("payup")
+                                    && defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdAccount() != defaultAccount.getIdAccount()
+                            ) {
+
+                                transactionDTO.setAccount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount());
+                                transactionDTO.setDate(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate());
+                                transactionDTO.setAmount(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount());
+
+                                if (defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank() != null) {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdBank().getTitle());
+
+                                } else {
+                                    transactionDTO.setSubject(defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getName() + " " +
+                                            defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAccountTransactionList().get(j).getIdAccount().getIdClient().getLastname());
+
+                                }
+
+                                transactionDTO.setTypeOfTransaction("payout");
+                                transactionDTOList.add(transactionDTO);
+                            }
+
+
+                        }
+
+                    }
+                %>
                 <div class="client-info-div">
                     <div class="row">
                         <div class="col-4">
@@ -146,21 +208,21 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    
+
                                     <%--
                                      Prikaz poslednje tri transakcije
                                      --%>
 
-                                    <% for (int i = 0; i < 2; i++) { %>
+                                    <%for (int i = defaultAccount.getAccountTransactionList().size() - 1; i > defaultAccount.getAccountTransactionList().size() - 5; i--) { %>
 
                                     <tr>
-                                        <td><%= defaultAccount.getTransactionList().get(i).getIdTransaction() %>
+                                        <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getIdTransaction() %>
                                         </td>
-                                        <td><%= defaultAccount.getTransactionList().get(i).getDate() %>
+                                        <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate() %>
                                         </td>
-                                        <td class="<%=defaultAccount.getTransactionList().get(i).getTypeOfTransaction().getTitle()%>"><%= defaultAccount.getTransactionList().get(i).getAmount() %>
+                                        <td class="<%=defaultAccount.getAccountTransactionList().get(i).getIdTypeTransaction().getTitle()%>"><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount() %>
                                         </td>
-                                        <td><%= defaultAccount.getTransactionList().get(i).getTypeOfTransaction().getTitle() %>
+                                        <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTypeTransaction().getTitle() %>
                                         </td>
 
                                     </tr>
@@ -178,28 +240,40 @@
 
                             <div class="col transfer-col" style="margin-left: 2em;margin-right: 2em">
                                 <div style="padding: 1em 2em 2em 1em">
-                                    <h5 >Current account <span style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
+                                    <h5>Current account <span
+                                            style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
 
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+                                    <form method="post" action="/Projekat_war_exploded/admin/account">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text"
+                                                  id="basic-addon1"><i class="fa fa-address-card"></i></span>
+                                            </div>
+                                            <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
+                                                   type="text" name="clientAccountNumber" class="form-control"
+                                                   placeholder="Account number"
+                                                   aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="hidden" name="currentAccountNumber"
+                                                   value="${currentAccount.accountNumber}">
                                         </div>
-                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
 
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon2">$</span>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text"
+                                                  id="basic-addon2">$</span>
+                                            </div>
+                                            <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
+                                                   type="text" name="amount" class="form-control"
+                                                   placeholder="Account number"
+                                                   aria-label="Username" aria-describedby="basic-addon1"><br>
+
                                         </div>
-                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1"><br>
-
-                                    </div>
 
 
-                                    <div>
-                                        <button type="submit" class="transfer-btn">Send</button>
-                                    </div>
+                                        <div>
+                                            <button type="submit" class="transfer-btn">Send</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col"></div>
@@ -208,6 +282,7 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                          aria-labelledby="v-pills-messages-tab">
+
 
                         <table class="table text-right">
                             <thead>
@@ -246,7 +321,39 @@
                         </table>
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                         aria-labelledby="v-pills-messages-tab"></div>
+                         aria-labelledby="v-pills-messages-tab">
+
+                        <table class="table text-right">
+                            <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Account number</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+
+                            <% for (TransactionDTO transactionDTO : transactionDTOList) { %>
+
+                            <tr>
+                                <td><%= transactionDTO.getDate() %>
+                                </td>
+                                <td class="<%=transactionDTO.getTypeOfTransaction()%>"><%= transactionDTO.getAmount()%>
+                                </td>
+                                <td><%=transactionDTO.getSubject()%>
+                                </td>
+                                <td><%= transactionDTO.getAccount().getAccountNumber()%>
+                                </td>
+
+                            </tr>
+                            <% }
+                            %>
+                            </tbody>
+                        </table>
+
+                    </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                          aria-labelledby="v-pills-settings-tab"></div>
                 </div>

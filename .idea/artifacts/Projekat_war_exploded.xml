@@ -17,6 +17,8 @@
           <element id="library" level="project" name="jsoup-1.13.1" />
           <element id="library" level="project" name="jstl-1.2" />
           <element id="library" level="project" name="gson-2.8.6" />
+          <element id="library" level="project" name="json-ignore-1.0.15" />
+          <element id="library" level="project" name="jackson-annotations-2.9.0" />
         </element>
       </element>
     </root>

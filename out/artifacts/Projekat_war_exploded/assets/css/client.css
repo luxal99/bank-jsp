@@ -123,6 +123,11 @@ h1,h3,h4,a,p{
     font-weight: bold;
 }
 
+.payout{
+    color:#B33A3A;
+    font-weight: bold;
+}
+
 .balance-h1{
     color: #7530FF;
     font-weight: bold;

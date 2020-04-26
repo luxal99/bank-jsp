@@ -5,6 +5,8 @@
  */
 package example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -43,6 +45,7 @@ public class UserType implements Serializable {
     @Column(name = "title")
     private String title;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUserType")
+    @JsonIgnore
     private List<User> userList;
 
     public UserType() {
