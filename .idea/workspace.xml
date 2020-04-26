@@ -6,25 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09f0829-ccb5-49f2-bbad-c37231915735" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1bcb48d-62d3-4555-88fe-f673584f66aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1bcb48d-62d3-4555-88fe-f673584f66aa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/index_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/TypeOfTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/TypeOfTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/entity/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/entity/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="786b0f37-ed47-4cf0-8f0b-f4fdc1332b95" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,18 +96,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/example/entity" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/web/assets/img" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/pages" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/example/config/util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/example/entity" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/web/assets/img" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 5.0.0">
@@ -202,6 +184,10 @@
     <configuration name="client.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Projekat_war_exploded/services/pages/client.jsp">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="GlassFish Server.GlassFish 5.0.0" />
+      <item itemvalue="JavaScript Debug.client.jsp" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.client.jsp" />
@@ -310,38 +296,38 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587896218623" />
-    <state width="1291" height="399" key="GridCell.Tab.0.bottom" timestamp="1587896800859">
+    <state width="1291" height="399" key="GridCell.Tab.0.bottom" timestamp="1587902835089">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
-    <state width="1291" height="399" key="GridCell.Tab.0.center" timestamp="1587896800859">
+    <state width="1291" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835089" />
+    <state width="1291" height="399" key="GridCell.Tab.0.center" timestamp="1587902835088">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
-    <state width="1291" height="399" key="GridCell.Tab.0.left" timestamp="1587896800859">
+    <state width="1291" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835088" />
+    <state width="1291" height="399" key="GridCell.Tab.0.left" timestamp="1587902835087">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
-    <state width="1291" height="399" key="GridCell.Tab.0.right" timestamp="1587896800859">
+    <state width="1291" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835087" />
+    <state width="1291" height="399" key="GridCell.Tab.0.right" timestamp="1587902835088">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800859" />
-    <state width="1291" height="399" key="GridCell.Tab.1.bottom" timestamp="1587896800860">
+    <state width="1291" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835088" />
+    <state width="1291" height="399" key="GridCell.Tab.1.bottom" timestamp="1587902835090">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
-    <state width="1291" height="399" key="GridCell.Tab.1.center" timestamp="1587896800860">
+    <state width="1291" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835090" />
+    <state width="1291" height="399" key="GridCell.Tab.1.center" timestamp="1587902835089">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
-    <state width="1291" height="399" key="GridCell.Tab.1.left" timestamp="1587896800860">
+    <state width="1291" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835089" />
+    <state width="1291" height="399" key="GridCell.Tab.1.left" timestamp="1587902835089">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
-    <state width="1291" height="399" key="GridCell.Tab.1.right" timestamp="1587896800860">
+    <state width="1291" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835089" />
+    <state width="1291" height="399" key="GridCell.Tab.1.right" timestamp="1587902835090">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1291" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587896800860" />
+    <state width="1291" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587902835090" />
     <state width="1291" height="296" key="GridCell.Tab.2.bottom" timestamp="1587808770510">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -382,10 +368,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="236" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587822868629" />
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587896785328">
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587902858270">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587896785328" />
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587902858270" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

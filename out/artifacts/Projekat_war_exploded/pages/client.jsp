@@ -146,7 +146,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    
+
                                     <%--
                                      Prikaz poslednje tri transakcije
                                      --%>
@@ -154,13 +154,13 @@
                                     <% for (int i = 0; i < 2; i++) { %>
 
                                     <tr>
-                                        <td><%= defaultAccount.getTransactionList().get(i).getIdTransaction() %>
+                                        <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getIdTransaction() %>
                                         </td>
-                                        <td><%= defaultAccount.getTransactionList().get(i).getDate() %>
+                                        <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getDate() %>
                                         </td>
-                                        <td class="<%=defaultAccount.getTransactionList().get(i).getTypeOfTransaction().getTitle()%>"><%= defaultAccount.getTransactionList().get(i).getAmount() %>
+                                        <td class="<%=defaultAccount.getAccountTransactionList().get(i).getIdTypeTransaction().getTitle()%>"><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getAmount() %>
                                         </td>
-                                        <td><%= defaultAccount.getTransactionList().get(i).getTypeOfTransaction().getTitle() %>
+                                        <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTypeTransaction().getTitle() %>
                                         </td>
 
                                     </tr>
@@ -178,21 +178,28 @@
 
                             <div class="col transfer-col" style="margin-left: 2em;margin-right: 2em">
                                 <div style="padding: 1em 2em 2em 1em">
-                                    <h5 >Current account <span style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
+                                    <h5>Current account <span
+                                            style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
 
 
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text"
+                                                  id="basic-addon1"><i class="fa fa-address-card"></i></span>
                                         </div>
-                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
+                                               type="text" class="form-control" placeholder="Account number"
+                                               aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
 
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text" id="basic-addon2">$</span>
+                                            <span style="background-color: #7530FF;color: #fff" class="input-group-text"
+                                                  id="basic-addon2">$</span>
                                         </div>
-                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;" type="text" class="form-control" placeholder="Account number" aria-label="Username" aria-describedby="basic-addon1"><br>
+                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
+                                               type="text" class="form-control" placeholder="Account number"
+                                               aria-label="Username" aria-describedby="basic-addon1"><br>
 
                                     </div>
 
