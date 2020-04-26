@@ -16,4 +16,6 @@ public interface AccountService {
     public String transfer(String accountNuber, Double amount, Account senderAccount,Account reciverAccount);
 
     public List<Account> findAccountByIdClient(Integer id);
+
+    public Account findByAccountNumber(String accountNumber);
 }

@@ -113,4 +113,12 @@ public class AccountServiceImpl implements AccountService {
     public List<Account> findAccountByIdClient(Integer id) {
         return null;
     }
+
+    @Override
+    public Account findByAccountNumber(String accountNumber) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        org.hibernate.query.Query query = session.createNamedQuery("Account.findByAccountNumber");
+        query.setParameter("accountNumber", accountNumber);
+        return (Account) query.getSingleResult();
+    }
 }

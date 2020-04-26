@@ -151,7 +151,7 @@
                                      Prikaz poslednje tri transakcije
                                      --%>
 
-                                    <% for (int i = 0; i < 2; i++) { %>
+                                    <% for (int i = defaultAccount.getAccountTransactionList().size() - 1; i > defaultAccount.getAccountTransactionList().size() - 5; i--) { %>
 
                                     <tr>
                                         <td><%= defaultAccount.getAccountTransactionList().get(i).getIdTransaction().getIdTransaction() %>
@@ -181,32 +181,37 @@
                                     <h5>Current account <span
                                             style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
 
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                    <form method="post" action="/Projekat_war_exploded/admin/account">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
                                             <span style="background-color: #7530FF;color: #fff" class="input-group-text"
                                                   id="basic-addon1"><i class="fa fa-address-card"></i></span>
+                                            </div>
+                                            <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
+                                                   type="text" name="clientAccountNumber" class="form-control"
+                                                   placeholder="Account number"
+                                                   aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="hidden" name="currentAccountNumber"
+                                                   value="${currentAccount.accountNumber}">
                                         </div>
-                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
-                                               type="text" class="form-control" placeholder="Account number"
-                                               aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
 
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
                                             <span style="background-color: #7530FF;color: #fff" class="input-group-text"
                                                   id="basic-addon2">$</span>
+                                            </div>
+                                            <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
+                                                   type="text" name="amount" class="form-control"
+                                                   placeholder="Account number"
+                                                   aria-label="Username" aria-describedby="basic-addon1"><br>
+
                                         </div>
-                                        <input style="background-color: #eee;border: 1px solid #eee;border-radius: 5px;"
-                                               type="text" class="form-control" placeholder="Account number"
-                                               aria-label="Username" aria-describedby="basic-addon1"><br>
-
-                                    </div>
 
 
-                                    <div>
-                                        <button type="submit" class="transfer-btn">Send</button>
-                                    </div>
+                                        <div>
+                                            <button type="submit" class="transfer-btn">Send</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col"></div>
