@@ -491,7 +491,7 @@
 
       <!--
       The monitoring-attribute-name element is useful for tagging session
-      runtime information for different sessions. For example, you can set it
+      runtime information for different sessions. For app, you can set it
       to "username", if you have an "username" attribute which is guarenteed to
       be unique.
 

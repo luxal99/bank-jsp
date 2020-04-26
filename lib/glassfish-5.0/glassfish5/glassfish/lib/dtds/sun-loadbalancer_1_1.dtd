@@ -59,7 +59,7 @@
 
       listeners      URLs of the listeners. Is a muti-valued, space
                      delimited list of URLs.
-                     For example: "http://server1:80 https://server2:80"
+                     For app: "http://server1:80 https://server2:80"
 -->
 
 <!ELEMENT instance EMPTY>

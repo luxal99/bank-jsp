@@ -20915,8 +20915,8 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T14:41:39.905+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(4)] [timeMillis: 1587818499905] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -20931,8 +20931,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -22324,7 +22324,7 @@ KeyIdentifier [
 
 [2020-04-25T14:43:25.676+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(4)] [timeMillis: 1587818605676] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
-org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: example.entity.Client.userList, could not initialize proxy - no Session
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: app.entity.Client.userList, could not initialize proxy - no Session
 	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:606)
 	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218)
 	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:585)
@@ -23948,8 +23948,8 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T14:45:57.377+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587818757377] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -23964,8 +23964,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -24047,8 +24047,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T14:46:55.486+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587818815486] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -24063,8 +24063,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -25544,11 +25544,11 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T14:47:43.743+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587818863743] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -25630,11 +25630,11 @@ org.hibernate.HibernateException: No CurrentSessionContext configured!
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T14:48:45.876+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587818925876] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -25764,11 +25764,11 @@ org.hibernate.HibernateException: No CurrentSessionContext configured!
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T14:49:19.637+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587818959637] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -27227,7 +27227,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-33" ]]
 
 [2020-04-25T14:53:51.947+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=111 _ThreadName=Thread-9] [timeMillis: 1587819231947] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27242,7 +27242,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27322,7 +27322,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-37" ]]
 
 [2020-04-25T14:54:45.822+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=115 _ThreadName=Thread-9] [timeMillis: 1587819285822] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27337,7 +27337,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27393,7 +27393,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-40" ]]
 
 [2020-04-25T14:56:35.295+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=118 _ThreadName=Thread-9] [timeMillis: 1587819395295] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27408,7 +27408,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27488,7 +27488,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-44" ]]
 
 [2020-04-25T14:56:43.456+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=122 _ThreadName=Thread-9] [timeMillis: 1587819403456] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27503,7 +27503,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27559,7 +27559,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-47" ]]
 
 [2020-04-25T14:59:00.421+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=126 _ThreadName=Thread-9] [timeMillis: 1587819540421] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27574,7 +27574,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27654,7 +27654,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-51" ]]
 
 [2020-04-25T14:59:10.737+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=130 _ThreadName=Thread-9] [timeMillis: 1587819550737] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27669,7 +27669,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27725,7 +27725,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-54" ]]
 
 [2020-04-25T14:59:32.918+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=133 _ThreadName=Thread-9] [timeMillis: 1587819572918] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27740,7 +27740,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27796,7 +27796,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-57" ]]
 
 [2020-04-25T15:00:26.996+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=136 _ThreadName=Thread-9] [timeMillis: 1587819626996] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27811,7 +27811,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 
@@ -27891,7 +27891,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   Exception in thread "Thread-61" ]]
 
 [2020-04-25T15:00:39.018+0200] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=140 _ThreadName=Thread-9] [timeMillis: 1587819639018] [levelValue: 1000] [[
-  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27906,7 +27906,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
+	at app.service.impl.ClientServiceImpl.lambda$updateClient$0(ClientServiceImpl.java:47)
 	at java.lang.Thread.run(Thread.java:748)
 ]]
 

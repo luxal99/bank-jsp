@@ -521,7 +521,7 @@
           <xs:documentation>Returns the maximum number of consecutive invalid login attempts before account is locked out.
 
  When the number of invalid logins within a specified period of time is greater than
- &lt;code&gt;LockoutThreshold&lt;/code&gt;value, the user is locked out. For example,
+ &lt;code&gt;LockoutThreshold&lt;/code&gt;value, the user is locked out. For app,
  with the default setting of &lt;code&gt;1&lt;/code&gt;, the user is locked out on the
  second consecutive invalid login. With a setting of &lt;code&gt;2&lt;/code&gt;, the user
  is locked out on the third consecutive invalid login.

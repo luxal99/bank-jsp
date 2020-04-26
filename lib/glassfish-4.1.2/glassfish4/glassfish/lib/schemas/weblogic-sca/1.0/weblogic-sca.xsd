@@ -30,7 +30,7 @@
         <annotation>
           <documentation>
             The fully-qualified Java type of the interface or class representing the remote service.
-            For example, if the external reference is to a Web Service, this would be the type of
+            For app, if the external reference is to a Web Service, this would be the type of
             the client-side proxy to the Web Service. For SCA references using a Web Service binding,
             the type used must be a JAX-WS compatible interface, generated from the external WSDL
             using the WebLogic clientgen Ant task.

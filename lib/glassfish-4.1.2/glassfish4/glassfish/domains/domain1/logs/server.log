@@ -478,8 +478,8 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 [2020-04-24T12:58:09.932+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587725889932] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
 java.lang.ExceptionInInitializerError
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:16)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:16)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
 	at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
@@ -516,7 +516,7 @@ java.lang.ExceptionInInitializerError
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NoClassDefFoundError: org/hibernate/cfg/AnnotationConfiguration
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:12)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:12)
 	... 36 more
 Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.AnnotationConfiguration
 	at org.glassfish.web.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1783)
@@ -530,8 +530,8 @@ Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.AnnotationConfigu
 [2020-04-24T12:58:10.225+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587725890225] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
 java.lang.ExceptionInInitializerError
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:16)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:16)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
 	at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
@@ -568,7 +568,7 @@ java.lang.ExceptionInInitializerError
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NoClassDefFoundError: org/hibernate/cfg/AnnotationConfiguration
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:12)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:12)
 	... 36 more
 ]]
 
@@ -1590,8 +1590,8 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 [2020-04-24T12:58:58.513+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587725938513] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
 java.lang.ExceptionInInitializerError
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:16)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:16)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
 	at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
@@ -1628,7 +1628,7 @@ java.lang.ExceptionInInitializerError
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NoClassDefFoundError: org/hibernate/cfg/Configuration
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:12)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:12)
 	... 36 more
 Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.Configuration
 	at org.glassfish.web.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1783)
@@ -1642,8 +1642,8 @@ Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.Configuration
 [2020-04-24T12:58:58.841+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587725938841] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
 java.lang.ExceptionInInitializerError
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:16)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:16)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
 	at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
@@ -1680,7 +1680,7 @@ java.lang.ExceptionInInitializerError
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NoClassDefFoundError: org/hibernate/cfg/Configuration
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:12)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:12)
 	... 36 more
 ]]
 
@@ -2702,8 +2702,8 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 [2020-04-24T13:01:59.896+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587726119896] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
 java.lang.ExceptionInInitializerError
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:15)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:15)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
 	at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
@@ -2740,7 +2740,7 @@ java.lang.ExceptionInInitializerError
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NoClassDefFoundError: org/hibernate/cfg/Configuration
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:11)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:11)
 	... 36 more
 Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.Configuration
 	at org.glassfish.web.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1783)
@@ -2754,8 +2754,8 @@ Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.Configuration
 [2020-04-24T13:02:00.253+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587726120253] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
 java.lang.ExceptionInInitializerError
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:15)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:15)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:23)
 	at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
@@ -2792,7 +2792,7 @@ java.lang.ExceptionInInitializerError
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NoClassDefFoundError: org/hibernate/cfg/Configuration
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:11)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:11)
 	... 36 more
 ]]
 

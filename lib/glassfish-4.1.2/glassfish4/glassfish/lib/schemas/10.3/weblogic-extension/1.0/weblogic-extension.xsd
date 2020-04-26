@@ -68,7 +68,7 @@
                                 base-package-name is used if not specified.
 
 
-	example:
+	app:
 
         <weblogic-extension>
 	   <custom-module>

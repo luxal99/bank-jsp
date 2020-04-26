@@ -43,7 +43,7 @@
                                 base-package-name is used if not specified.
 
 
-	example:
+	app:
 
         &lt;weblogic-extension>
 	   &lt;custom-module>

@@ -243,7 +243,7 @@
           <xs:element name="java-vendor" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The Java Vendor value to use when starting this server
- For example, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt; </xs:documentation>
+ For app, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt; </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="java-home" type="xs:string" minOccurs="0" nillable="true">
@@ -2385,7 +2385,7 @@
           <xs:element name="file-name" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The name of the file that stores current log messages. Usually it is a
- computed value based on the name of the parent of this MBean. For example,
+ computed value based on the name of the parent of this MBean. For app,
  for a server log, it is &lt;code&gt;&lt;i&gt;serverName&lt;/i&gt;.log&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -2809,7 +2809,7 @@
               <xs:documentation>Set the WorkManager name that will be used to execute servlet requests
  that need their session retrieved from a remote server since the current
  server is neither the primary nor the secondary for the request. This can
- happen if request stickness is lost for example due to hardware LB
+ happen if request stickness is lost for app due to hardware LB
  configuration issues. Creating a dedicated WorkManager with a max threads
  constraint ensures that threads are available to service requests for which
  the current server is the primary.
@@ -6716,7 +6716,7 @@
           <xs:element name="monitored-m-bean-type" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example,
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app,
  &lt;code&gt;ServerRuntime&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -6911,7 +6911,7 @@
           <xs:element name="attribute-m-bean-type" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example, specify
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app, specify
  &lt;code&gt;Server&lt;/code&gt; to monitor a ServerMBean.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -7900,7 +7900,7 @@
  of the message bodies in the JMS server exceeds the message
  buffer size. If unspecified, messages are written to the
  &lt;code&gt;tmp&lt;/code&gt; directory in the host WebLogic Server
- instance's directory. For example,
+ instance's directory. For app,
  &lt;code&gt;&lt;em&gt;domainName&lt;/em&gt;/servers/&lt;em&gt;servername&lt;/em&gt;/tmp&lt;/code&gt;.
  </xs:documentation>
             </xs:annotation>
@@ -10779,7 +10779,7 @@
  database specified in {@link
  ClusterMBean#getDataSourceForSessionPersistence()} when a server
  is shutdown. The sessions will not be written at any other
- time. (For example, they are not saved via this mechanism if
+ time. (For app, they are not saved via this mechanism if
  there is a server crash.)</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -12272,7 +12272,7 @@
           <xs:element name="extra-ejbc-options" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>
@@ -13863,7 +13863,7 @@
           <xs:element name="extra-ejbc-options" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>

@@ -1422,9 +1422,9 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-24T23:52:16.760+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(4)] [timeMillis: 1587765136760] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.RegistrationServlet]: Servlet.service() for servlet example.servlet.RegistrationServlet threw exception
+  StandardWrapperValve[app.servlet.RegistrationServlet]: Servlet.service() for servlet app.servlet.RegistrationServlet threw exception
 java.lang.NoClassDefFoundError: org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder
-	at example.servlet.RegistrationServlet.doPost(RegistrationServlet.java:47)
+	at app.servlet.RegistrationServlet.doPost(RegistrationServlet.java:47)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -2980,12 +2980,12 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-24T23:55:18.716+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587765318716] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.RegistrationServlet]: Servlet.service() for servlet example.servlet.RegistrationServlet threw exception
+  StandardWrapperValve[app.servlet.RegistrationServlet]: Servlet.service() for servlet app.servlet.RegistrationServlet threw exception
 java.lang.NoClassDefFoundError: org/apache/commons/logging/LogFactory
 	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.<init>(BCryptPasswordEncoder.java:37)
 	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.<init>(BCryptPasswordEncoder.java:51)
 	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.<init>(BCryptPasswordEncoder.java:44)
-	at example.servlet.RegistrationServlet.doPost(RegistrationServlet.java:47)
+	at app.servlet.RegistrationServlet.doPost(RegistrationServlet.java:47)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -11404,12 +11404,12 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T00:23:07.909+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587766987909] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.LoginServlet]: Servlet.service() for servlet example.servlet.LoginServlet threw exception
+  StandardWrapperValve[app.servlet.LoginServlet]: Servlet.service() for servlet app.servlet.LoginServlet threw exception
 java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
 	at java.util.ArrayList.get(ArrayList.java:433)
-	at example.service.UserServiceImpl.findByUsername(UserServiceImpl.java:32)
-	at example.servlet.LoginServlet.doGet(LoginServlet.java:21)
+	at app.service.impl.UserServiceImpl.findByUsername(UserServiceImpl.java:32)
+	at app.servlet.LoginServlet.doGet(LoginServlet.java:21)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)

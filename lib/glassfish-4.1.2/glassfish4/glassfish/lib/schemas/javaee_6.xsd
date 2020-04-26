@@ -868,7 +868,7 @@
   <xsd:complexType name="env-entry-type-valuesType">
     <xsd:annotation>
       <xsd:documentation>
-        <![CDATA[[
+          <![CDATA[[
         This type contains the fully-qualified Java type of the
         environment entry value that is expected by the
         application's code.
@@ -891,7 +891,7 @@
         
         <env-entry-type>java.lang.Boolean</env-entry-type>
         <env-entry-type>java.lang.Class</env-entry-type>
-        <env-entry-type>com.example.Color</env-entry-type>
+        <env-entry-type>com.app.Color</env-entry-type>
         
         ]]>
       </xsd:documentation>

@@ -774,7 +774,7 @@
           <xs:element minOccurs="0" name="file-name" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:documentation>The name of the file that stores current log messages. Usually it is a
- computed value based on the name of the parent of this MBean. For example,
+ computed value based on the name of the parent of this MBean. For app,
  for a server log, it is &lt;code&gt;&lt;i&gt;SERVER_NAME&lt;/i&gt;.log&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -1003,7 +1003,7 @@
  is a relative path, then &lt;code&gt;&lt;i&gt;CacheDirectory&lt;/i&gt;&lt;/code&gt; is created relative to the WebLogic 
  Server instance's home directory. If "" or &lt;code&gt;Null&lt;/code&gt; is specified, the &lt;code&gt;CacheDirectory&lt;/code&gt; 
  is located in the current operating system &lt;code&gt;temp&lt;/code&gt; dir as determined by 
- the (&lt;code&gt;java.io.tmpdir&lt;/code&gt;) Java System property (for example: &lt;code&gt;/tmp&lt;/code&gt;
+ the (&lt;code&gt;java.io.tmpdir&lt;/code&gt;) Java System property (for app: &lt;code&gt;/tmp&lt;/code&gt;
  on UNIX, &lt;code&gt;%TEMP% &lt;/code&gt; on Windows) and is 
  &lt;code&gt; &lt;i&gt;TempDirectory&lt;/i&gt;/WLStoreCache/&lt;i&gt;DomainName&lt;/i&gt;/&lt;i&gt;unique-id&lt;/i&gt;/&lt;i&gt;StoreName&lt;/i&gt;-&lt;i&gt;FileNum&lt;/i&gt;.DAT.cache". 
  The value of &lt;code&gt;java.io.tmpdir&lt;/code&gt; varies between operating systems and configurations, 
@@ -2310,7 +2310,7 @@
           <xs:element minOccurs="0" name="attribute-m-bean-type" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example, specify
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app, specify
  &lt;code&gt;Server&lt;/code&gt; to monitor a ServerMBean.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -3090,7 +3090,7 @@
               <xs:documentation>Set the WorkManager name that will be used to execute servlet requests
  that need their session retrieved from a remote server since the current
  server is neither the primary nor the secondary for the request. This can
- happen if request stickness is lost for example due to hardware LB
+ happen if request stickness is lost for app due to hardware LB
  configuration issues. Creating a dedicated WorkManager with a max threads
  constraint ensures that threads are available to service requests for which
  the current server is the primary.
@@ -6285,7 +6285,7 @@
           <xs:element minOccurs="0" name="monitored-m-bean-type" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example,
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app,
  &lt;code&gt;ServerRuntime&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -10592,7 +10592,7 @@
           <xs:element minOccurs="0" name="java-vendor" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:documentation>The Java Vendor value to use when starting this server
- For example, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt; </xs:documentation>
+ For app, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt; </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element minOccurs="0" name="java-home" nillable="true" type="xs:string">
@@ -11633,7 +11633,7 @@
  database specified in {@link
  ClusterMBean#getDataSourceForSessionPersistence()} when a server
  is shutdown. The sessions will not be written at any other
- time. (For example, they are not saved via this mechanism if
+ time. (For app, they are not saved via this mechanism if
  there is a server crash.)</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -13409,7 +13409,7 @@
           <xs:element minOccurs="0" name="extra-ejbc-options" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>
@@ -14406,7 +14406,7 @@
  of the message bodies in the JMS server exceeds the message
  buffer size. If unspecified, messages are written to the
  &lt;code&gt;tmp&lt;/code&gt; directory in the host WebLogic Server
- instance's directory. For example,
+ instance's directory. For app,
  &lt;code&gt;&lt;em&gt;domainName&lt;/em&gt;/servers/&lt;em&gt;servername&lt;/em&gt;/tmp&lt;/code&gt;.
  </xs:documentation>
             </xs:annotation>
@@ -15111,7 +15111,7 @@
  is a relative path, then &lt;code&gt;&lt;i&gt;CacheDirectory&lt;/i&gt;&lt;/code&gt; is created relative to the WebLogic 
  Server instance's home directory. If "" or &lt;code&gt;Null&lt;/code&gt; is specified, the &lt;code&gt;CacheDirectory&lt;/code&gt; 
  is located in the current operating system &lt;code&gt;temp&lt;/code&gt; dir as determined by 
- the (&lt;code&gt;java.io.tmpdir&lt;/code&gt;) Java System property (for example: &lt;code&gt;/tmp&lt;/code&gt;
+ the (&lt;code&gt;java.io.tmpdir&lt;/code&gt;) Java System property (for app: &lt;code&gt;/tmp&lt;/code&gt;
  on UNIX, &lt;code&gt;%TEMP% &lt;/code&gt; on Windows) and is 
  &lt;code&gt; &lt;i&gt;TempDirectory&lt;/i&gt;/WLStoreCache/&lt;i&gt;DomainName&lt;/i&gt;/&lt;i&gt;unique-id&lt;/i&gt;/&lt;i&gt;StoreName&lt;/i&gt;-&lt;i&gt;FileNum&lt;/i&gt;.DAT.cache". 
  The value of &lt;code&gt;java.io.tmpdir&lt;/code&gt; varies between operating systems and configurations, 
@@ -15510,7 +15510,7 @@
           <xs:element minOccurs="0" name="extra-ejbc-options" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>

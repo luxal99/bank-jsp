@@ -1540,7 +1540,7 @@
             of the abstract schema type of an entity bean with 
             cmp-version 2.x. It is used in EJB QL queries. 
             
-            For example, the abstract-schema-name for an entity 
+            For app, the abstract-schema-name for an entity
             bean whose local interface is 
             com.acme.commerce.Order might be Order. 
             
@@ -2254,7 +2254,7 @@
         </method-params>
         </method>
         
-        The following example illustrates a Style 3 element with
+        The following app illustrates a Style 3 element with
         more complex parameter types. The method 
         foobar(char s, int i, int[] iar, mypackage.MyClass mycl, 
         mypackage.MyClass[][] myclaar) would be specified as:
@@ -2291,7 +2291,7 @@
         business interface and the remote component interface, the same
         attribute applies to the method for both interfaces.
         
-        For example, the method element
+        For app, the method element
         
         <method>
         <ejb-name>EmployeeService</ejb-name>
@@ -2332,8 +2332,8 @@
         </method>
         
         The method-intf element can be used with all three Styles
-        of the method element usage. For example, the following
-        method element example could be used to refer to all the
+        of the method element usage. For app, the following
+        method element app could be used to refer to all the
         methods of the EmployeeService bean's remote home interface
         and the remote business interface.
         

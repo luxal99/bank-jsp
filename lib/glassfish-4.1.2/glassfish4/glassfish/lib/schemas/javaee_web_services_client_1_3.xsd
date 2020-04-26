@@ -483,7 +483,7 @@
         attribute service-name-pattern and port-name-pattern in
         the handler-chain element
         
-        For example, the various forms acceptable here for
+        For app, the various forms acceptable here for
         service-name-pattern attribute in handler-chain element
         are :
         

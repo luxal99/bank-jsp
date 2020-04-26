@@ -1,5 +1,5 @@
-<%@ page import="example.service.AccountServiceImpl" %>
-<%@ page import="example.util.HashPassword" %><%--
+<%@ page import="app.service.impl.AccountServiceImpl" %>
+<%@ page import="app.util.HashPassword" %><%--
   Created by IntelliJ IDEA.
   User: luxal
   Date: 4/24/20

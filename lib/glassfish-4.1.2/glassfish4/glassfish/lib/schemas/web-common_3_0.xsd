@@ -672,7 +672,7 @@
         <xsd:documentation>
 
           The extension element contains a string describing an
-          extension. example: "txt"
+          extension. app: "txt"
           
         </xsd:documentation>
       </xsd:annotation>

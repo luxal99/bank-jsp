@@ -433,7 +433,7 @@
                   maxOccurs="1">
         <xs:annotation>
           <xs:documentation>
-            Define a service channel, for example: /service/echo
+            Define a service channel, for app: /service/echo
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -441,7 +441,7 @@
                   maxOccurs="1">
         <xs:annotation>
           <xs:documentation>
-            Define the class to service this service, for example: EchoService
+            Define the class to service this service, for app: EchoService
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -451,7 +451,7 @@
           <xs:documentation>
             Define a service method in the service class. The service method
             must have only one payload parameter with type 'Object'. For
-            example: Object echo(Object payload).
+            app: Object echo(Object payload).
           </xs:documentation>
         </xs:annotation>
       </xs:element>

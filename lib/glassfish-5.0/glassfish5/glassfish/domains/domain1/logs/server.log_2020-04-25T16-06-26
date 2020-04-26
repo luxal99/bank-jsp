@@ -35,8 +35,8 @@
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:01:28.916+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587819688916] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -51,8 +51,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -1494,11 +1494,11 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:05:38.493+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587819938493] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -5789,11 +5789,11 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:19:58.079+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587820798079] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -9639,10 +9639,10 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at example.config.util.DBConfig.getSessionFactory(DBConfig.java:33)
-	at example.service.UserServiceImpl$1.call(UserServiceImpl.java:33)
-	at example.service.UserServiceImpl.findByUsername(UserServiceImpl.java:39)
-	at example.servlet.LoginServlet.doPost(LoginServlet.java:31)
+	at app.config.DBConfig.getSessionFactory(DBConfig.java:33)
+	at app.service.impl.UserServiceImpl$1.call(UserServiceImpl.java:33)
+	at app.service.impl.UserServiceImpl.findByUsername(UserServiceImpl.java:39)
+	at app.servlet.LoginServlet.doPost(LoginServlet.java:31)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -11105,11 +11105,11 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:31:28.212+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(3)] [timeMillis: 1587821488212] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -11191,11 +11191,11 @@ org.hibernate.HibernateException: No CurrentSessionContext configured!
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:31:57.082+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=27 _ThreadName=http-listener-1(2)] [timeMillis: 1587821517082] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -11301,11 +11301,11 @@ org.hibernate.HibernateException: No CurrentSessionContext configured!
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:32:04.980+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=26 _ThreadName=http-listener-1(1)] [timeMillis: 1587821524980] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:471)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -11579,8 +11579,8 @@ org.hibernate.HibernateException: No CurrentSessionContext configured!
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:32:36.281+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=27 _ThreadName=http-listener-1(2)] [timeMillis: 1587821556281] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -11595,8 +11595,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:48)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:48)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -13038,8 +13038,8 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-25T15:35:10.211+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587821710211] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -13054,8 +13054,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:652)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:645)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:640)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:47)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:47)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -14488,8 +14488,8 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:44:04.024+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(3)] [timeMillis: 1587822244024] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -14510,8 +14510,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:351)
 	at com.sun.proxy.$Proxy259.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -15961,8 +15961,8 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:44:58.940+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587822298940] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -15983,8 +15983,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:351)
 	at com.sun.proxy.$Proxy260.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -17411,12 +17411,12 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:46:23.781+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=32 _ThreadName=http-listener-1(5)] [timeMillis: 1587822383781] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: Calling method 'getSession' is not valid without an active transaction (Current status: NOT_ACTIVE)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:347)
 	at com.sun.proxy.$Proxy243.getSession(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -18867,12 +18867,12 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:47:36.523+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587822456523] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: Calling method 'getSession' is not valid without an active transaction (Current status: NOT_ACTIVE)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:347)
 	at com.sun.proxy.$Proxy259.getSession(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:45)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:45)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -21456,8 +21456,8 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:48:59.743+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587822539743] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -21478,8 +21478,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:351)
 	at com.sun.proxy.$Proxy260.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -22912,12 +22912,12 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:50:18.432+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587822618432] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: Calling method 'update' is not valid without an active transaction (Current status: NOT_ACTIVE)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:347)
 	at com.sun.proxy.$Proxy260.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:44)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -24371,12 +24371,12 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:51:40.287+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587822700287] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: Calling method 'update' is not valid without an active transaction (Current status: NOT_ACTIVE)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:347)
 	at com.sun.proxy.$Proxy260.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:45)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:45)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -25830,12 +25830,12 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:53:42.417+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=30 _ThreadName=http-listener-1(3)] [timeMillis: 1587822822417] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
 org.hibernate.HibernateException: Calling method 'update' is not valid without an active transaction (Current status: NOT_ACTIVE)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:347)
 	at com.sun.proxy.$Proxy260.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:45)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:45)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -27268,8 +27268,8 @@ KeyIdentifier [
   HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.]]
 
 [2020-04-25T15:55:38.205+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(4)] [timeMillis: 1587822938205] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.ClientServlet]: Servlet.service() for servlet example.servlet.ClientServlet threw exception
-org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [example.entity.Client.accountList#33]
+  StandardWrapperValve[app.servlet.ClientServlet]: Servlet.service() for servlet app.servlet.ClientServlet threw exception
+org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions. Collection : [app.entity.Client.accountList#33]
 	at org.hibernate.collection.internal.AbstractPersistentCollection.setCurrentSession(AbstractPersistentCollection.java:689)
 	at org.hibernate.event.internal.OnUpdateVisitor.processCollection(OnUpdateVisitor.java:46)
 	at org.hibernate.event.internal.AbstractVisitor.processValue(AbstractVisitor.java:104)
@@ -27290,8 +27290,8 @@ org.hibernate.HibernateException: Illegal attempt to associate a collection with
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:351)
 	at com.sun.proxy.$Proxy260.update(Unknown Source)
-	at example.service.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
-	at example.servlet.ClientServlet.doPost(ClientServlet.java:26)
+	at app.service.impl.ClientServiceImpl.updateClient(ClientServiceImpl.java:46)
+	at app.servlet.ClientServlet.doPost(ClientServlet.java:26)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)

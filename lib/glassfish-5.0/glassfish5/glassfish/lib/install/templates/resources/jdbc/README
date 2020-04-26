@@ -1,4 +1,4 @@
-The jdbc resource templates directory contains example resource templates for various databases which can be modified and used. 
+The jdbc resource templates directory contains app resource templates for various databases which can be modified and used.
 The purpose is to avoid having to remember the syntax and various options which are needed for the definition of connection-pools and resources.
 
 Pl. refer to User Commands for the syntax of adding resources using an xml script

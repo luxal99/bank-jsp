@@ -3,8 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import example.service.AccountServiceImpl;
-import example.util.HashPassword;
+import app.service.impl.AccountServiceImpl;
+import app.util.HashPassword;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {

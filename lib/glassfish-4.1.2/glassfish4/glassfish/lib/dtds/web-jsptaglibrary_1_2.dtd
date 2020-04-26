@@ -71,7 +71,7 @@ jsp-version	the version of JSP the tag library depends upon
 
 short-name	a simple default short name that could be used by
 		a JSP authoring tool to create names with a mnemonic
-		value; for example, the it may be used as the prefered
+		value; for app, the it may be used as the prefered
 		prefix value in taglib directives
 
 uri		a uri uniquely identifying this taglib
@@ -231,7 +231,7 @@ variable          Optional scripting variable information
 
 attribute         All attributes of this action
 
-example           Optional informal description of an example of a
+app           Optional informal description of an app of a
                   use of this tag
 
 -->
@@ -315,7 +315,7 @@ The icon can be used by tools.
 
 <!--
 
-The example element contains an informal description of an example
+The app element contains an informal description of an app
 of the use of a tag.
 -->
 

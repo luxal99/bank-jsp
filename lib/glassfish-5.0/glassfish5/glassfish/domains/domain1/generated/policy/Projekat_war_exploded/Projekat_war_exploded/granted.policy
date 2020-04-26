@@ -1,4 +1,4 @@
-/* AUTOMATICALLY GENERATED ON Sun Apr 26 22:55:59 CEST 2020*/
+/* AUTOMATICALLY GENERATED ON Sun Apr 26 23:54:27 CEST 2020*/
 /* DO NOT EDIT */
 
 grant {
@@ -8,14 +8,13 @@ grant {
 
 grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
-  permission javax.security.jacc.WebRoleRefPermission "Dynamic JAXWS Servlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "", "**";
-  permission javax.security.jacc.WebRoleRefPermission "example.servlet.RegistrationServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "example.servlet.LoginServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "example.servlet.UserServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "example.servlet.AccountServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "example.servlet.ClientServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "app.servlet.LoginServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "app.servlet.UserServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "app.servlet.AccountServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "app.servlet.ClientServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "default", "**";
   permission javax.security.jacc.WebRoleRefPermission "WSServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "app.servlet.RegistrationServlet", "**";
 };
 

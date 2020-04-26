@@ -596,7 +596,7 @@ pm-inuse specifies which CMP vendor is used.
 
 <!--
 This holds the runtime configuration properties of the message-driven bean 
-in its operation environment.  For example, this may include information 
+in its operation environment.  For app, this may include information
 about the name of a physical JMS destination etc.
 Defined this way to match the activation-config on the standard
 deployment descriptor for message-driven bean.

@@ -119,7 +119,7 @@
             the physical database connections in the connection pool in the
             data source.
 
-            For example:
+            For app:
 
             oracle.jdbc.OracleDriver
 
@@ -417,7 +417,7 @@
             SQL statement that will be used to test connections instead of the
             standard query.
 
-            For example: SQL BEGIN; Null; END;
+            For app: SQL BEGIN; Null; END;
           </documentation>
         </annotation>
       </element>
@@ -841,7 +841,7 @@
           <documentation>
             Specifies the data chunk size for steaming data types.
 
-            Streaming data types (for example resulting from a call to
+            Streaming data types (for app resulting from a call to
             getBinaryStream()) are sent in sized chunks from
             WebLogic Server to the client as needed.
           </documentation>

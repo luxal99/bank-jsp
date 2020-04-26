@@ -221,8 +221,8 @@
 			    method that is to be used to implement
 			    the function.
 
-	example             Optional informal description of an
-			    example of a use of this function
+	app             Optional informal description of an
+			    app of a use of this function
 
 	function-extension  Zero or more extensions that provide extra
 			    information about this function, for tool
@@ -304,8 +304,8 @@
 	<xsd:annotation>
 	  <xsd:documentation>
 
-	    The example element contains an informal description
-	    of an example of the use of this function.
+	    The app element contains an informal description
+	    of an app of the use of this function.
 
 	  </xsd:documentation>
 	</xsd:annotation>
@@ -357,8 +357,8 @@
 			  resides in the WAR, or /META-INF/tags if the
 			  .tag file resides in a JAR.
 
-	example           Optional informal description of an
-			  example of a use of this tag
+	app           Optional informal description of an
+			  app of a use of this tag
 
 	tag-extension     Zero or more extensions that provide extra
 			  information about this tag, for tool
@@ -379,8 +379,8 @@
 	<xsd:annotation>
 	  <xsd:documentation>
 
-	    The example element contains an informal description
-	    of an example of the use of a tag.
+	    The app element contains an informal description
+	    of an app of the use of a tag.
 
 	  </xsd:documentation>
 	</xsd:annotation>
@@ -443,8 +443,8 @@
 			   javax.servlet.jsp.tagext.DynamicAttributes
 			   interface.  Defaults to false.
 
-	example           Optional informal description of an
-			  example of a use of this tag
+	app           Optional informal description of an
+			  app of a use of this tag
 
 	tag-extension     Zero or more extensions that provide extra
 			  information about this tag, for tool
@@ -515,8 +515,8 @@
 	<xsd:annotation>
 	  <xsd:documentation>
 
-	    The example element contains an informal description
-	    of an example of the use of a tag.
+	    The app element contains an informal description
+	    of an app of the use of a tag.
 
 	  </xsd:documentation>
 	</xsd:annotation>
@@ -717,7 +717,7 @@
 
 	short-name      a simple default short name that could be
 			used by a JSP authoring tool to create
-			names with a mnemonic value; for example,
+			names with a mnemonic value; for app,
 			the it may be used as the prefered prefix
 			value in taglib directives
 
@@ -762,7 +762,7 @@
 
 	    Defines a simple default name that could be used by
 	    a JSP authoring tool to create names with a
-	    mnemonicvalue; for example, it may be used as the
+	    mnemonicvalue; for app, it may be used as the
 	    preferred prefix value in taglib directives.  Do
 	    not use white space, and do not start with digits
 	    or underscore.

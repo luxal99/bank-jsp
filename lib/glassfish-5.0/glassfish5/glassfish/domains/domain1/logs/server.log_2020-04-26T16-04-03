@@ -3131,7 +3131,7 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3222,7 +3222,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3313,7 +3313,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3404,7 +3404,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3495,7 +3495,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3586,7 +3586,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3677,7 +3677,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -3768,7 +3768,7 @@ java.util.ConcurrentModificationException
 java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
-	at example.service.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
+	at app.service.impl.AccountServiceImpl.getAll(AccountServiceImpl.java:37)
 	at org.apache.jsp.pages.dashboard_jsp._jspService(dashboard_jsp.java:165)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -13162,31 +13162,31 @@ PWC6197: An error occurred at line: 157 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 159 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 161 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 161 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 163 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 
 	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:129)
@@ -14958,31 +14958,31 @@ PWC6197: An error occurred at line: 157 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 159 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 161 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 161 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 163 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 
 	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:129)
@@ -16393,31 +16393,31 @@ PWC6197: An error occurred at line: 157 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 159 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 161 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 161 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 PWC6197: An error occurred at line: 163 in the jsp file: /pages/client.jsp
 PWC6199: Generated servlet error:
 cannot find symbol
   symbol:   method getTransactionList()
-  location: variable defaultAccount of type example.entity.Account
+  location: variable defaultAccount of type app.entity.Account
 
 
 	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:129)
@@ -20908,12 +20908,12 @@ hence Enterprise Web Service (109) deployment is disabled for this archive to av
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-26T14:54:51.482+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587905691482] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.AccountServlet]: Servlet.service() for servlet example.servlet.AccountServlet threw exception
+  StandardWrapperValve[app.servlet.AccountServlet]: Servlet.service() for servlet app.servlet.AccountServlet threw exception
 java.lang.NumberFormatException: For input string: "5432115151"
 	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.lang.Integer.parseInt(Integer.java:583)
 	at java.lang.Integer.valueOf(Integer.java:766)
-	at example.servlet.AccountServlet.doPost(AccountServlet.java:30)
+	at app.servlet.AccountServlet.doPost(AccountServlet.java:30)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -22995,11 +22995,11 @@ KeyIdentifier [
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-26T15:23:13.538+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=28 _ThreadName=http-listener-1(1)] [timeMillis: 1587907393538] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.AccountServlet]: Servlet.service() for servlet example.servlet.AccountServlet threw exception
+  StandardWrapperValve[app.servlet.AccountServlet]: Servlet.service() for servlet app.servlet.AccountServlet threw exception
 javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1580)
-	at example.service.AccountServiceImpl.findByAccountNumber(AccountServiceImpl.java:122)
-	at example.servlet.AccountServlet.doPost(AccountServlet.java:31)
+	at app.service.impl.AccountServiceImpl.findByAccountNumber(AccountServiceImpl.java:122)
+	at app.servlet.AccountServlet.doPost(AccountServlet.java:31)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)
@@ -23129,11 +23129,11 @@ javax.persistence.NoResultException: No entity found for query
   HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]]]
 
 [2020-04-26T15:26:47.400+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1587907607400] [levelValue: 900] [[
-  StandardWrapperValve[example.servlet.AccountServlet]: Servlet.service() for servlet example.servlet.AccountServlet threw exception
+  StandardWrapperValve[app.servlet.AccountServlet]: Servlet.service() for servlet app.servlet.AccountServlet threw exception
 javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1580)
-	at example.service.AccountServiceImpl.findByAccountNumber(AccountServiceImpl.java:122)
-	at example.servlet.AccountServlet.doPost(AccountServlet.java:31)
+	at app.service.impl.AccountServiceImpl.findByAccountNumber(AccountServiceImpl.java:122)
+	at app.servlet.AccountServlet.doPost(AccountServlet.java:31)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:706)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
 	at org.apache.catalina.core.StandardWrapper.service(StandardWrapper.java:1580)

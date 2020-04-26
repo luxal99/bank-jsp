@@ -6716,7 +6716,7 @@ KeyIdentifier [
 
 [2020-04-25T11:22:58.534+0200] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=31 _ThreadName=http-listener-1(4)] [timeMillis: 1587806578534] [levelValue: 900] [[
   StandardWrapperValve[jsp]: Servlet.service() for servlet jsp threw exception
-java.lang.NoClassDefFoundError: example/util/HashPassword
+java.lang.NoClassDefFoundError: app/util/HashPassword
 	at org.apache.jsp.pages.client_jsp._jspService(client_jsp.java:85)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:791)
@@ -6752,7 +6752,7 @@ java.lang.NoClassDefFoundError: example/util/HashPassword
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.ClassNotFoundException: example.util.HashPassword
+Caused by: java.lang.ClassNotFoundException: app.util.HashPassword
 	at org.glassfish.web.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1621)
 	at org.glassfish.web.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1471)
 	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:187)

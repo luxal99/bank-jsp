@@ -1,10 +1,18 @@
-<%@ page import="example.entity.Client" %>
+<%@ page import="app.entity.Client" %>
 <%@ page import="java.util.List" %>
-<%@ page import="example.entity.UserType" %>
-<%@ page import="example.service.*" %>
-<%@ page import="example.entity.Account" %>
-<%@ page import="example.entity.Bank" %>
-<%@ page import="example.util.HashPassword" %>
+<%@ page import="app.entity.UserType" %>
+<%@ page import="app.service.*" %>
+<%@ page import="app.entity.Account" %>
+<%@ page import="app.entity.Bank" %>
+<%@ page import="app.util.HashPassword" %>
+<%@ page import="app.service.dao.AccountService" %>
+<%@ page import="app.service.dao.BankService" %>
+<%@ page import="app.service.dao.ClientService" %>
+<%@ page import="app.service.dao.UserTypeService" %>
+<%@ page import="app.service.impl.ClientServiceImpl" %>
+<%@ page import="app.service.impl.BankServiceImpl" %>
+<%@ page import="app.service.impl.AccountServiceImpl" %>
+<%@ page import="app.service.impl.UserTypeServiceImpl" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -223,10 +231,10 @@
                             <input class="form-control" type="text" name="amount" value="${account.balance}"/>
                             <input class="form-control" type="hidden" name="accountNumber"
                                    value="${account.accountNumber}"/>
-                            <input class="form-control" type="hidden" name="idClientAccount"
-                                   value="${account.idAccount}"/>
-                            <input class="form-control" type="hidden" name="idBankAccount"
-                                   value="${bankAccount.idAccount}"/>
+                            <input class="form-control" type="hidden" name="clientAccountNumber"
+                                   value="${account.accountNumber}"/>
+                            <input class="form-control" type="hidden" name="currentAccountNumber"
+                                   value="${bankAccount.accountNumber}"/>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

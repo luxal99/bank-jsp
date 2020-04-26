@@ -51,7 +51,7 @@
           <xs:documentation>Returns the maximum number of consecutive invalid login attempts before account is locked out.
 
  When the number of invalid logins within a specified period of time is greater than
- &lt;code&gt;LockoutThreshold&lt;/code&gt;value, the user is locked out. For example,
+ &lt;code&gt;LockoutThreshold&lt;/code&gt;value, the user is locked out. For app,
  with the default setting of &lt;code&gt;1&lt;/code&gt;, the user is locked out on the
  second consecutive invalid login. With a setting of &lt;code&gt;2&lt;/code&gt;, the user
  is locked out on the third consecutive invalid login.
@@ -614,7 +614,7 @@
           <xs:documentation>The full package name of the JDBC driver class used to create the physical database connections in the
  connection pool. Note that this driver class must be in the classpath of any server to which it is deployed.
  &lt;p/&gt;
- &lt;p&gt;For example:&lt;/p&gt;
+ &lt;p&gt;For app:&lt;/p&gt;
  &lt;ol&gt;
  &lt;li&gt;&lt;code&gt;oracle.jdbc.OracleDriver&lt;/code&gt;&lt;/li&gt;
  &lt;li&gt;&lt;code&gt;com.microsoft.sqlserver.jdbc.SQLServerDriver&lt;/code&gt;&lt;/li&gt;
@@ -677,10 +677,10 @@
  &lt;/p&gt;
  &lt;p&gt;The following are examples of keys:&lt;/p&gt;
  &lt;ol&gt;&lt;li&gt;&lt;code&gt;java.naming.provider.url:&lt;/code&gt; property for specifying configuration information for the service provider
- to use. The value of the property should contain a URL string (For example: &lt;code&gt;iiops://localhost:7002&lt;/code&gt;).&lt;/li&gt;
+ to use. The value of the property should contain a URL string (For app: &lt;code&gt;iiops://localhost:7002&lt;/code&gt;).&lt;/li&gt;
  &lt;li&gt;&lt;code&gt;java.naming.factory.initial:&lt;/code&gt; property for specifying the initial context factory to use. The value of
  the property should be the fully qualified class name of the factory class that will create an initial
- context (For example: &lt;code&gt;weblogic.jndi.WLInitialContextFactory&lt;/code&gt;).&lt;/li&gt;
+ context (For app: &lt;code&gt;weblogic.jndi.WLInitialContextFactory&lt;/code&gt;).&lt;/li&gt;
  &lt;/ol&gt;
  &lt;/p&gt;
  &lt;p&gt;When setting the attribute, the syntax of its value is validated, and an
