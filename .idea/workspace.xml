@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="786b0f37-ed47-4cf0-8f0b-f4fdc1332b95" name="Default Changelist" comment="" />
 =======
     <list default="true" id="b09f0829-ccb5-49f2-bbad-c37231915735" name="Default Changelist" comment="">
@@ -29,6 +30,9 @@
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
 >>>>>>> client
+=======
+    <list default="true" id="786b0f37-ed47-4cf0-8f0b-f4fdc1332b95" name="Default Changelist" comment="" />
+>>>>>>> dev
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +73,7 @@
       <list>
         <option value="Tag Library Descriptor" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="Jsp File" />
         <option value="CSS File" />
         <option value="Interface" />
@@ -77,6 +82,11 @@
         <option value="Jsp File" />
         <option value="CSS File" />
 >>>>>>> client
+=======
+        <option value="Jsp File" />
+        <option value="CSS File" />
+        <option value="Interface" />
+>>>>>>> dev
         <option value="Class" />
       </list>
     </option>
@@ -125,6 +135,7 @@
   </component>
   <component name="RecentsManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/example/entity" />
@@ -133,6 +144,8 @@
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
 >>>>>>> client
+=======
+>>>>>>> dev
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/web" />
@@ -250,10 +263,14 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <item name="com.intellij.database.console.session.MessageBusSession@375eeb0a" type="9fbbdea:ServiceModel$ServiceNode" />
 =======
                 <item name="com.intellij.database.console.session.MessageBusSession@4183f3f7" type="9fbbdea:ServiceModel$ServiceNode" />
 >>>>>>> client
+=======
+                <item name="com.intellij.database.console.session.MessageBusSession@375eeb0a" type="9fbbdea:ServiceModel$ServiceNode" />
+>>>>>>> dev
               </path>
             </expand>
             <select />
@@ -277,9 +294,12 @@
       <workItem from="1587800098944" duration="6779000" />
       <workItem from="1587830509029" duration="8698000" />
       <workItem from="1587840935192" duration="1569000" />
+<<<<<<< HEAD
 =======
       <workItem from="1587800098944" duration="22169000" />
 >>>>>>> client
+=======
+>>>>>>> dev
     </task>
     <task id="LOCAL-00001" summary="Generisani entiteti">
       <created>1587715114157</created>
@@ -324,6 +344,7 @@
     </state>
     <state x="418" y="211" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587800545176" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587841319322">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -334,6 +355,12 @@
     </state>
     <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587896713386" />
 >>>>>>> client
+=======
+    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587841319322">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587841319322" />
+>>>>>>> dev
     <state x="555" y="214" width="800" height="683" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1587709110253">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -456,6 +483,9 @@
     </state>
     <state x="632" y="446" width="646" height="242" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.27.1920.1053@0.27.1920.1053" timestamp="1587715012192" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
     <state x="624" y="236" key="run.anything.popup" timestamp="1587831698169">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -464,6 +494,7 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587890484603" />
+<<<<<<< HEAD
 =======
     <state x="624" y="236" key="run.anything.popup" timestamp="1587822868629">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -485,5 +516,7 @@
       </breakpoints>
     </breakpoint-manager>
 >>>>>>> client
+=======
+>>>>>>> dev
   </component>
 </project>

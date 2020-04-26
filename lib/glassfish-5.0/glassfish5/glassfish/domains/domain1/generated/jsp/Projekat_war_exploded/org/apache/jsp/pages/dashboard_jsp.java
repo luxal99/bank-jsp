@@ -94,11 +94,15 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <h2 class=\"text-center\">Modal Example</h2>\n");
       out.write("                    <!-- Trigger the modal with a button -->\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.write("                    <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Create user\n");
       out.write("                    </button>\n");
       out.write("\n");
       out.write("                    <!-- Modal -->\n");
       out.write("\n");
+<<<<<<< HEAD
 =======
       out.write("                    <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Open\n");
       out.write("                        Modal\n");
@@ -221,6 +225,8 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\n");
       out.write("                    </div>\n");
 >>>>>>> client
+=======
+>>>>>>> dev
       out.write("\n");
       out.write("                    <table class=\"table\">\n");
       out.write("                        <thead>\n");
@@ -279,12 +285,18 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">\n");
       out.write("\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.write("                <button type=\"button\" class=\"open-btn\" data-toggle=\"modal\" data-target=\"#addAccountModal\">Create\n");
       out.write("                    account\n");
       out.write("                </button>\n");
       out.write("\n");
+<<<<<<< HEAD
 =======
 >>>>>>> client
+=======
+>>>>>>> dev
       out.write("                ");
 
                     AccountService accountService = new AccountServiceImpl();
@@ -297,14 +309,20 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <th scope=\"col\">#</th>\n");
       out.write("                        <th scope=\"col\">Account Number</th>\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.write("                        <th scope=\"col\">Client ID</th>\n");
       out.write("                        <th scope=\"col\">Balance</th>\n");
       out.write("                        <th scope=\"col\">Client name</th>\n");
       out.write("                        <th scope=\"col\">Client lastname</th>\n");
+<<<<<<< HEAD
 =======
       out.write("                        <th scope=\"col\">Client</th>\n");
       out.write("                        <th scope=\"col\">Handle</th>\n");
 >>>>>>> client
+=======
+>>>>>>> dev
       out.write("                    </tr>\n");
       out.write("                    </thead>\n");
       out.write("                    <tbody>\n");
@@ -325,6 +343,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </td>\n");
       out.write("                        <td>");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.print( account.getIdClient().getIdClient() );
       out.write("\n");
       out.write("                        </td>\n");
@@ -345,6 +366,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <button class=\"open-btn\" type=\"submit\" name=\"clientInfo\">\n");
       out.write("                                    Select client\n");
       out.write("                                </button>\n");
+<<<<<<< HEAD
 =======
       out.print( account.getBalance() );
       out.write("\n");
@@ -353,6 +375,8 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <form method=\"get\" action=\"dashboard.jsp\" >\n");
       out.write("                                <button class=\"open-btn\" type=\"submit\" name=\"clientInfo\">Client detail</button>\n");
 >>>>>>> client
+=======
+>>>>>>> dev
       out.write("                                <input type=\"hidden\" name=\"idAccount\" value=\"");
       out.print(account.getIdAccount());
       out.write("\"/>\n");
@@ -368,6 +392,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </tbody>\n");
       out.write("                </table>\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.write("                <button class=\"pay-btn\" type=\"button\" data-toggle=\"modal\" data-target=\"#payUpModal\">Pay up</button>\n");
       out.write("                <div style=\"height: 1px;background-color: #eee;margin-top: 1em\"></div>\n");
       out.write("                <h3>Current selected client</h3>\n");
@@ -376,6 +403,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
                     if (request.getParameter("clientInfo") != null) {
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
                         request.getSession().setAttribute("account", account);
+<<<<<<< HEAD
 =======
       out.write("                <h2>Client Info</h2>\n");
       out.write("                ");
@@ -385,12 +413,17 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
                         Account account = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
                         request.setAttribute("account",account);
 >>>>>>> client
+=======
+>>>>>>> dev
 
                     }
                 
       out.write("\n");
       out.write("\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.write("                <div style=\"margin-top: 1em\">\n");
       out.write("                    <h3>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.accountNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -408,6 +441,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.telephone}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h3>\n");
       out.write("                </div>\n");
+<<<<<<< HEAD
 =======
       out.write("\n");
       out.write("                <h3>");
@@ -423,6 +457,8 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.idClient.telephone}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h3>\n");
 >>>>>>> client
+=======
+>>>>>>> dev
       out.write("\n");
       out.write("            </div>\n");
       out.write("            <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\n");
@@ -433,6 +469,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("        </div>\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       out.write("        <!-- Button trigger modal -->\n");
       out.write("\n");
       out.write("\n");
@@ -654,8 +693,11 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
+<<<<<<< HEAD
 =======
 >>>>>>> client
+=======
+>>>>>>> dev
       out.write("    </div>\n");
       out.write("</div>\n");
       out.write("\n");

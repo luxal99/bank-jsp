@@ -1142,14 +1142,20 @@
       <Type>btree</Type>
     </index>
     <key id="266" parent="237" name="PRIMARY">
+<<<<<<< HEAD
 =======
     <key id="277" parent="238" name="PRIMARY">
 >>>>>>> client
+=======
+>>>>>>> dev
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_transaction</ColNames>
       <Primary>1</Primary>
     </key>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
     <foreign-key id="267" parent="237" name="transaction_account_id_account_fk">
       <ColNames>id_account</ColNames>
       <RefTableName>account</RefTableName>
@@ -1165,9 +1171,12 @@
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="269" parent="238" name="id_type_of_transaction">
+<<<<<<< HEAD
 =======
     <column id="278" parent="239" name="id_type_of_transaction">
 >>>>>>> client
+=======
+>>>>>>> dev
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1175,28 +1184,40 @@
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="270" parent="238" name="title">
 =======
     <column id="279" parent="239" name="title">
 >>>>>>> client
+=======
+    <column id="270" parent="238" name="title">
+>>>>>>> dev
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <key id="271" parent="238" name="PRIMARY">
 =======
     <key id="280" parent="239" name="PRIMARY">
 >>>>>>> client
+=======
+    <key id="271" parent="238" name="PRIMARY">
+>>>>>>> dev
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_type_of_transaction</ColNames>
       <Primary>1</Primary>
     </key>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="272" parent="239" name="id_user">
 =======
     <column id="281" parent="240" name="id_user">
 >>>>>>> client
+=======
+    <column id="272" parent="239" name="id_user">
+>>>>>>> dev
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1204,63 +1225,90 @@
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="273" parent="239" name="username">
 =======
     <column id="282" parent="240" name="username">
 >>>>>>> client
+=======
+    <column id="273" parent="239" name="username">
+>>>>>>> dev
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="274" parent="239" name="password">
 =======
     <column id="283" parent="240" name="password">
 >>>>>>> client
+=======
+    <column id="274" parent="239" name="password">
+>>>>>>> dev
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="275" parent="239" name="id_client">
 =======
     <column id="284" parent="240" name="id_client">
 >>>>>>> client
+=======
+    <column id="275" parent="239" name="id_client">
+>>>>>>> dev
       <Position>4</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="276" parent="239" name="id_user_type">
 =======
     <column id="285" parent="240" name="id_user_type">
 >>>>>>> client
+=======
+    <column id="276" parent="239" name="id_user_type">
+>>>>>>> dev
       <Position>5</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="277" parent="239" name="id_bank">
 =======
     <column id="286" parent="240" name="id_bank">
 >>>>>>> client
+=======
+    <column id="277" parent="239" name="id_bank">
+>>>>>>> dev
       <Position>6</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <index id="278" parent="239" name="username">
 =======
     <index id="287" parent="240" name="username">
 >>>>>>> client
+=======
+    <index id="278" parent="239" name="username">
+>>>>>>> dev
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
     <index id="279" parent="239" name="FKuser805388">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
@@ -1274,6 +1322,7 @@
       <Type>btree</Type>
     </index>
     <key id="282" parent="239" name="PRIMARY">
+<<<<<<< HEAD
 =======
     <index id="288" parent="240" name="FKuser805388">
       <ColNames>id_client</ColNames>
@@ -1289,10 +1338,13 @@
     </index>
     <key id="291" parent="240" name="PRIMARY">
 >>>>>>> client
+=======
+>>>>>>> dev
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_user</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <key id="283" parent="239" name="username">
       <ColNames>username</ColNames>
@@ -1306,33 +1358,52 @@
     </key>
     <foreign-key id="293" parent="240" name="FKuser805388">
 >>>>>>> client
+=======
+    <key id="283" parent="239" name="username">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>username</UnderlyingIndexName>
+    </key>
+    <foreign-key id="284" parent="239" name="FKuser805388">
+>>>>>>> dev
       <ColNames>id_client</ColNames>
       <RefTableName>client</RefTableName>
       <RefColNames>id_client</RefColNames>
     </foreign-key>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <foreign-key id="285" parent="239" name="FKuser949261">
 =======
     <foreign-key id="294" parent="240" name="FKuser949261">
 >>>>>>> client
+=======
+    <foreign-key id="285" parent="239" name="FKuser949261">
+>>>>>>> dev
       <ColNames>id_user_type</ColNames>
       <RefTableName>user_type</RefTableName>
       <RefColNames>id_user_type</RefColNames>
     </foreign-key>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <foreign-key id="286" parent="239" name="FKuser236728">
 =======
     <foreign-key id="295" parent="240" name="FKuser236728">
 >>>>>>> client
+=======
+    <foreign-key id="286" parent="239" name="FKuser236728">
+>>>>>>> dev
       <ColNames>id_bank</ColNames>
       <RefTableName>bank</RefTableName>
       <RefColNames>id_bank</RefColNames>
     </foreign-key>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="287" parent="240" name="id_user_type">
 =======
     <column id="296" parent="241" name="id_user_type">
 >>>>>>> client
+=======
+    <column id="287" parent="240" name="id_user_type">
+>>>>>>> dev
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1340,37 +1411,53 @@
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <column id="288" parent="240" name="title">
 =======
     <column id="297" parent="241" name="title">
 >>>>>>> client
+=======
+    <column id="288" parent="240" name="title">
+>>>>>>> dev
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <index id="289" parent="240" name="title">
 =======
     <index id="298" parent="241" name="title">
 >>>>>>> client
+=======
+    <index id="289" parent="240" name="title">
+>>>>>>> dev
       <ColNames>title</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <key id="290" parent="240" name="PRIMARY">
 =======
     <key id="299" parent="241" name="PRIMARY">
 >>>>>>> client
+=======
+    <key id="290" parent="240" name="PRIMARY">
+>>>>>>> dev
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_user_type</ColNames>
       <Primary>1</Primary>
     </key>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <key id="291" parent="240" name="title">
 =======
     <key id="300" parent="241" name="title">
 >>>>>>> client
+=======
+    <key id="291" parent="240" name="title">
+>>>>>>> dev
       <ColNames>title</ColNames>
       <UnderlyingIndexName>title</UnderlyingIndexName>
     </key>
