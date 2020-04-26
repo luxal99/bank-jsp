@@ -80,13 +80,13 @@ public class AccountServiceImpl implements AccountService {
 
         senderTransaction.setIdTransaction(transactionEntity);
         senderTransaction.setIdAccount(senderAccount);
-        senderTransaction.setIdTypeTransaction(payUpTransaction);
+        senderTransaction.setIdTypeTransaction(payOutTransaction);
 
         accountTransactionService.save(senderTransaction);
 
         receiverTransaction.setIdTransaction(transactionEntity);
         receiverTransaction.setIdAccount(receiverAccount);
-        receiverTransaction.setIdTypeTransaction(payOutTransaction);
+        receiverTransaction.setIdTypeTransaction(payUpTransaction);
 
         accountTransactionService.save(receiverTransaction);
 
