@@ -435,7 +435,7 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
-    <application context-root="/Projekat_war_exploded" object-type="user" name="Projekat_war_exploded" directory-deployed="true" location="file:/home/luxal/PC/Metropolitan/II%20godina/CS230/Projekat/out/artifacts/Projekat_war_exploded/">
+    <application context-root="/" object-type="user" name="Projekat_war_exploded" directory-deployed="true" location="file:/home/luxal/PC/Metropolitan/II%20godina/CS230/Projekat/out/artifacts/Projekat_war_exploded/">
       <property name="appLocation" value="file:/home/luxal/PC/Metropolitan/II%20godina/CS230/Projekat/out/artifacts/Projekat_war_exploded/"></property>
       <property name="archiveType" value="war"></property>
       <property name="defaultAppName" value="Projekat_war_exploded"></property>

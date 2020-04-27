@@ -245,7 +245,7 @@
                                     <h5>Current account <span
                                             style="font-weight: bold">${currentAccount.accountNumber}</span></h5>
 
-                                    <form method="post" action="/Projekat_war_exploded/admin/account">
+                                    <form method="post" action="${pageContext.request.contextPath}/admin/account">
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                             <span style="background-color: #7530FF;color: #fff" class="input-group-text"
@@ -374,7 +374,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="/Projekat_war_exploded/client/user" method="post">
+                    <form action="${pageContext.request.contextPath}/client/user" method="post">
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
@@ -415,7 +415,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="/Projekat_war_exploded/client">
+                    <form method="post" action="${pageContext.request.contextPath}/client">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Telephone</label>
                             <input type="text" name="telephone" class="form-control" value="${clinet.telephone}"
