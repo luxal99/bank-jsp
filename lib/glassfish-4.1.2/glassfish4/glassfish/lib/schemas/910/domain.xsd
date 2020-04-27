@@ -2318,7 +2318,7 @@
           <xs:element name="file-name" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The name of the file that stores current log messages. Usually it is a
- computed value based on the name of the parent of this MBean. For example,
+ computed value based on the name of the parent of this MBean. For app,
  for a server log, it is &lt;code&gt;&lt;i&gt;serverName&lt;/i&gt;.log&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -6769,7 +6769,7 @@
  of the message bodies in the JMS server exceeds the message
  buffer size. If unspecified, messages are written to the
  &lt;code&gt;tmp&lt;/code&gt; directory in the host WebLogic Server
- instance's directory. For example,
+ instance's directory. For app,
  &lt;code&gt;&lt;em&gt;domainName&lt;/em&gt;/servers/&lt;em&gt;servername&lt;/em&gt;/tmp&lt;/code&gt;.
  </xs:documentation>
             </xs:annotation>
@@ -9029,7 +9029,7 @@
           <xs:element name="monitored-m-bean-type" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example,
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app,
  &lt;code&gt;ServerRuntime&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -11043,7 +11043,7 @@
           <xs:element name="attribute-m-bean-type" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example,
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app,
  &lt;code&gt;Server&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -11446,7 +11446,7 @@
           <xs:element name="extra-ejbc-options" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>
@@ -12929,7 +12929,7 @@
           <xs:element name="extra-ejbc-options" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>

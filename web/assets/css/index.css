@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope&display=swap');
 .login-btn{
     padding-left: 5em;
     padding-right: 5em;
@@ -13,5 +14,16 @@
     -webkit-box-shadow: 2px 14px 35px -22px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 14px 35px -22px rgba(0,0,0,0.75);
     box-shadow: 2px 14px 35px -22px rgba(0,0,0,0.75);
-    margin-top: 20em;
+    margin-top: 15em;
 }
+.left-col{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/soy-smile-249718.appspot.com/o/1393237.jpg?alt=media&token=9a925e48-5b21-4908-8e1c-1a88f9bae869") !important;
+    background-size: cover;
+    height: 50vh;
+    padding: 0 !important;
+}
+
+h1,h2,h3,p{
+    font-family: 'Manrope', sans-serif;
+}
+

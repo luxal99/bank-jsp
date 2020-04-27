@@ -849,7 +849,7 @@
           <xs:element name="file-name" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The name of the file that stores current log messages. Usually it is a
- computed value based on the name of the parent of this MBean. For example,
+ computed value based on the name of the parent of this MBean. For app,
  for a server log, it is &lt;code&gt;&lt;i&gt;SERVER_NAME&lt;/i&gt;.log&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -1024,7 +1024,7 @@
               <xs:documentation>Determines the refresh period for the OCSP response local cache,
  expressed as a percentage of the validity period of the response.
  &lt;p&gt;
- For example, for a validity period of 10 hours,
+ For app, for a validity period of 10 hours,
  a value of 10% specifies a refresh every 1 hour.
  &lt;p&gt;
  The validity period is determined by the OCSP response,
@@ -1080,7 +1080,7 @@
  &lt;p&gt;
  The value specified in this attribute determines
 &lt;/code&gt; attributes apply.
- For example, if &lt;code&gt;CrlCacheType&lt;/code&gt; is &lt;code&gt;ldap&lt;/code&gt;,
+ For app, if &lt;code&gt;CrlCacheType&lt;/code&gt; is &lt;code&gt;ldap&lt;/code&gt;,
  see related attributes like
  &lt;code&gt;{@link #getCrlCacheTypeLdapHostname}&lt;/code&gt;.
  (Interface=weblogic.management.configuration.CertRevocMBean Attribute=getCrlCacheType)</xs:documentation>
@@ -1131,7 +1131,7 @@
               <xs:documentation>Determines the refresh period for the CRL local cache,
  expressed as a percentage of the validity period of the CRL.
  &lt;p&gt;
- For example, for a validity period of 10 hours,
+ For app, for a validity period of 10 hours,
  a value of 10% specifies a refresh every 1 hour.
  &lt;p&gt;
  The validity period is determined by the CRL, and is
@@ -1202,7 +1202,7 @@
  used in certificates issued by the represented certificate
  authority.
  &lt;p&gt;
- For example:&lt;br&gt;
+ For app:&lt;br&gt;
  &amp;quot;CN=CertGenCAB, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US&amp;quot;
  &lt;p&gt;
  This will be used to match this configuration to issued
@@ -1267,7 +1267,7 @@
  &lt;code&gt;getOcspResponderExplicitTrustMethod&lt;/code&gt; is &#147;USE_SUBJECT&#148;.
  &lt;p&gt;
  The subject name is formatted as a distinguished name per RFC 2253,
- for example "CN=CertGenCAB, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US".
+ for app "CN=CertGenCAB, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US".
  &lt;p&gt;
  In cases where the subject name alone is not sufficient
  to uniquely identify the certificate, then both the
@@ -1283,7 +1283,7 @@
  &lt;code&gt;getOcspResponderExplicitTrustMethod&lt;/code&gt; is &#147;USE_ISSUER_SERIAL_NUMBER&#148;.
  &lt;p&gt;
  The issuer name is formatted as a distinguished name per RFC 2253,
- for example "CN=CertGenCAB, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US".
+ for app "CN=CertGenCAB, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US".
  &lt;p&gt;
  When &lt;code&gt;{@link #getOcspResponderCertIssuerName}&lt;/code&gt;
  returns a non-null value then the
@@ -1298,7 +1298,7 @@
  &lt;code&gt;getOcspResponderExplicitTrustMethod&lt;/code&gt; is &#147;USE_ISSUER_SERIAL_NUMBER&#148;.
  &lt;p&gt;
  The serial number is formatted as a hexidecimal string, with optional colon or space
- separators, for example "2A:FF:00".
+ separators, for app "2A:FF:00".
  &lt;p&gt;
  When &lt;code&gt;{@link #getOcspResponderCertSerialNumber}&lt;/code&gt;
  returns a non-null value then the
@@ -2817,7 +2817,7 @@
           <xs:element name="attribute-m-bean-type" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example, specify
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app, specify
  &lt;code&gt;Server&lt;/code&gt; to monitor a ServerMBean.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -3235,7 +3235,7 @@
           <xs:element name="java-vendor" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The Java Vendor value to use when starting this server;
- for example, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt;. </xs:documentation>
+ for app, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt;. </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="java-home" type="xs:string" minOccurs="0" nillable="true">
@@ -3654,7 +3654,7 @@
               <xs:documentation>Set the WorkManager name that will be used to execute servlet requests
  that need their session retrieved from a remote server since the current
  server is neither the primary nor the secondary for the request. This can
- happen if request stickness is lost for example due to hardware LB
+ happen if request stickness is lost for app due to hardware LB
  configuration issues. Creating a dedicated WorkManager with a max threads
  constraint ensures that threads are available to service requests for which
  the current server is the primary.
@@ -4295,7 +4295,7 @@
             <xs:annotation>
               <xs:documentation>Specifies the volume of diagnostic data that is automatically produced by WebLogic Server at run time.
  Note that the WLDF diagnostic volume setting does not affect explicitly configured diagnostic modules. 
- For example, this controls the volume of events generated for JRockit Flight Recorder.</xs:documentation>
+ For app, this controls the volume of events generated for JRockit Flight Recorder.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
@@ -7003,7 +7003,7 @@
           <xs:element name="monitored-m-bean-type" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The MBean type that defines the attribute you want to monitor.
- Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For example,
+ Do not include the &lt;code&gt;MBean&lt;/code&gt; suffix. For app,
  &lt;code&gt;ServerRuntime&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
             <xs:simpleType>
@@ -11492,7 +11492,7 @@
           <xs:element name="java-vendor" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>The Java Vendor value to use when starting this server
- For example, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt; </xs:documentation>
+ For app, &lt;code&gt;BEA, Sun, HP etc &lt;/code&gt; </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="java-home" type="xs:string" minOccurs="0" nillable="true">
@@ -12883,7 +12883,7 @@
  database specified in {@link
  ClusterMBean#getDataSourceForSessionPersistence()} when a server
  is shutdown. The sessions will not be written at any other
- time. (For example, they are not saved via this mechanism if
+ time. (For app, they are not saved via this mechanism if
  there is a server crash.)</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -14797,7 +14797,7 @@
           <xs:element name="extra-ejbc-options" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>
@@ -15712,7 +15712,7 @@
  of the message bodies in the JMS server exceeds the message
  buffer size. If unspecified, messages are written to the
  &lt;code&gt;tmp&lt;/code&gt; directory in the host WebLogic Server
- instance's directory. For example,
+ instance's directory. For app,
  &lt;code&gt;&lt;em&gt;domainName&lt;/em&gt;/servers/&lt;em&gt;servername&lt;/em&gt;/tmp&lt;/code&gt;.
  </xs:documentation>
             </xs:annotation>
@@ -16794,7 +16794,7 @@
           <xs:element name="extra-ejbc-options" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Returns the extra options passed to ejbc during the dynamic ejbc
- of a jar file. For example: -J-mx128m By default this value is
+ of a jar file. For app: -J-mx128m By default this value is
  null. If no ExtraEJBCOptions are specified on the EJBComponent, the
  default will be pulled from the Server.ExtraEJBCOptions.</xs:documentation>
             </xs:annotation>

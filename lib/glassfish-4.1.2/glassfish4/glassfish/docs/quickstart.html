@@ -60,7 +60,7 @@ cellspacing="4" cellpadding="2">
 <h2>About This Quick Start Guide</h2>
 <p>This <i>Quick Start Guide</i> demonstrates key features of GlassFish Server and enables you to quickly learn the basics. Step-by-step procedures introduce you to product features and enable you to use them immediately.</p>
 <p>This guide assumes that you have already obtained and installed the GlassFish Server 4.1 software. For more information about installing GlassFish Server 4.1, see the <a href="http://glassfish.java.net/docs/4.0/installation-guide.pdf"><cite>Installation Guide</cite></a>.</p>
-<p>Instructions and examples in this guide that apply to all supported operating systems use the forward slash character (<code>/</code>) as path separators in all file names and commands. Ensure that you use the correct character for the system on which GlassFish Server is installed. For example:</p>
+<p>Instructions and examples in this guide that apply to all supported operating systems use the forward slash character (<code>/</code>) as path separators in all file names and commands. Ensure that you use the correct character for the system on which GlassFish Server is installed. For app:</p>
 <ul>
 <li><p><b>UNIX, Linux, or Mac OS X systems:</b> <i>as-install</i><code>/bin/asadmin</code></p></li>
 <li><p><b>Windows systems:</b> <i>as-install</i><code>\bin\asadmin</code></p></li>
@@ -337,7 +337,7 @@ cellspacing="4" cellpadding="2">
 <pre>
 <i>as-install</i>/bin/asadmin start-database --dbhome <i>directory-path</i>
 </pre>
-<p>For example, to start the Java DB server from its default location:</p>
+<p>For app, to start the Java DB server from its default location:</p>
 <pre>
 <b><i>as-install</i>/bin/asadmin start-database --dbhome <i>as-install-parent</i>/javadb</b>
 </pre>
@@ -456,7 +456,7 @@ Hi, my name is Duke. What's yours?
 <i>as-install</i>/bin/asadmin undeploy <i>war-name</i>
 </pre>
 <p>For <i>war-name</i>, use the literal <code>hello</code>, not the full <code>hello.war</code> name.</p>
-<p>For the <code>hello.war</code> example, the command is as follows:</p>
+<p>For the <code>hello.war</code> app, the command is as follows:</p>
 <pre>
 <b><i>as-install</i>/bin/asadmin undeploy hello</b>
 </pre>
@@ -493,7 +493,7 @@ Hi, my name is Duke. What's yours?
 <li><p>Select Packaged File to be Uploaded to the Server, and click Browse.</p></li>
 <li><p>Navigate to the location in which you saved the <code>hello.war</code> sample, select the file, and click Open.</p>
 <p>You are returned to the Deploy Applications or Modules page.</p></li>
-<li><p>Specify a description in the Description field, for example:</p>
+<li><p>Specify a description in the Description field, for app:</p>
 <p><code>hello</code></p></li>
 <li><p>Accept the other default settings, and click OK.</p>
 <p>You are returned to the Applications page.</p></li>
@@ -556,7 +556,7 @@ Hi, my name is Duke. What's yours?
 <a id="geyvj" name="geyvj"></a><a id="GSQSG00017" name="GSQSG00017"></a>
 
 <h4>To Deploy the Sample Application Automatically</h4>
-<p>You can deploy applications automatically by placing them in the <i>domain-dir</i><code>/autodeploy</code> directory, where <i>domain-dir</i> is the directory of the domain for which you want to configure automatic deployment. For this example, use the default domain, <code>domain1</code>, in the default <i>domain-root-dir</i>, which is <i>as-install</i><code>/domains</code>:</p>
+<p>You can deploy applications automatically by placing them in the <i>domain-dir</i><code>/autodeploy</code> directory, where <i>domain-dir</i> is the directory of the domain for which you want to configure automatic deployment. For this app, use the default domain, <code>domain1</code>, in the default <i>domain-root-dir</i>, which is <i>as-install</i><code>/domains</code>:</p>
 <pre>
 <i>as-install</i>/domains/domain1/autodeploy
 </pre>

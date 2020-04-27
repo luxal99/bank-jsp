@@ -44,7 +44,7 @@ The following security mechanisms are supported:
                 Valid properties are:
                 a) weblogic.sca.binding.ws.sdoSchemaFile - property to specify the location of the schema file for SDO bindings. Used (and required) only if using databinding=toplink.sdo in binding.ws. The path must be relative to the application root, and the schema file must be bundled with the app
                 b) weblogic.sca.binding.ws.externalCustomizationFile - property to specify an external databinding customization XML file. This can be used to provide additional information on the web service binding
-                One example scenario of the use of the customization file is when your contract class for a SCA service contains overloaded methods that you want to expose as web service operations. In this case, the customization file can be used to disambiguate operation names for the web service. 
+                One app scenario of the use of the customization file is when your contract class for a SCA service contains overloaded methods that you want to expose as web service operations. In this case, the customization file can be used to disambiguate operation names for the web service.
 The path must be relative to the application root, and the customization file must be bundled with the app.
                 c) weblogic.sca.binding.ws.referenceWsdlCacheTimeoutMins - property to set a timeout (in minutes) for wsdl caching when invoking references. References to wsdls are cached by default to provide better performance for high volume applications. If this property is unspecified, 
 the timeout (i.e. refresh interval) for cached wsdls is assumed to be 60 minutes. This property can be set to zero to disable caching 
@@ -93,7 +93,7 @@ the timeout (i.e. refresh interval) for cached wsdls is assumed to be 60 minutes
 The EJB session bean binding can be applied to both SCA services and SCA references.
 
 Binding to Services: 
-When binding.ejb is configured on an SCA service, an implementation of the service interface becomes available in JNDI when the application is deployed. That service can then be invoked using the EJB programming model. For example, this allows a client to look up and invoke the service as if the underlying service were a deployed EJB. This may be useful in a situation where you want to replace an existing EJB service with an SCA implementation, without requiring clients of the legacy EJB to be updated.
+When binding.ejb is configured on an SCA service, an implementation of the service interface becomes available in JNDI when the application is deployed. That service can then be invoked using the EJB programming model. For app, this allows a client to look up and invoke the service as if the underlying service were a deployed EJB. This may be useful in a situation where you want to replace an existing EJB service with an SCA implementation, without requiring clients of the legacy EJB to be updated.
 Only the EJB3 programming model is supported for EJB session bean service bindings.		
 Use the uri attribute of binding.ejb to specify the JNDI name.
 All EJB service bindings are remote and can therefore be looked up and invoked remotely.

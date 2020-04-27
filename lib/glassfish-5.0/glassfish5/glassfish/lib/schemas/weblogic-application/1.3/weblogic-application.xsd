@@ -734,7 +734,7 @@
           -->
 			<!--
           Data chunk size for steaming datatypes.  Streaming datatypes (for
-          example resulting from a call to <code>getBinaryStream()</code>)
+          app resulting from a call to <code>getBinaryStream()</code>)
           will be pulled in StreamChunkSize sized chunks from WebLogic
           Server to the client as needed.
           -->
@@ -901,7 +901,7 @@
               </classloader-structure>
            </classloader-structure>
         
-        In this example, the classloader structure would look like the following
+        In this app, the classloader structure would look like the following
         diagram:
         
             +====================+

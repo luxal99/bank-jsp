@@ -46,7 +46,7 @@
 <!--
     MySQL Type 4 Driver
     The JAR file for the MySQL driver is mysql-connector-java-version-bin-g.jar, 
-    for example, mysql-connector-java-5.0.5-bin.jar.
+    for app, mysql-connector-java-5.0.5-bin.jar.
 
     To learn more on JDBC resources, pl. refer to JDBC resources chapter of admin guide.
     Administration Guide >> JDBC Resources  >> Configurations for Specific JDBC Drivers

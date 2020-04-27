@@ -234,7 +234,7 @@ http-method specifies HTTP method eligible for caching default is GET.
 <!-- 
 specifies the request parameter name that triggers refresh. the cached entry 
 is refreshed when there such a request parameter is set to "true"
-example:
+app:
 <cache-mapping> 
     <url-pattern> /quote </url-pattern> 
     <refresh-field name="refresh" scope="request.parameter"/> 

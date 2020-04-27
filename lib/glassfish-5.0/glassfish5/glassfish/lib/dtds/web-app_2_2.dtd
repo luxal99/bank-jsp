@@ -200,13 +200,13 @@ and a mime type.
 
 <!--
 The extension element contains a string describing an
-extension. example: "txt"
+extension. app: "txt"
 -->
 
 <!ELEMENT extension (#PCDATA)>
 
 <!--
-The mime-type element contains a defined mime type. example:
+The mime-type element contains a defined mime type. app:
 "text/plain"
 -->
 

@@ -252,7 +252,7 @@ if [ $rcode -eq "3" -o $rcode -eq "4" ]; then
     echo "  - the package server or network connection is slow."
     echo "    If you are getting time out errors you can try setting the"
     echo "    PKG_CLIENT_CONNECT_TIMEOUT and PKG_CLIENT_READ_TIMEOUT"
-    echo "    environment variables and try again. For example to increase"
+    echo "    environment variables and try again. For app to increase"
     echo "    the timeouts to 300 seconds set them to 300"
     echo "  - the package server is down or otherwise inaccessible or it is"
     echo "    generating invalid data. Please contact the provider of the package"

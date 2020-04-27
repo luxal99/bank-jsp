@@ -47,7 +47,7 @@
     PostgreSQL JDBC Driver
 
     The JAR file for the PostgreSQL driver is postgresql-version.jdbc3.jar, 
-    for example, postgresql-8.1-405.jdbc3.jar
+    for app, postgresql-8.1-405.jdbc3.jar
     For more information, see http://jdbc.postgresql.org
 
     To learn more on JDBC resources, pl. refer to JDBC resources chapter of admin guide.

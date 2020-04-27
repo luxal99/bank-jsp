@@ -439,7 +439,7 @@ Examples:
 		</method>
 
 	
-	The following example illustrates a Style 3 element with
+	The following app illustrates a Style 3 element with
 	more complex parameter types. The method
 			foobar(char s, int i, int[] iar, mypackage.MyClass mycl,
 				mypackage.MyClass[][] myclaar)
@@ -462,7 +462,7 @@ Examples:
    interface and a method with the same name and signature that is
    defined in the remote interface.
 
-	For example, the method element
+	For app, the method element
 
    		<method>
 			<ejb-name>EmployeeService</ejb-name>

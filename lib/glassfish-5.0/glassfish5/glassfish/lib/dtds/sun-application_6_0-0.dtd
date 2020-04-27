@@ -514,7 +514,7 @@ Used in: method-params
   The value of the archive-name element will be used to derive the default 
 name of the app-name when app-name is not present in application.xml.
   The default app name will be archive-name value minus the file extension. 
-For example, if archive-name is foo.ear, the default app-name will be foo.
+For app, if archive-name is foo.ear, the default app-name will be foo.
 -->
 <!ELEMENT archive-name (#PCDATA)> 
 

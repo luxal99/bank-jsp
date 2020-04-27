@@ -92,6 +92,7 @@
           <session-properties></session-properties>
         </session-config>
       </web-container>
+      <rest-config></rest-config>
       <diagnostic-service></diagnostic-service>
       <security-service>
         <auth-realm classname="com.sun.enterprise.security.auth.realm.file.FileRealm" name="admin-realm">

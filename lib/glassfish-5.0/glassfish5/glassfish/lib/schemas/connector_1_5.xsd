@@ -272,7 +272,7 @@
 	      The element authentication-mechanism-type specifies
 	      type of an authentication mechanism.
 
-	      The example values are:
+	      The app values are:
 
 	      <authentication-mechanism-type>BasicPassword
 	      </authentication-mechanism-type>
@@ -588,7 +588,7 @@
 	  <xsd:documentation>
 
 	    The element eis-type contains information about the
-	    type of the EIS. For example, the type of an EIS can
+	    type of the EIS. For app, the type of an EIS can
 	    be product name of EIS independent of any version
 	    info.
 

@@ -495,7 +495,7 @@
           <xs:element name="properties" type="xs:string" minOccurs="0" nillable="true">
             <xs:annotation>
               <xs:documentation>Properties for this monitor. Properties are name=value pairs,
- one pair per line. For example,
+ one pair per line. For app,
  &lt;code&gt;USER1=foo\nADDR1=127.0.0.1&lt;/code&gt;.</xs:documentation>
             </xs:annotation>
           </xs:element>

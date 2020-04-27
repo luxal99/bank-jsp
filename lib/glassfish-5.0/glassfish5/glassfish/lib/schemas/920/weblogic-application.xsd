@@ -719,7 +719,7 @@
           -->
 			<!--
           Data chunk size for steaming datatypes.  Streaming datatypes (for
-          example resulting from a call to <code>getBinaryStream()</code>)
+          app resulting from a call to <code>getBinaryStream()</code>)
           will be pulled in StreamChunkSize sized chunks from WebLogic
           Server to the client as needed.
           -->
@@ -886,7 +886,7 @@
               </classloader-structure>
            </classloader-structure>
         
-        In this example, the classloader structure would look like the following
+        In this app, the classloader structure would look like the following
         diagram:
         
             +====================+
@@ -1185,7 +1185,7 @@
 
       <!--
       The monitoring-attribute-name element is useful for tagging session
-      runtime information for different sessions. For example, you can set it
+      runtime information for different sessions. For app, you can set it
       to "username", if you have an "username" attribute which is guarenteed to
       be unique.
 

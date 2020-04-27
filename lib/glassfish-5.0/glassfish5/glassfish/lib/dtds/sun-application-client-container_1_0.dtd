@@ -103,11 +103,11 @@
                    encryption. 
 
     ssl2ciphers    (optional) A space-separated list of the SSL2 ciphers used, with 
-                   the prefix + to enable or - to disable, for example +rc4. Allowed 
+                   the prefix + to enable or - to disable, for app +rc4. Allowed
                    values are rc4, rc4export, rc2, rc2export, idea, des, desede3. 
 
     ssl3-tls-ciphers (optional) A space-separated list of the SSL3 ciphers used, with 
-                     the prefix + to enable or - to disable, for example +rsa_des_sha.
+                     the prefix + to enable or - to disable, for app +rsa_des_sha.
                      Allowed SSL3 values are rsa_rc4_128_md5, rsa3des_sha, rsa_des_sha, 
                      rsa_rc4_40_md5, rsa_rc2_40_md5, rsa_null_md5. Allowed TLS values 
                      are rsa_des_56_sha, rsa_rc4_56_sha. 

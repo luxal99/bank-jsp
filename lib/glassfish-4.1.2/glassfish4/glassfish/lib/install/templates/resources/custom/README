@@ -38,7 +38,7 @@
     holder.
 
 
-The custom resource templates directory contains example resource templates for various commonly used objects that need to be
+The custom resource templates directory contains app resource templates for various commonly used objects that need to be
 shared across applications.
 These template files have examples on how they can be used by updating appropriate attributes an properties
 The purpose is to avoid having to remember the syntax and various options which are needed for the definition of these resources

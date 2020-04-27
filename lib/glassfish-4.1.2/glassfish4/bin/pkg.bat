@@ -46,7 +46,7 @@ set MY_HOME=%~dp0
 set RETURN_CODE=0
 
 @REM We want to set MY_NAME to the name of this file. %~0 may include 
-@REM the portion of the path used to invoke the command, for example
+@REM the portion of the path used to invoke the command, for app
 @REM ".\foo.bat". We need to trim the leading stuff to get just "foo.bat".
 set MY_PATH=%~0
 :loop2
@@ -210,7 +210,7 @@ echo     environment variable to the full URL of the proxy server.
 echo   - the package server or network connection is slow.
 echo     If you are getting time out errors you can try setting the
 echo     PKG_CLIENT_CONNECT_TIMEOUT and PKG_CLIENT_READ_TIMEOUT
-echo     environment variables and try again. For example to increase
+echo     environment variables and try again. For app to increase
 echo     the timeouts to 300 seconds set them to 300
 echo   - the package server is down or otherwise inaccessible or it is
 echo     generating invalid data. Please contact the provider of the package

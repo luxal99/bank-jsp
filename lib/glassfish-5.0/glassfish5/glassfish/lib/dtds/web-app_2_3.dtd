@@ -321,7 +321,7 @@ Used in: error-page
 
 <!--
 The extension element contains a string describing an
-extension. example: "txt"
+extension. app: "txt"
 
 Used in: mime-mapping
 -->
@@ -542,7 +542,7 @@ Used in: web-app
 <!ELEMENT mime-mapping (extension, mime-type)>
 
 <!--
-The mime-type element contains a defined mime type. example:
+The mime-type element contains a defined mime type. app:
 "text/plain"
 
 Used in: mime-mapping

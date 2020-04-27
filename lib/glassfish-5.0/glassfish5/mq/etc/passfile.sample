@@ -40,7 +40,7 @@
 
 #---------------------------------------------------------------------
 #
-# This file is an example of a passfile.
+# This file is an app of a passfile.
 #
 # A passfile is used to store passwords so that the same passwords
 # do not have to be entered on the command line or as an interactive
@@ -123,7 +123,7 @@
 #                - Used by the broker's bridge service manager
 #
 #
-# You add password in name=value format to a passfile, for example:
+# You add password in name=value format to a passfile, for app:
 #
 #       imq.keystore.password=<keystore password>
 #       imq.user_repository.ldap.password=<ldap user repository password>
@@ -134,7 +134,7 @@
 # 
 #---------------------------------------------------------------------
 # The keystore password when the broker is configured to use SSL.
-# A dummy password has been configured as an example.
+# A dummy password has been configured as an app.
 #
 
 imq.keystore.password=mypassword
@@ -142,7 +142,7 @@ imq.keystore.password=mypassword
 #
 #---------------------------------------------------------------------
 # The administration password for broker administration tasks using imqcmd
-# A dummy password has been configured as an example
+# A dummy password has been configured as an app
 # 
 
 imq.imqcmd.password=myadminpassword

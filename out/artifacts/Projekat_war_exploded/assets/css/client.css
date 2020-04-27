@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope&display=swap');
+body{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/soy-smile-249718.appspot.com/o/wave.svg?alt=media&token=866d6df1-11f1-4671-8bcd-983dc9b6b4b8");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+.header-menu{
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    padding-left: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2em;
+}
+
+.col-sm-2,.col-sm-9{
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    min-height: 80vh;
+
+    background-color: #fff;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.content-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2em;
+}
+
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #4BB543 !important;
+
+}
+
+.nav-link{
+    color: #4BB543;
+}
+.transfer-col{
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+
+}
+
+.nav-link:hover{
+    color: #121212;
+}
+
+.fa-user{
+    padding-top: .8em;
+    font-size: 30px;
+}
+.client-info-div {
+    margin-top: .5em;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+span{
+    font-weight: bold;
+}
+
+h1,h3,h4,a,p{
+    font-family: 'Manrope', sans-serif;
+}
+
+.profile-btn{
+    background-color: transparent;
+    border: 0 !important;
+}
+
+.account-col{
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    margin-top: 2em;
+    margin-left: 2em;
+    padding: 1em;
+}
+
+.account-span{
+    font-weight: bold;
+    color: #4BB543;
+    font-size: 60px;
+}
+
+.open-btn{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 4em;
+    padding-right: 4em;
+    -webkit-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    -moz-box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    box-shadow: 21px 25px 33px -29px rgba(0,0,0,0.75);
+    background-color: #4BB543;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #4BB543;
+}
+
+.transaction-col{
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 1em;
+}
+
+.payup{
+    color:#4BB543;
+    font-weight: bold;
+}
+
+.payout{
+    color:#B33A3A;
+    font-weight: bold;
+}
+
+.balance-h1{
+    color: #7530FF;
+    font-weight: bold;
+}
+
+.transfer-btn{
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color: #fff;
+    background-color: #7530FF;
+    -webkit-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.75);
+    border: 1px solid #7530FF;
+    border-radius: 5px;
+}

@@ -84,7 +84,7 @@ and conversions to other media types.
 "Work" shall mean the work of authorship, whether in Source or
 Object form, made available under the License, as indicated by a
 copyright notice that is included in or attached to the work
-(an example is provided in the Appendix below).
+(an app is provided in the Appendix below).
 
 "Derivative Works" shall mean any work, whether in Source or Object
 form, that is based on (or derived from) the Work and for which the
@@ -1288,7 +1288,7 @@ to surrender the rights. These restrictions translate to certain responsibilitie
 
 copies of the library, or if you modify it.
 
-For example, if you distribute copies of the library, whether gratis or for a fee, you must give the recipients
+For app, if you distribute copies of the library, whether gratis or for a fee, you must give the recipients
 
 all the rights that we gave you. You must make sure that they, too, receive or can get the source code. If you
 
@@ -1419,21 +1419,21 @@ Library, and copy and distribute such modifications or work under the terms of S
 
 you also meet all of these conditions:
 
-•a) The modified work must itself be a software library.
-•b) You must cause the files modified to carry prominent notices stating that you changed the files and the
+ï¿½a) The modified work must itself be a software library.
+ï¿½b) You must cause the files modified to carry prominent notices stating that you changed the files and the
 
 date of any change.
-•c) You must cause the whole of the work to be licensed at no charge to all third parties under the terms of
+ï¿½c) You must cause the whole of the work to be licensed at no charge to all third parties under the terms of
 
 this License.
-•d) If a facility in the modified Library refers to a function or a table of data to be supplied by an
+ï¿½d) If a facility in the modified Library refers to a function or a table of data to be supplied by an
 
 application program that uses the facility, other than as an argument passed when the facility is invoked, then
 
 you must make a good faith effort to ensure that, in the event an application does not supply such function or
 
 table, the facility still operates, and performs whatever part of its purpose remains meaningful.
-(For example, a function in a library to compute square roots has a purpose that is entirely well-defined
+(For app, a function in a library to compute square roots has a purpose that is entirely well-defined
 
 independent of the application. Therefore, Subsection 2d requires that any application-supplied function or
 
@@ -1547,7 +1547,7 @@ displays copyright notices, you must include the copyright notice for the Librar
 
 reference directing the user to the copy of this License. Also, you must do one of these things:
 
-•a) Accompany the work with the complete corresponding machine-readable source code for the Library including
+ï¿½a) Accompany the work with the complete corresponding machine-readable source code for the Library including
 
 whatever changes were used in the work (which must be distributed under Sections 1 and 2 above); and, if the
 
@@ -1560,15 +1560,15 @@ modified executable containing the modified Library. (It is understood that the 
 of definitions files in the Library will not necessarily be able to recompile the application to use the
 
 modified definitions.)
-•b) Accompany the work with a written offer, valid for at least three years, to give the same user the
+ï¿½b) Accompany the work with a written offer, valid for at least three years, to give the same user the
 
 materials specified in Subsection 6a, above, for a charge no more than the cost of performing this
 
 distribution.
-•c) If distribution of the work is made by offering access to copy from a designated place, offer equivalent
+ï¿½c) If distribution of the work is made by offering access to copy from a designated place, offer equivalent
 
 access to copy the above specified materials from the same place.
-•d) Verify that the user has already received a copy of these materials or that you have already sent this user
+ï¿½d) Verify that the user has already received a copy of these materials or that you have already sent this user
 
 a copy.
 For an executable, the required form of the "work that uses the Library" must include any data and utility
@@ -1595,10 +1595,10 @@ provided that the separate distribution of the work based on the Library and of 
 
 otherwise permitted, and provided that you do these two things:
 
-•a) Accompany the combined library with a copy of the same work based on the Library, uncombined with any other
+ï¿½a) Accompany the combined library with a copy of the same work based on the Library, uncombined with any other
 
 library facilities. This must be distributed under the terms of the Sections above.
-•b) Give prominent notice with the combined library of the fact that part of it is a work based on the Library,
+ï¿½b) Give prominent notice with the combined library of the fact that part of it is a work based on the Library,
 
 and explaining where to find the accompanying uncombined form of the same work.
 8. You may not copy, modify, sublicense, link with, or distribute the Library except as expressly provided
@@ -1637,7 +1637,7 @@ contradict the conditions of this License, they do not excuse you from the condi
 
 cannot distribute so as to satisfy simultaneously your obligations under this License and any other pertinent
 
-obligations, then as a consequence you may not distribute the Library at all. For example, if a patent license
+obligations, then as a consequence you may not distribute the Library at all. For app, if a patent license
 
 would not permit royalty-free redistribution of the Library by all those who receive copies directly or
 
@@ -1817,7 +1817,7 @@ To protect your rights, we need to make restrictions that forbid distributors to
 deny you these rights or to ask you to surrender these rights. These restrictions
 translate to certain responsibilities for you if you distribute copies of the
 library or if you modify it.
-For example, if you distribute copies of the library, whether gratis or for a fee,
+For app, if you distribute copies of the library, whether gratis or for a fee,
 you must give the recipients all the rights that we gave you. You must make sure
 that they, too, receive or can get the source code. If you link other code with the
 library, you must provide complete object files to the recipients, so that they can
@@ -1853,14 +1853,14 @@ provides other free software developers Less of an advantage over competing non-
 programs. These disadvantages are the reason we use the ordinary General Public
 License for many libraries. However, the Lesser license provides advantages in
 certain special circumstances.
-For example, on rare occasions, there may be a special need to encourage the widest
+For app, on rare occasions, there may be a special need to encourage the widest
 possible use of a certain library, so that it becomes a de-facto standard. To
 achieve this, non-free programs must be allowed to use the library. A more frequent
 case is that a free library does the same job as widely used non-free libraries. In
 this case, there is little to gain by limiting the free library to free software
 only, so we use the Lesser General Public License.
 In other cases, permission to use a particular library in non-free programs enables
-a greater number of people to use a large body of free software. For example,
+a greater number of people to use a large body of free software. For app,
 permission to use the GNU C Library in non-free programs enables many more people to
 use the whole GNU operating system, as well as its variant, the GNU/Linux operating
 system.
@@ -1921,7 +1921,7 @@ be supplied by an application program that uses the facility, other than as an
 argument passed when the facility is invoked, then you must make a good faith effort
 to ensure that, in the event an application does not supply such function or table,
 the facility still operates, and performs whatever part of its purpose remains
-meaningful. (For example, a function in a library to compute square roots has a purpose that is
+meaningful. (For app, a function in a library to compute square roots has a purpose that is
 entirely well-defined independent of the application. Therefore, Subsection 2d
 requires that any application-supplied function or table used by this function must
 be optional: if the application does not supply it, the square root function must
@@ -2074,7 +2074,7 @@ contradict the conditions of this License, they do not excuse you from the condi
 
 cannot distribute so as to satisfy simultaneously your obligations under this License and any other pertinent
 
-obligations, then as a consequence you may not distribute the Library at all. For example, if a patent license
+obligations, then as a consequence you may not distribute the Library at all. For app, if a patent license
 
 would not permit royalty-free redistribution of the Library by all those who receive copies directly or
 
@@ -2262,7 +2262,7 @@ anyone to deny you these rights or to ask you to surrender the rights.
 These restrictions translate to certain responsibilities for you if you
 distribute copies of the software, or if you modify it.
 
-For example, if you distribute copies of such a program, whether
+For app, if you distribute copies of such a program, whether
 gratis or for a fee, you must give the recipients all the rights that
 you have. You must make sure that they, too, receive or can get the
 source code. And you must show them these terms so they know their
@@ -2433,7 +2433,7 @@ otherwise) that contradict the conditions of this License, they do not
 excuse you from the conditions of this License. If you cannot
 distribute so as to satisfy simultaneously your obligations under this
 License and any other pertinent obligations, then as a consequence you
-may not distribute the Program at all. For example, if a patent
+may not distribute the Program at all. For app, if a patent
 license would not permit royalty-free redistribution of the Program by
 all those who receive copies directly or indirectly through you, then
 the only way you could satisfy both it and this License would be to
@@ -2614,7 +2614,7 @@ To protect your rights, we need to make restrictions that forbid distributors to
 deny you these rights or to ask you to surrender these rights. These restrictions
 translate to certain responsibilities for you if you distribute copies of the
 library or if you modify it.
-For example, if you distribute copies of the library, whether gratis or for a fee,
+For app, if you distribute copies of the library, whether gratis or for a fee,
 you must give the recipients all the rights that we gave you. You must make sure
 that they, too, receive or can get the source code. If you link other code with the
 library, you must provide complete object files to the recipients, so that they can
@@ -2650,14 +2650,14 @@ provides other free software developers Less of an advantage over competing non-
 programs. These disadvantages are the reason we use the ordinary General Public
 License for many libraries. However, the Lesser license provides advantages in
 certain special circumstances.
-For example, on rare occasions, there may be a special need to encourage the widest
+For app, on rare occasions, there may be a special need to encourage the widest
 possible use of a certain library, so that it becomes a de-facto standard. To
 achieve this, non-free programs must be allowed to use the library. A more frequent
 case is that a free library does the same job as widely used non-free libraries. In
 this case, there is little to gain by limiting the free library to free software
 only, so we use the Lesser General Public License.
 In other cases, permission to use a particular library in non-free programs enables
-a greater number of people to use a large body of free software. For example,
+a greater number of people to use a large body of free software. For app,
 permission to use the GNU C Library in non-free programs enables many more people to
 use the whole GNU operating system, as well as its variant, the GNU/Linux operating
 system.
@@ -2718,7 +2718,7 @@ be supplied by an application program that uses the facility, other than as an
 argument passed when the facility is invoked, then you must make a good faith effort
 to ensure that, in the event an application does not supply such function or table,
 the facility still operates, and performs whatever part of its purpose remains
-meaningful. (For example, a function in a library to compute square roots has a purpose that is
+meaningful. (For app, a function in a library to compute square roots has a purpose that is
 entirely well-defined independent of the application. Therefore, Subsection 2d
 requires that any application-supplied function or table used by this function must
 be optional: if the application does not supply it, the square root function must
@@ -2871,7 +2871,7 @@ contradict the conditions of this License, they do not excuse you from the condi
 
 cannot distribute so as to satisfy simultaneously your obligations under this License and any other pertinent
 
-obligations, then as a consequence you may not distribute the Library at all. For example, if a patent license
+obligations, then as a consequence you may not distribute the Library at all. For app, if a patent license
 
 would not permit royalty-free redistribution of the Library by all those who receive copies directly or
 
@@ -3076,13 +3076,13 @@ How to Use
 PLY consists of two files : lex.py and yacc.py. These are contained
 within the 'ply' directory which may also be used as a Python package.
 To use PLY, simply copy the 'ply' directory to your project and import
-lex and yacc from the associated 'ply' package. For example:
+lex and yacc from the associated 'ply' package. For app:
 
 import ply.lex as lex
 import ply.yacc as yacc
 
 Alternatively, you can copy just the files lex.py and yacc.py
-individually and use them as modules. For example:
+individually and use them as modules. For app:
 
 import lex
 import yacc
@@ -3092,10 +3092,10 @@ The file setup.py can be used to install ply using distutils.
 The file doc/ply.html contains complete documentation on how to use
 the system.
 
-The example directory contains several different examples including a
+The app directory contains several different examples including a
 PLY specification for ANSI C as given in K&R 2nd Ed.
 
-A simple example is found at the end of this document
+A simple app is found at the end of this document
 
 Requirements
 ============
@@ -3141,7 +3141,7 @@ subset of basic language features. You should not convert PLY using
 Example
 =======
 
-Here is a simple example showing a PLY implementation of a calculator
+Here is a simple app showing a PLY implementation of a calculator
 with variables.
 
     -----------------------------------------------------------------------------
@@ -3261,7 +3261,7 @@ In addition there is a Google group for discussing PLY related issues at
 
 http://groups.google.com/group/ply-hack
 
-– Dave-----------------------------------------------------------------------------------------
+ï¿½ Dave-----------------------------------------------------------------------------------------
 
 PyXML_LICENSE This file collects the licences for the various pieces of software
 included in this package, sorted by the package name in alphabetical

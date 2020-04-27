@@ -1030,7 +1030,7 @@
                 for this application instance.
 
                 It must be specified as :language:[_:country:[_:variant:]]
-                without the colons, for example "ja_JP_SJIS".  The
+                without the colons, for app "ja_JP_SJIS".  The
                 separators between the segments may be '-' or '_'.
 
             </xsd:documentation>
@@ -2341,7 +2341,7 @@
                 which locales are supported in this application instance.
 
                 It must be specified as :language:[_:country:[_:variant:]]
-                without the colons, for example "ja_JP_SJIS".  The
+                without the colons, for app "ja_JP_SJIS".  The
                 separators between the segments may be '-' or '_'.
 
             </xsd:documentation>
