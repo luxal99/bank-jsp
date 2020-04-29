@@ -14,15 +14,12 @@
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/local-password" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/jsp/Projekat_war_exploded/org/apache/jsp/pages/client_jsp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/generated/policy/Projekat_war_exploded/Projekat_war_exploded/granted.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/glassfish-5.0/glassfish5/glassfish/domains/domain1/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/app/service/impl/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/WEB-INF/classes/app/service/impl/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/client.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projekat_war_exploded/pages/client.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projekat/app/service/impl/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekat/app/service/impl/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/client.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/client.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,17 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="Bank" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Bank" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Bank" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bank: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -99,7 +107,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jackson-annotations-2.9.0.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.14677104" />
@@ -124,9 +132,12 @@
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 5.0.0">
     <configuration name="GlassFish 5.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <deployment>
         <artifact name="Projekat:war exploded">
-          <settings />
+          <settings>
+            <option name="defaultContextRoot" value="false" />
+          </settings>
         </artifact>
       </deployment>
       <server-settings>
@@ -229,7 +240,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7feee96" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4dc653" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Bank: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4f4be6b5" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -254,6 +270,9 @@
       <workItem from="1587840935192" duration="1569000" />
       <workItem from="1587800098944" duration="22169000" />
       <workItem from="1587940294304" duration="413000" />
+      <workItem from="1587984676519" duration="12000" />
+      <workItem from="1587985180966" duration="21000" />
+      <workItem from="1588003762677" duration="871000" />
     </task>
     <task id="LOCAL-00001" summary="Generisani entiteti">
       <created>1587715114157</created>
@@ -293,10 +312,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="555" y="183" width="800" height="683" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1587726582955" />
-    <state x="418" y="211" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587800545176">
+    <state x="418" y="211" width="834" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588003785415">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="418" y="211" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587800545176" />
+    <state x="418" y="211" width="834" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1588003785415" />
     <state x="768" y="228" width="541" height="593" key="#com.intellij.ide.util.MemberChooser" timestamp="1587934471174">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -317,42 +336,42 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="482" y="60" width="945" height="993" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1587731082234" />
-    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl" timestamp="1587912902160">
+    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl" timestamp="1587983315996">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587912902160" />
-    <state width="1716" height="399" key="GridCell.Tab.0.bottom" timestamp="1587940524097">
+    <state x="738" y="299" width="735" height="537" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587983315996" />
+    <state width="1716" height="398" key="GridCell.Tab.0.bottom" timestamp="1588004716728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
-    <state width="1716" height="399" key="GridCell.Tab.0.center" timestamp="1587940524097">
+    <state width="1716" height="398" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716728" />
+    <state width="1716" height="398" key="GridCell.Tab.0.center" timestamp="1588004716728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
-    <state width="1716" height="399" key="GridCell.Tab.0.left" timestamp="1587940524096">
+    <state width="1716" height="398" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716728" />
+    <state width="1716" height="398" key="GridCell.Tab.0.left" timestamp="1588004716728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524096" />
-    <state width="1716" height="399" key="GridCell.Tab.0.right" timestamp="1587940524097">
+    <state width="1716" height="398" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716728" />
+    <state width="1716" height="398" key="GridCell.Tab.0.right" timestamp="1588004716728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
-    <state width="1716" height="399" key="GridCell.Tab.1.bottom" timestamp="1587940524097">
+    <state width="1716" height="398" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716728" />
+    <state width="1716" height="398" key="GridCell.Tab.1.bottom" timestamp="1588004716729">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
-    <state width="1716" height="399" key="GridCell.Tab.1.center" timestamp="1587940524097">
+    <state width="1716" height="398" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716729" />
+    <state width="1716" height="398" key="GridCell.Tab.1.center" timestamp="1588004716729">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
-    <state width="1716" height="399" key="GridCell.Tab.1.left" timestamp="1587940524097">
+    <state width="1716" height="398" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716729" />
+    <state width="1716" height="398" key="GridCell.Tab.1.left" timestamp="1588004716728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
-    <state width="1716" height="399" key="GridCell.Tab.1.right" timestamp="1587940524097">
+    <state width="1716" height="398" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716728" />
+    <state width="1716" height="398" key="GridCell.Tab.1.right" timestamp="1588004716729">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1716" height="399" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587940524097" />
+    <state width="1716" height="398" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1588004716729" />
     <state width="1291" height="296" key="GridCell.Tab.2.bottom" timestamp="1587808770510">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -385,10 +404,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="672" y="179" width="566" height="691" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587890512866" />
-    <state x="614" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1587940296633">
+    <state x="614" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1587984676723">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="614" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587940296633" />
+    <state x="614" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587984676723" />
     <state x="632" y="446" width="646" height="242" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1587715012192">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -397,9 +416,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="236" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587822868629" />
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1587939037140">
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1588004529424">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587939037140" />
+    <state x="623" y="212" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1588004529424" />
   </component>
 </project>

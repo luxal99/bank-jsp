@@ -79,7 +79,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            <div class=\"col-sm\" style=\"padding-top: 5em\">\n");
       out.write("                <div>\n");
-      out.write("                    <form method=\"post\" action=\"/Projekat_war_exploded/admin/login\">\n");
+      out.write("                    <form method=\"post\" action=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/admin/login\">\n");
       out.write("                        <div class=\"form-group\">\n");
       out.write("                            <label for=\"exampleInputEmail1\">Username</label>\n");
       out.write("                            <input type=\"text\" name=\"username\" class=\"form-control\" id=\"exampleInputEmail1\"\n");

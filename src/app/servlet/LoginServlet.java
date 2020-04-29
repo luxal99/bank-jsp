@@ -32,7 +32,6 @@ public class LoginServlet extends HttpServlet {
                 resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
 
             } else if (user.getIdClient() != null && password.equals(req.getParameter("password"))) {
-                resp.setContentType("text/html");
 
                 Cookie cookie = new Cookie("id", HashPassword.encrypt(String.valueOf(user.getIdClient().getIdClient())));
                 cookie.setPath(req.getContextPath() + "/pages/client.jsp");
@@ -45,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 
 
         } catch (Exception ex) {
-            resp.setStatus(404);
+            resp.sendRedirect("/pages/error.jsp");
         }
     }
 }
