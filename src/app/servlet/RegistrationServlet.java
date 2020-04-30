@@ -4,7 +4,6 @@ import app.entity.Account;
 import app.entity.Client;
 import app.entity.User;
 import app.entity.UserType;
-import app.service.dao.AccountService;
 import app.service.impl.AccountServiceImpl;
 import app.service.impl.ClientServiceImpl;
 import app.service.impl.UserServiceImpl;

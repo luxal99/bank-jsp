@@ -1,7 +1,6 @@
 package app.servlet;
 
 import app.entity.Account;
-import app.service.dao.AccountService;
 import app.service.impl.AccountServiceImpl;
 
 import javax.servlet.ServletException;
