@@ -29,19 +29,20 @@ public abstract class CRUDImpl<T> implements CRUDService<T> {
         return entity;
     }
 
+    @Transactional
     @Override
-    public T findById(Class<T> entityClass, Integer id) {
+    public T findById(Integer id) {
         T t = null;
         Transaction transaction = null;
-        try (Session session = DBConfig.getSessionFactory().openSession()) {
+        try {
+            Session session = DBConfig.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-            t = session.find(entityClass, id);
+            t = session.find(this.entityClass, id);
             transaction.commit();
-            session.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return t;
     }
 
     @Transactional

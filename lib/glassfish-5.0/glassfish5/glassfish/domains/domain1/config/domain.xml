@@ -188,7 +188,6 @@
         <jvm-options>-Dfelix.fileinstall.disableConfigSave=false</jvm-options>
         <jvm-options>-XX:NewRatio=2</jvm-options>
         <jvm-options>-Dcom.ctc.wstx.returnNullForDefaultNamespace=true</jvm-options>
-        <jvm-options>-javaagent:/home/luxal/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/193.6911.18/plugins/java/lib/rt/debugger-agent.jar</jvm-options>
       </java-config>
       <network-config>
         <protocols>

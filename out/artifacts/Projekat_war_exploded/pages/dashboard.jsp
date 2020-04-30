@@ -51,8 +51,8 @@
         if (!haveId) {
             response.sendRedirect(request.getContextPath());
         } else {
-            BankService bankService = new BankServiceImpl();
-            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
+            Bank bank = bankService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
             request.setAttribute("bankAccount", bank.getAccountList().get(0));
         }
 
@@ -226,7 +226,7 @@
                         <h3>Account number: ${account.accountNumber}</h3>
 
 
-                        <form method="post" action="/Projekat_war_exploded/admin/account">
+                        <form method="post" action="${pageContext.request.contextPath}/admin/account">
                             <input class="form-control" type="text" name="amount" value="${account.balance}"/>
                             <input class="form-control" type="hidden" name="accountNumber"
                                    value="${account.accountNumber}"/>
@@ -307,7 +307,7 @@
                         <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="/Projekat_war_exploded/admin/registration">
+                        <form method="post" action="${pageContext.request.contextPath}/admin/registration">
 
                             <div class="col-sm">
                                 <h3>Client information</h3>

@@ -12,5 +12,5 @@ public interface CRUDService<T> {
     public List<T> getAll();
 
     @Transactional
-    public T findById(Class<T> entityClass,Integer id);
+    public T findById(Integer id);
 }

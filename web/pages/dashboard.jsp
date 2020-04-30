@@ -5,7 +5,6 @@
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.service.dao.AccountService" %>
-<%@ page import="app.service.dao.BankService" %>
 <%@ page import="app.service.dao.ClientService" %>
 <%@ page import="app.service.dao.UserTypeService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
@@ -51,8 +50,8 @@
         if (!haveId) {
             response.sendRedirect(request.getContextPath());
         } else {
-            BankService bankService = new BankServiceImpl();
-            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
+            Bank bank = bankService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
             request.setAttribute("bankAccount", bank.getAccountList().get(0));
         }
 

@@ -1,7 +1,9 @@
 <%@ page import="app.service.impl.AccountServiceImpl" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.service.impl.TransactionServiceImpl" %>
-<%@ page import="app.entity.Transaction" %><%--
+<%@ page import="app.entity.Transaction" %>
+<%@ page import="app.service.impl.BankServiceImpl" %>
+<%@ page import="app.entity.Bank" %><%--
   Created by IntelliJ IDEA.
   User: luxal
   Date: 4/24/20
@@ -28,8 +30,11 @@
 </head>
 <body>
 <%
+    BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
     TransactionServiceImpl<Transaction> transactionService = new TransactionServiceImpl<Transaction>(Transaction.class);
     out.println(transactionService.getAll().get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
+
+    out.println(bankService.findById(1).getAccountList().get(0).getAccountNumber());
 %>
 <div>
     <div class="container login-container">

@@ -7,6 +7,8 @@ import app.service.impl.AccountServiceImpl;
 import app.util.HashPassword;
 import app.service.impl.TransactionServiceImpl;
 import app.entity.Transaction;
+import app.service.impl.BankServiceImpl;
+import app.entity.Bank;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -51,6 +53,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
@@ -70,8 +74,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\n");
       out.write("<body>\n");
 
+    BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
     TransactionServiceImpl<Transaction> transactionService = new TransactionServiceImpl<Transaction>(Transaction.class);
     out.println(transactionService.getAll().get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
+
+    out.println(bankService.findById(1).getAccountList().get(0).getAccountNumber());
 
       out.write("\n");
       out.write("<div>\n");

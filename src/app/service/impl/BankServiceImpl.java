@@ -1,5 +1,8 @@
 package app.service.impl;
+
 import app.entity.Bank;
+
+import javax.transaction.Transactional;
 
 public class BankServiceImpl<Bank> extends CRUDImpl<Bank> {
 
@@ -7,8 +10,9 @@ public class BankServiceImpl<Bank> extends CRUDImpl<Bank> {
         super(entityClass);
     }
 
+    @Transactional
     @Override
-    public Bank findById(Class<Bank> entityClass, Integer id) {
-        return super.findById(entityClass, id);
+    public Bank findById(Integer id) {
+        return super.findById(id);
     }
 }

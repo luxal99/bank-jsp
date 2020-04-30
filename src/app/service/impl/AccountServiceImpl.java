@@ -60,9 +60,9 @@ public class AccountServiceImpl implements AccountService {
         } else {
             Session session = DBConfig.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
-            TransactionServiceImpl transactionService = new TransactionServiceImpl(app.entity.Transaction.class);
+            TransactionServiceImpl<app.entity.Transaction> transactionService = new TransactionServiceImpl<app.entity.Transaction>(app.entity.Transaction.class);
             TransactionTypeService transactionTypeService = new TransactionTypeServiceImpl();
-            AccountTransactionServiceImpl accountTransactionService = new AccountTransactionServiceImpl(AccountTransaction.class);
+            AccountTransactionServiceImpl<AccountTransaction> accountTransactionService = new AccountTransactionServiceImpl<AccountTransaction>(AccountTransaction.class);
 
             app.entity.Transaction transactionEntity = new app.entity.Transaction();
             TypeOfTransaction payUpTransaction = transactionTypeService.findByType("payup");

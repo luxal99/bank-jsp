@@ -9,31 +9,20 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- *
  * @author luxal
  */
 @Entity
 @Table(name = "user_type")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "UserType.findAll", query = "SELECT u FROM UserType u"),
-    @NamedQuery(name = "UserType.findByIdUserType", query = "SELECT u FROM UserType u WHERE u.idUserType = :idUserType"),
-    @NamedQuery(name = "UserType.findByTitle", query = "SELECT u FROM UserType u WHERE u.title = :title")})
+        @NamedQuery(name = "UserType.findAll", query = "SELECT u FROM UserType u"),
+        @NamedQuery(name = "UserType.findByIdUserType", query = "SELECT u FROM UserType u WHERE u.idUserType = :idUserType"),
+        @NamedQuery(name = "UserType.findByTitle", query = "SELECT u FROM UserType u WHERE u.title = :title")})
 public class UserType implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -44,7 +33,7 @@ public class UserType implements Serializable {
     private Integer idUserType;
     @Column(name = "title")
     private String title;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUserType")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUserType", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<User> userList;
 
@@ -101,5 +90,5 @@ public class UserType implements Serializable {
     public String toString() {
         return "com.mycompany.mavenproject2.UserType[ idUserType=" + idUserType + " ]";
     }
-    
+
 }
