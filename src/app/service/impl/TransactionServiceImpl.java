@@ -1,17 +1,24 @@
 package app.service.impl;
 
-import app.config.DBConfig;
 import app.entity.Transaction;
-import app.service.dao.TransactionService;
-import org.hibernate.Session;
 
-public class TransactionServiceImpl implements TransactionService {
+import javax.transaction.Transactional;
+import java.util.List;
+
+public class TransactionServiceImpl<Transaction> extends CRUDImpl<Transaction> {
+
     @Override
-    public String save(Transaction transaction) {
-        Session session = DBConfig.getSessionFactory().openSession();
-        org.hibernate.Transaction sessionTransaction = session.beginTransaction();
-        session.save(transaction);
-        sessionTransaction.commit();
-        return null;
+    public Transaction save(Transaction entity) {
+        return super.save(entity);
+    }
+
+    public TransactionServiceImpl(Class<Transaction> entityClass) {
+        super(entityClass);
+    }
+
+
+    @Override
+    public List<Transaction> getAll() {
+        return super.getAll();
     }
 }

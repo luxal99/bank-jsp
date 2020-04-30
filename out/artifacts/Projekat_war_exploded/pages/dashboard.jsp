@@ -5,9 +5,6 @@
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.service.dao.AccountService" %>
-<%@ page import="app.service.dao.BankService" %>
-<%@ page import="app.service.dao.ClientService" %>
-<%@ page import="app.service.dao.UserTypeService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.service.impl.BankServiceImpl" %>
 <%@ page import="app.service.impl.AccountServiceImpl" %>
@@ -51,8 +48,8 @@
         if (!haveId) {
             response.sendRedirect(request.getContextPath());
         } else {
-            BankService bankService = new BankServiceImpl();
-            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
+            Bank bank = bankService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
             request.setAttribute("bankAccount", bank.getAccountList().get(0));
         }
 
@@ -100,7 +97,7 @@
                         <tbody>
 
                         <%
-                            ClientService clientService = new ClientServiceImpl();
+                            ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
                             List<Client> clientList = clientService.getAll();
                         %>
 
@@ -226,7 +223,7 @@
                         <h3>Account number: ${account.accountNumber}</h3>
 
 
-                        <form method="post" action="/Projekat_war_exploded/admin/account">
+                        <form method="post" action="${pageContext.request.contextPath}/admin/account">
                             <input class="form-control" type="text" name="amount" value="${account.balance}"/>
                             <input class="form-control" type="hidden" name="accountNumber"
                                    value="${account.accountNumber}"/>
@@ -307,7 +304,7 @@
                         <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="/Projekat_war_exploded/admin/registration">
+                        <form method="post" action="${pageContext.request.contextPath}/admin/registration">
 
                             <div class="col-sm">
                                 <h3>Client information</h3>
@@ -369,7 +366,7 @@
                                            aria-describedby="emailHelp">
                                 </div>
                                 <%
-                                    UserTypeService userTypeService = new UserTypeServiceImpl();
+                                    UserTypeServiceImpl<UserType> userTypeService = new UserTypeServiceImpl<UserType>(UserType.class);
                                     List<UserType> userTypeList = userTypeService.getAll();
                                     request.setAttribute("userTypeList", userTypeList);
 

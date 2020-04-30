@@ -1,27 +1,16 @@
 package app.service.impl;
 
-import app.config.DBConfig;
 import app.entity.AccountTransaction;
-import app.service.dao.AccountTransactionService;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
-import java.util.List;
-
-public class AccountTransactionServiceImpl implements AccountTransactionService {
+public class AccountTransactionServiceImpl<AccountTransaction> extends CRUDImpl<AccountTransaction> {
 
 
-    @Override
-    public String save(AccountTransaction accountTransaction) {
-        Session session = DBConfig.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(accountTransaction);
-        transaction.commit();
-        return "Saved";
+    public AccountTransactionServiceImpl(Class<AccountTransaction> entityClass) {
+        super(entityClass);
     }
 
     @Override
-    public List<AccountTransaction> getAll() {
-        return null;
+    public AccountTransaction save(AccountTransaction entity) {
+        return super.save(entity);
     }
 }

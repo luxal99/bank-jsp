@@ -4,10 +4,6 @@
 <%@ page import="app.entity.Account" %>
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>
-<%@ page import="app.service.dao.AccountService" %>
-<%@ page import="app.service.dao.BankService" %>
-<%@ page import="app.service.dao.ClientService" %>
-<%@ page import="app.service.dao.UserTypeService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.service.impl.BankServiceImpl" %>
 <%@ page import="app.service.impl.AccountServiceImpl" %>
@@ -51,8 +47,8 @@
         if (!haveId) {
             response.sendRedirect(request.getContextPath());
         } else {
-            BankService bankService = new BankServiceImpl();
-            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
+            Bank bank = bankService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
             request.setAttribute("bankAccount", bank.getAccountList().get(0));
         }
 
@@ -100,7 +96,7 @@
                         <tbody>
 
                         <%
-                            ClientService clientService = new ClientServiceImpl();
+                            ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
                             List<Client> clientList = clientService.getAll();
                         %>
 
@@ -134,8 +130,15 @@
                 </button>
 
                 <%
-                    AccountService accountService = new AccountServiceImpl();
+                    AccountServiceImpl accountService = new AccountServiceImpl(Account.class);
                     List<Account> accountList = accountService.getAll();
+
+                    for (int i =0;i<accountList.size();i++) {
+                        if (accountList.get(i).getIdClient() == null) {
+                            accountList.remove(i);
+                        }
+                    }
+
                 %>
                 <table class="table">
                     <thead>
@@ -151,15 +154,15 @@
                     <tbody>
 
 
-                    <% for (Account account : accountList) { %>
+                    <% for (Account account : accountList) { %>--%>
 
-                    <tr>
+                    <tr>--%>
                         <td><%= account.getIdAccount() %>
-                        </td>
+                        </td>--%>
                         <td><%= account.getAccountNumber() %>
-                        </td>
+                        </td>--%>
                         <td><%= account.getIdClient().getIdClient() %>
-                        </td>
+                        </td>--%>
                         <td><%= account.getBalance() %>
                         </td>
                         <td><%= account.getIdClient().getName() %>
@@ -171,7 +174,7 @@
                                 <button class="open-btn" type="submit" name="clientInfo">
                                     Select client
                                 </button>
-                                <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
+                                <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>--%>
                             </form>
                         </td>
                         <td></td>
@@ -369,7 +372,7 @@
                                            aria-describedby="emailHelp">
                                 </div>
                                 <%
-                                    UserTypeService userTypeService = new UserTypeServiceImpl();
+                                    UserTypeServiceImpl<UserType> userTypeService = new UserTypeServiceImpl<UserType>(UserType.class);
                                     List<UserType> userTypeList = userTypeService.getAll();
                                     request.setAttribute("userTypeList", userTypeList);
 

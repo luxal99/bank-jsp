@@ -1,5 +1,9 @@
 <%@ page import="app.service.impl.AccountServiceImpl" %>
-<%@ page import="app.util.HashPassword" %><%--
+<%@ page import="app.util.HashPassword" %>
+<%@ page import="app.service.impl.TransactionServiceImpl" %>
+<%@ page import="app.entity.Transaction" %>
+<%@ page import="app.service.impl.BankServiceImpl" %>
+<%@ page import="app.entity.Bank" %><%--
   Created by IntelliJ IDEA.
   User: luxal
   Date: 4/24/20
@@ -25,17 +29,24 @@
     <title>$Title$</title>
 </head>
 <body>
+<%
+    BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
+    TransactionServiceImpl<Transaction> transactionService = new TransactionServiceImpl<Transaction>(Transaction.class);
+    out.println(transactionService.getAll().get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
 
+    out.println(bankService.findById(1).getAccountList().get(0).getAccountNumber());
+%>
 <div>
     <div class="container login-container">
         <div class="row">
             <div class="col-sm " style="padding: 0 !important;">
-               <div class="left-col">
-                   <div class="container">
-                       <h1 class="text-center" style="color: #fff;padding-top: 25%">Welcome</h1>
-                       <h4 class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-                   </div>
-               </div>
+                <div class="left-col">
+                    <div class="container">
+                        <h1 class="text-center" style="color: #fff;padding-top: 25%">Welcome</h1>
+                        <h4 class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-sm" style="padding-top: 5em">
                 <div>

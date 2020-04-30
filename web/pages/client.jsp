@@ -1,9 +1,7 @@
 <%@ page import="app.entity.Client" %>
-<%@ page import="app.service.dao.ClientService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.entity.Account" %>
-<%@ page import="app.service.dao.AccountService" %>
 <%@ page import="app.service.impl.AccountServiceImpl" %>
 <%@ page import="app.dto.TransactionDTO" %>
 <%@ page import="java.util.ArrayList" %>
@@ -53,8 +51,8 @@
             response.sendRedirect(request.getContextPath());
         }
 
-        ClientService clientService = new ClientServiceImpl();
-        Client client = clientService.findClientById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+        ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
+        Client client = clientService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
 
         request.setAttribute("clinet", client);
 
@@ -106,7 +104,7 @@
 
                         request.setAttribute("currentAccount", defaultAccount);
                     } else {
-                        AccountService accountService = new AccountServiceImpl();
+                        AccountServiceImpl accountService = new AccountServiceImpl(Account.class);
                         defaultAccount = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
                         request.setAttribute("currentAccount", defaultAccount);
                     }

@@ -10,9 +10,6 @@ import app.entity.Account;
 import app.entity.Bank;
 import app.util.HashPassword;
 import app.service.dao.AccountService;
-import app.service.dao.BankService;
-import app.service.dao.ClientService;
-import app.service.dao.UserTypeService;
 import app.service.impl.ClientServiceImpl;
 import app.service.impl.BankServiceImpl;
 import app.service.impl.AccountServiceImpl;
@@ -72,8 +69,6 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <link rel=\"stylesheet\" href=\"../assets/css/dashboard.css\">\n");
@@ -110,8 +105,8 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
         if (!haveId) {
             response.sendRedirect(request.getContextPath());
         } else {
-            BankService bankService = new BankServiceImpl();
-            Bank bank = bankService.findBankById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+            BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
+            Bank bank = bankService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
             request.setAttribute("bankAccount", bank.getAccountList().get(0));
         }
 
@@ -165,7 +160,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                        ");
 
-                            ClientService clientService = new ClientServiceImpl();
+                            ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
                             List<Client> clientList = clientService.getAll();
                         
       out.write("\n");
@@ -338,7 +333,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</h3>\n");
       out.write("\n");
       out.write("\n");
-      out.write("                        <form method=\"post\" action=\"/Projekat_war_exploded/admin/account\">\n");
+      out.write("                        <form method=\"post\" action=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/admin/account\">\n");
       out.write("                            <input class=\"form-control\" type=\"text\" name=\"amount\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account.balance}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\n");
@@ -439,7 +436,9 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <h4 class=\"modal-title\">Modal Header</h4>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"modal-body\">\n");
-      out.write("                        <form method=\"post\" action=\"/Projekat_war_exploded/admin/registration\">\n");
+      out.write("                        <form method=\"post\" action=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/admin/registration\">\n");
       out.write("\n");
       out.write("                            <div class=\"col-sm\">\n");
       out.write("                                <h3>Client information</h3>\n");
