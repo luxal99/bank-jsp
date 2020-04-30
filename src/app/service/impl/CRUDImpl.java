@@ -18,9 +18,10 @@ public abstract class CRUDImpl<T> implements CRUDService<T> {
         this.entityClass = entityClass;
     }
 
+
     @Transactional
     @Override
-    public Object save(Object entity) {
+    public T save(T entity) {
         Session session = DBConfig.getSessionFactory().openSession();
         org.hibernate.Transaction sessionTransaction = session.beginTransaction();
         session.save(entity);
@@ -62,5 +63,15 @@ public abstract class CRUDImpl<T> implements CRUDService<T> {
             e.printStackTrace();
         }
         return tList;
+    }
+
+    @Override
+    public String update(T entity) {
+        Session session = DBConfig.getSessionFactory().openSession();
+        org.hibernate.Transaction sessionTransaction = session.beginTransaction();
+        session.update(entity);
+        sessionTransaction.commit();
+        session.close();
+        return "Updated";
     }
 }

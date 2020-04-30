@@ -5,8 +5,6 @@
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.service.dao.AccountService" %>
-<%@ page import="app.service.dao.BankService" %>
-<%@ page import="app.service.dao.ClientService" %>
 <%@ page import="app.service.dao.UserTypeService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.service.impl.BankServiceImpl" %>
@@ -100,7 +98,7 @@
                         <tbody>
 
                         <%
-                            ClientService clientService = new ClientServiceImpl();
+                            ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
                             List<Client> clientList = clientService.getAll();
                         %>
 

@@ -1,7 +1,6 @@
 package app.servlet;
 
 import app.entity.Client;
-import app.service.dao.ClientService;
 import app.service.impl.ClientServiceImpl;
 
 import javax.servlet.ServletException;
@@ -17,12 +16,12 @@ public class ClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        ClientService clientService = new ClientServiceImpl();
-        Client client = clientService.findClientById(Integer.valueOf(req.getParameter("idClient")));
+        ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
+        Client client = clientService.findById(Integer.valueOf(req.getParameter("idClient")));
 
         client.setMail(req.getParameter("email"));
         client.setTelephone(req.getParameter("telephone"));
 
-        clientService.updateClient(client);
+        clientService.update(client);
     }
 }

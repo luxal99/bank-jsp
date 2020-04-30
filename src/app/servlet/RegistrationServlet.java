@@ -5,7 +5,6 @@ import app.entity.Client;
 import app.entity.User;
 import app.entity.UserType;
 import app.service.dao.AccountService;
-import app.service.dao.ClientService;
 import app.service.dao.UserService;
 import app.service.dao.UserTypeService;
 import app.service.impl.AccountServiceImpl;
@@ -33,7 +32,7 @@ public class RegistrationServlet extends HttpServlet {
         client.setMail(req.getParameter("email"));
 
 
-        ClientService clientService = new ClientServiceImpl();
+        ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
         Client savedClient = clientService.save(client);
 
         UserTypeService userTypeService = new UserTypeServiceImpl();

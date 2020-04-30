@@ -10,7 +10,7 @@ public class AccountTransactionServiceImpl<AccountTransaction> extends CRUDImpl<
     }
 
     @Override
-    public Object save(Object entity) {
+    public AccountTransaction save(AccountTransaction entity) {
         return super.save(entity);
     }
 }

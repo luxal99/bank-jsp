@@ -1,5 +1,4 @@
 <%@ page import="app.entity.Client" %>
-<%@ page import="app.service.dao.ClientService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.entity.Account" %>
@@ -53,8 +52,8 @@
             response.sendRedirect(request.getContextPath());
         }
 
-        ClientService clientService = new ClientServiceImpl();
-        Client client = clientService.findClientById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
+        ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
+        Client client = clientService.findById(Integer.valueOf(HashPassword.decrypt(idCookie.getValue())));
 
         request.setAttribute("clinet", client);
 

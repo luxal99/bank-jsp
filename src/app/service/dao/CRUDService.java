@@ -13,4 +13,7 @@ public interface CRUDService<T> {
 
     @Transactional
     public T findById(Integer id);
+
+    @Transactional
+    public String update(T entity);
 }

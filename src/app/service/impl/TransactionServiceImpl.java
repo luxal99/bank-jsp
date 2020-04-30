@@ -8,14 +8,13 @@ import java.util.List;
 public class TransactionServiceImpl<Transaction> extends CRUDImpl<Transaction> {
 
     @Override
-    public Object save(Object entity) {
+    public Transaction save(Transaction entity) {
         return super.save(entity);
     }
 
     public TransactionServiceImpl(Class<Transaction> entityClass) {
         super(entityClass);
     }
-
 
 
     @Override
