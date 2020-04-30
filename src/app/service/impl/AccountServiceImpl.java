@@ -4,59 +4,38 @@ import app.config.DBConfig;
 import app.entity.Account;
 import app.entity.AccountTransaction;
 import app.entity.TypeOfTransaction;
-import app.service.dao.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import javax.persistence.Query;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class AccountServiceImpl implements AccountService {
+public class AccountServiceImpl extends CRUDImpl<Account> {
 
 
-    @Override
-    public Account save(Account account) {
-        Session session = DBConfig.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(account);
-        transaction.commit();
-        return account;
+    public AccountServiceImpl(Class<Account> entityClass) {
+        super(entityClass);
     }
 
     @Override
-    public List<Account> getAll() {
-        List<Account> accountList = new ArrayList();
-        Session session = DBConfig.getSessionFactory().openSession();
-
-        Query query = session.createNamedQuery("Account.findAll");
-        accountList = query.getResultList();
-
-        for (int i = 0; i < accountList.size(); i++) {
-            if (accountList.get(i).getIdClient() == null) accountList.remove(i);
-        }
-        return accountList;
-    }
-
-    @Override
-    public String delete(Integer id) {
-        return null;
+    public Account save(Account entity) {
+        return super.save(entity);
     }
 
     @Override
     public Account findById(Integer id) {
-        Session session = DBConfig.getSessionFactory().openSession();
-        org.hibernate.query.Query query = session.createNamedQuery("Account.findByIdAccount");
-        query.setInteger("idAccount", id);
-        return (Account) query.getSingleResult();
+        return super.findById(id);
     }
 
     @Override
-    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount) {
+    public List<Account> getAll() {
+        return super.getAll();
+    }
+
+    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount) throws Exception {
 
         if (amount > senderAccount.getBalance()) {
-
+            throw new Exception("");
         } else {
             Session session = DBConfig.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
@@ -108,16 +87,8 @@ public class AccountServiceImpl implements AccountService {
         }
 
 
-        return accountNumber;
     }
 
-
-    @Override
-    public List<Account> findAccountByIdClient(Integer id) {
-        return null;
-    }
-
-    @Override
     public Account findByAccountNumber(String accountNumber) {
         Session session = DBConfig.getSessionFactory().openSession();
         org.hibernate.query.Query query = session.createNamedQuery("Account.findByAccountNumber");

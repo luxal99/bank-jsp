@@ -1,7 +1,6 @@
 package app.servlet;
 
 import app.entity.User;
-import app.service.dao.UserService;
 import app.service.impl.UserServiceImpl;
 import app.util.HashPassword;
 
@@ -20,7 +19,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
 
-            UserService userService = new UserServiceImpl();
+            UserServiceImpl<User> userService = new UserServiceImpl<User>(User.class);
             User user = userService.findByUsername(req.getParameter("username"));
             String password = HashPassword.decrypt(user.getPassword());
             assert password != null;

@@ -5,7 +5,6 @@
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.service.dao.AccountService" %>
-<%@ page import="app.service.dao.UserTypeService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.service.impl.BankServiceImpl" %>
 <%@ page import="app.service.impl.AccountServiceImpl" %>
@@ -367,7 +366,7 @@
                                            aria-describedby="emailHelp">
                                 </div>
                                 <%
-                                    UserTypeService userTypeService = new UserTypeServiceImpl();
+                                    UserTypeServiceImpl<UserType> userTypeService = new UserTypeServiceImpl<UserType>(UserType.class);
                                     List<UserType> userTypeList = userTypeService.getAll();
                                     request.setAttribute("userTypeList", userTypeList);
 

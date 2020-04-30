@@ -5,8 +5,6 @@ import app.entity.Client;
 import app.entity.User;
 import app.entity.UserType;
 import app.service.dao.AccountService;
-import app.service.dao.UserService;
-import app.service.dao.UserTypeService;
 import app.service.impl.AccountServiceImpl;
 import app.service.impl.ClientServiceImpl;
 import app.service.impl.UserServiceImpl;
@@ -35,7 +33,7 @@ public class RegistrationServlet extends HttpServlet {
         ClientServiceImpl<Client> clientService = new ClientServiceImpl<Client>(Client.class);
         Client savedClient = clientService.save(client);
 
-        UserTypeService userTypeService = new UserTypeServiceImpl();
+        UserTypeServiceImpl<UserType> userTypeService = new UserTypeServiceImpl<UserType>(UserType.class);
         UserType userType = userTypeService.findById(Integer.valueOf(req.getParameter("userType")));
 
         User user = new User();
@@ -47,7 +45,7 @@ public class RegistrationServlet extends HttpServlet {
         user.setIdUserType(userType);
         user.setIdClient(savedClient);
 
-        UserService userService = new UserServiceImpl();
+        UserServiceImpl<User> userService = new UserServiceImpl<User>(User.class);
         userService.save(user);
 
         Account account = new Account();
