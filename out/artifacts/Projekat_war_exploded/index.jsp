@@ -29,13 +29,6 @@
     <title>$Title$</title>
 </head>
 <body>
-<%
-    BankServiceImpl<Bank> bankService = new BankServiceImpl<Bank>(Bank.class);
-    TransactionServiceImpl<Transaction> transactionService = new TransactionServiceImpl<Transaction>(Transaction.class);
-    out.println(transactionService.getAll().get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
-
-    out.println(bankService.findById(1).getAccountList().get(0).getAccountNumber());
-%>
 <div>
     <div class="container login-container">
         <div class="row">
