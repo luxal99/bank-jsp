@@ -4,10 +4,7 @@ import app.config.DBConfig;
 import app.entity.Account;
 import app.entity.AccountTransaction;
 import app.entity.TypeOfTransaction;
-import app.service.dao.AccountService;
-import app.service.dao.AccountTransactionService;
-import app.service.dao.TransactionService;
-import app.service.dao.TransactionTypeService;
+import app.service.dao.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import javax.persistence.Query;
@@ -16,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 public class AccountServiceImpl implements AccountService {
+
 
   @Override
     public Account save(Account account) {
@@ -54,14 +52,14 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount) throws Exception {
+    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount)  {
 
         if (amount > senderAccount.getBalance()) {
-            throw new Exception("");
+
         }else{
             Session session = DBConfig.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
-            TransactionService transactionService = new TransactionServiceImpl();
+            TransactionServiceImpl transactionService = new TransactionServiceImpl();
             TransactionTypeService transactionTypeService = new TransactionTypeServiceImpl();
             AccountTransactionService accountTransactionService = new AccountTransactionServiceImpl();
 
@@ -109,6 +107,7 @@ public class AccountServiceImpl implements AccountService {
         }
 
 
+        return accountNumber;
     }
 
 

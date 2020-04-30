@@ -13,7 +13,7 @@ public interface AccountService {
 
     Account findById(Integer id);
 
-    String transfer(String accountNuber, Double amount, Account senderAccount, Account reciverAccount) throws Exception;
+    String transfer(String accountNuber, Double amount, Account senderAccount, Account reciverAccount) ;
 
     List<Account> findAccountByIdClient(Integer id);
 

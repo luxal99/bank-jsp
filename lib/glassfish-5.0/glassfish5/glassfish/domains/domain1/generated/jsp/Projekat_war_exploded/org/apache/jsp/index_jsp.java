@@ -5,6 +5,8 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import app.service.impl.AccountServiceImpl;
 import app.util.HashPassword;
+import app.service.impl.TransactionServiceImpl;
+import app.entity.Transaction;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -44,7 +46,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -65,17 +69,22 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>$Title$</title>\n");
       out.write("</head>\n");
       out.write("<body>\n");
+
+    TransactionServiceImpl transactionService = new TransactionServiceImpl();
+    out.println(transactionService.getAll(Transaction.class).get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
+
       out.write("\n");
       out.write("<div>\n");
       out.write("    <div class=\"container login-container\">\n");
       out.write("        <div class=\"row\">\n");
       out.write("            <div class=\"col-sm \" style=\"padding: 0 !important;\">\n");
-      out.write("               <div class=\"left-col\">\n");
-      out.write("                   <div class=\"container\">\n");
-      out.write("                       <h1 class=\"text-center\" style=\"color: #fff;padding-top: 25%\">Welcome</h1>\n");
-      out.write("                       <h4 class=\"text-center\">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>\n");
-      out.write("                   </div>\n");
-      out.write("               </div>\n");
+      out.write("                <div class=\"left-col\">\n");
+      out.write("                    <div class=\"container\">\n");
+      out.write("                        <h1 class=\"text-center\" style=\"color: #fff;padding-top: 25%\">Welcome</h1>\n");
+      out.write("                        <h4 class=\"text-center\">Lorem Ipsum is simply dummy text of the printing and typesetting\n");
+      out.write("                            industry.</h4>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"col-sm\" style=\"padding-top: 5em\">\n");
       out.write("                <div>\n");
