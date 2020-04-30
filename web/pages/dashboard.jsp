@@ -4,7 +4,6 @@
 <%@ page import="app.entity.Account" %>
 <%@ page import="app.entity.Bank" %>
 <%@ page import="app.util.HashPassword" %>
-<%@ page import="app.service.dao.AccountService" %>
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.service.impl.BankServiceImpl" %>
 <%@ page import="app.service.impl.AccountServiceImpl" %>
@@ -131,8 +130,15 @@
                 </button>
 
                 <%
-                    AccountService accountService = new AccountServiceImpl();
+                    AccountServiceImpl accountService = new AccountServiceImpl(Account.class);
                     List<Account> accountList = accountService.getAll();
+
+                    for (int i =0;i<accountList.size();i++) {
+                        if (accountList.get(i).getIdClient() == null) {
+                            accountList.remove(i);
+                        }
+                    }
+
                 %>
                 <table class="table">
                     <thead>
@@ -148,15 +154,15 @@
                     <tbody>
 
 
-                    <% for (Account account : accountList) { %>
+                    <% for (Account account : accountList) { %>--%>
 
-                    <tr>
+                    <tr>--%>
                         <td><%= account.getIdAccount() %>
-                        </td>
+                        </td>--%>
                         <td><%= account.getAccountNumber() %>
-                        </td>
+                        </td>--%>
                         <td><%= account.getIdClient().getIdClient() %>
-                        </td>
+                        </td>--%>
                         <td><%= account.getBalance() %>
                         </td>
                         <td><%= account.getIdClient().getName() %>
@@ -168,7 +174,7 @@
                                 <button class="open-btn" type="submit" name="clientInfo">
                                     Select client
                                 </button>
-                                <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>
+                                <input type="hidden" name="idAccount" value="<%=account.getIdAccount()%>"/>--%>
                             </form>
                         </td>
                         <td></td>

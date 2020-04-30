@@ -2,7 +2,6 @@
 <%@ page import="app.service.impl.ClientServiceImpl" %>
 <%@ page import="app.util.HashPassword" %>
 <%@ page import="app.entity.Account" %>
-<%@ page import="app.service.dao.AccountService" %>
 <%@ page import="app.service.impl.AccountServiceImpl" %>
 <%@ page import="app.dto.TransactionDTO" %>
 <%@ page import="java.util.ArrayList" %>
@@ -105,7 +104,7 @@
 
                         request.setAttribute("currentAccount", defaultAccount);
                     } else {
-                        AccountService accountService = new AccountServiceImpl();
+                        AccountServiceImpl accountService = new AccountServiceImpl(Account.class);
                         defaultAccount = accountService.findById(Integer.valueOf(request.getParameter("idAccount")));
                         request.setAttribute("currentAccount", defaultAccount);
                     }

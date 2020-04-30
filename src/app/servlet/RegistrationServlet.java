@@ -52,7 +52,7 @@ public class RegistrationServlet extends HttpServlet {
         account.setIdClient(savedClient);
         account.setAccountNumber(req.getParameter("accountNumber"));
 
-        AccountService accountService = new AccountServiceImpl();
+        AccountServiceImpl accountService = new AccountServiceImpl(Account.class);
         accountService.save(account);
 
         resp.sendRedirect(req.getContextPath() + "/pages/dashboard.jsp");
