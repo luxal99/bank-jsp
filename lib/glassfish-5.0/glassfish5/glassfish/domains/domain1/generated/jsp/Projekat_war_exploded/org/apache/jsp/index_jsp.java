@@ -70,8 +70,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\n");
       out.write("<body>\n");
 
-    TransactionServiceImpl transactionService = new TransactionServiceImpl();
-    out.println(transactionService.getAll(Transaction.class).get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
+    TransactionServiceImpl<Transaction> transactionService = new TransactionServiceImpl<Transaction>(Transaction.class);
+    out.println(transactionService.getAll().get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
 
       out.write("\n");
       out.write("<div>\n");

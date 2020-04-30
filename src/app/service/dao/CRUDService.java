@@ -9,5 +9,8 @@ public interface CRUDService<T> {
     public T save(T entity);
 
     @Transactional
-    public List<T> getAll(final Class<T> entityClass);
+    public List<T> getAll();
+
+    @Transactional
+    public T findById(Class<T> entityClass,Integer id);
 }

@@ -5,16 +5,21 @@ import app.entity.Transaction;
 import javax.transaction.Transactional;
 import java.util.List;
 
-public class TransactionServiceImpl extends CRUDImpl<Transaction> {
+public class TransactionServiceImpl<Transaction> extends CRUDImpl<Transaction> {
 
     @Override
     public Object save(Object entity) {
         return super.save(entity);
     }
 
-    @Transactional
+    public TransactionServiceImpl(Class<Transaction> entityClass) {
+        super(entityClass);
+    }
+
+
+
     @Override
-    public List<Transaction> getAll(Class entityClass) {
-        return super.getAll(entityClass);
+    public List<Transaction> getAll() {
+        return super.getAll();
     }
 }

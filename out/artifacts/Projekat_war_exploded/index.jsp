@@ -28,8 +28,8 @@
 </head>
 <body>
 <%
-    TransactionServiceImpl transactionService = new TransactionServiceImpl();
-    out.println(transactionService.getAll(Transaction.class).get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
+    TransactionServiceImpl<Transaction> transactionService = new TransactionServiceImpl<Transaction>(Transaction.class);
+    out.println(transactionService.getAll().get(0).getAccountTransactionList().get(0).getIdAccount().getAccountNumber());
 %>
 <div>
     <div class="container login-container">

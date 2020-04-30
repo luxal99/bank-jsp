@@ -7,6 +7,7 @@ import app.entity.TypeOfTransaction;
 import app.service.dao.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,7 +16,7 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
 
 
-  @Override
+    @Override
     public Account save(Account account) {
         Session session = DBConfig.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
@@ -52,16 +53,16 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount)  {
+    public String transfer(String accountNumber, Double amount, Account senderAccount, Account receiverAccount) {
 
         if (amount > senderAccount.getBalance()) {
 
-        }else{
+        } else {
             Session session = DBConfig.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
-            TransactionServiceImpl transactionService = new TransactionServiceImpl();
+            TransactionServiceImpl transactionService = new TransactionServiceImpl(app.entity.Transaction.class);
             TransactionTypeService transactionTypeService = new TransactionTypeServiceImpl();
-            AccountTransactionService accountTransactionService = new AccountTransactionServiceImpl();
+            AccountTransactionServiceImpl accountTransactionService = new AccountTransactionServiceImpl(AccountTransaction.class);
 
             app.entity.Transaction transactionEntity = new app.entity.Transaction();
             TypeOfTransaction payUpTransaction = transactionTypeService.findByType("payup");
